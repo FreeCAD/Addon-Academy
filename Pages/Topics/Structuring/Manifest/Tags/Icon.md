@@ -7,7 +7,7 @@ The `<icon>` tag specifies the logo of your addon.
 
 ## General
 
-The `<icon>` is required and has to  
+The `<icon>` tag is required and has to  
 be placed inside the `<package>` tag.
 
 *» Check the [Manifest] of the [Template] for an example.*
