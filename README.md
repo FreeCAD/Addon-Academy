@@ -1,5 +1,5 @@
 
-# Addon Development
+# Addon Academy
 
 Documentation, examples & guides on how to develop addons.
 
