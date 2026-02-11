@@ -1,4 +1,15 @@
 
+<h3>
+
+ » [<kbd> 🏠 </kbd>](../../../../..)
+ » [<kbd> Topics </kbd>](../../..)
+ » [<kbd> Structuring </kbd>](../..)
+ » [<kbd> Manifest </kbd>](..)
+
+</h3>
+
+<br/>
+
 # Icon
 
 The `<icon>` tag specifies the logo of your addon.

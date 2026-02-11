@@ -1,4 +1,13 @@
 
+<h3>
+
+ » [<kbd> 🏠 </kbd>](../../..)
+ » [<kbd> Demos </kbd>](..)
+
+</h3>
+
+<br/>
+
 # Demo : Extend Toolbar
 
 This demo shows how to extend an existing toolbar.

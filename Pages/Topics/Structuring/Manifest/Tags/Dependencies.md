@@ -1,4 +1,15 @@
 
+<h3>
+
+ » [<kbd> 🏠 </kbd>](../../../../..)
+ » [<kbd> Topics </kbd>](../../..)
+ » [<kbd> Structuring </kbd>](../..)
+ » [<kbd> Manifest </kbd>](..)
+
+</h3>
+
+<br/>
+
 # Dependencies
 
 The `<depend>` , `<replace>` & `<conflict>`  
@@ -143,7 +154,6 @@ Optional dependency on the [Curves] addon.
 ```
 
 <br/>
-
 
 [PartDesign]: https://github.com/FreeCAD/FreeCAD/tree/main/src/Mod/PartDesign
 [Manifest]: https://github.com/FreeCAD/Addon-Template/blob/Latest/package.xml

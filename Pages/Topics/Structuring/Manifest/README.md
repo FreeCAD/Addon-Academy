@@ -1,4 +1,14 @@
 
+<h3>
+
+ » [<kbd> 🏠 </kbd>](../../../..)
+ » [<kbd> Topics </kbd>](../..)
+ » [<kbd> Structuring </kbd>](..)
+
+</h3>
+
+<br/>
+
 # Manifest
 
 The addon manifest is a metadata file that contains various bits  
