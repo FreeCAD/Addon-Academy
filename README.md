@@ -23,6 +23,8 @@ Documentation, examples & guides on how to develop addons.
 
 - ~~Localization~~
 
+- [Addon Index]
+
 - [Structuring]
 
 <br/>
@@ -49,6 +51,7 @@ Documentation, examples & guides on how to develop addons.
 <!----------------------------------------------------------------------------->
 
 [Structuring]: ./Pages/Topics/Structuring
+[Addon Index]: ./Pages/Topics/Addon-Index
 
 <!----------------------------------------------------------------------------->
 
