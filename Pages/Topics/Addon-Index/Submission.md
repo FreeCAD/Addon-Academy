@@ -17,7 +17,5 @@
 
 <!----------------------------------------------------------------------------->
 
-[Workbench]: ./Examples/Workbench.xml
-[Toolbar]: ./Examples/Toolbar.xml
 
 

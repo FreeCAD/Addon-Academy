@@ -17,10 +17,17 @@ It contains a list of all known addons and their
 sources as well as related data like what Python  
 packages can  be installed as dependencies.
 
+<br/>
+
 ## Topics
 
--   [Submitting Your Addon][Submission]
+-   [Submission]
 
+-   [Index]
 
+<br/>
+
+<!----------------------------------------------------------------------------->
 
 [Submission]: ./Submission
+[Index]: ./Index
