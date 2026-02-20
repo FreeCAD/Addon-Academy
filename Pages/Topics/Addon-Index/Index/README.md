@@ -24,13 +24,13 @@ Addon Index and ones that choose to stay independent.
 
 <picture>
   <source 
-    srcset = './Media/Dark/Addon-Affiliation.svg'
+    srcset = './Media/Dark/Affiliation.svg'
     media = '( prefers-color-scheme : dark )' 
   />
   <img 
     height = '100'
-    src = './Media/Light/Addon-Affiliation.svg'
-    alt = 'Addon Affiliation'
+    src = './Media/Light/Affiliation.svg'
+    alt = 'Affiliation'
   />
 </picture>
 
@@ -46,6 +46,27 @@ of a Proof-of-Concept, it shouldn't be indexed.
 
 There are also some requirements that addons have to  
 fulfill to be indexed, which might not work for some addons.
+
+<br/>
+
+## Coverage
+
+Indexed addons can further be subdivided into `Unbound`  
+addons that have at least the minimal amount of coverage  
+of desired qualities and `Curated`, that have full coverage.
+
+
+<picture>
+  <source 
+    srcset = './Media/Dark/Coverage.svg'
+    media = '( prefers-color-scheme : dark )' 
+  />
+  <img 
+    height = '100'
+    src = './Media/Light/Coverage.svg'
+    alt = 'Coverage'
+  />
+</picture>
 
 <!----------------------------------------------------------------------------->
 
