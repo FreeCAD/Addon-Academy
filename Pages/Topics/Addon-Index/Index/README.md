@@ -52,9 +52,8 @@ fulfill to be indexed, which might not work for some addons.
 ## Coverage
 
 Indexed addons can further be subdivided into `Unbound`  
-addons that have at least the minimal amount of coverage  
-of desired qualities and `Curated`, that have full coverage.
-
+addons that have at least the minimal amount of [Coverage]  
+of desired [Qualities] and `Curated`, that have full [Coverage].
 
 <picture>
   <source 
@@ -68,6 +67,20 @@ of desired qualities and `Curated`, that have full coverage.
   />
 </picture>
 
+<br/>
+
+## Topics
+
+-   [Coverage]
+
+-   [Qualities]
+
+
+<br/>
+
 <!----------------------------------------------------------------------------->
+
+[Qualities]: ./Qualities.md
+[Coverage]: ./Coverage.md
 
 [Index]: https://github.com/FreeCAD/Addons/blob/main/Data/Index.json
