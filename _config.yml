@@ -1,0 +1,85 @@
+
+description : Documentation for the FreeCAD Addon Ecosystem.
+title : FreeCAD Academy
+
+
+includes_dir : _includes
+layouts_dir : _layouts
+
+destination : ./Page
+source : ./Source
+
+
+strict_front_matter : false
+safe : true
+
+keep_files :
+    - .git
+
+markdown_ext : 'md'
+encoding : 'utf-8'
+
+include :
+    - .htaccess
+
+theme : null
+
+exclude :
+
+    - Gemfile.lock
+    - Gemfile
+
+    - node_modules
+
+    - vendor/bundle/
+    - vendor/cache/
+    - vendor/gems/
+    - vendor/ruby/
+
+    - LICENSE-CODE
+    - LICENSE-DOCS
+
+    - README.md
+
+
+show_drafts : null
+limit_posts : 0
+unpublished : false
+future : false
+
+whitelist : []
+plugins : []
+
+excerpt_separator : '\n\n'
+highlighter : rouge
+markdown : kramdown
+incremental : false
+lsi : false
+
+paginate_path : /page:num
+permalink : date
+timezone : null
+
+defaults : []
+verbose : false
+quiet : false
+
+liquid:
+    strict_variables : false
+    strict_filters : false
+    error_mode : warn
+
+kramdown:
+
+    syntax_highlighter : rouge
+    entity_output : as_char
+    smart_quotes : lsquo,rsquo,ldquo,rdquo
+    math_engine : mathjax
+    input : GFM
+
+    footnote_nr : 1
+    toc_levels : [ 1 , 2 , 3 , 4 , 5 , 6 ]
+
+    show_warnings : false
+    hard_wrap : false
+    auto_ids : true

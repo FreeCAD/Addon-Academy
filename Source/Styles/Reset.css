@@ -1,0 +1,88 @@
+
+*::before ,
+*::after ,
+* {
+    overflow-wrap : break-word ;
+    box-sizing : border-box ;
+    word-wrap : break-word ;
+    padding : 0 ;
+    margin : 0 ;
+}
+
+* {
+  font : inherit ;
+}
+
+:target {
+    scroll-margin-block : 5ex ;
+}
+
+html {
+    text-size-adjust : none ;
+}
+
+html:focus-within {
+    scroll-behavior : smooth ;
+}
+
+body {
+
+    text-rendering : optimizeSpeed ;
+    line-height : 1.5 ;
+
+    min-height : 100dvh ;
+    min-height : 100vh ;
+}
+
+header , footer , section ,
+article , main {
+    container-type : inline-size ;
+}
+
+table {
+    border-collapse : collapse ;
+    border-spacing : 0 ;
+}
+
+blockquote , figure , body ,
+h1 , h2 , h3 , h4 , h5 , h6 ,
+p , dl , dd {
+    margin-block-end : 0 ;
+}
+
+h1 , h2 , h3 , h4 , h5 , h6 {
+    text-wrap : balance ;
+}
+
+figcaption , li , p {
+    text-wrap : balance ;
+    max-width : 65ch ;
+}
+
+:is( ul , ol )[ role = 'list' ]{
+    list-style : none ;
+}
+
+a {
+    text-decoration-skip-ink : auto ;
+    color : currentColor ;
+}
+
+picture , img {
+    max-width : 100% ;
+    display : block ;
+}
+
+textarea:focus , textarea ,
+button:active , button:focus , button ,
+select:focus , select ,
+input:focus , input {
+    outline : none ;
+    border : none ;
+}
+
+input[ type = 'number' ]::-webkit-inner-spin-button ,
+input[ type = 'number' ]::-webkit-outer-spin-button {
+    appearance : none ;
+    margin : 0 ;
+}

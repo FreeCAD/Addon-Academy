@@ -1,0 +1,26 @@
+
+{%- assign priority = include.priority | default : 'Normal' -%}
+{%- assign name = include.name | default : '' -%}
+
+{%- capture link -%}
+    {{- '/Styles/' -}}
+    {{- name -}}
+    {{- '.css?v=' -}}
+    {{- site.github.build_revision -}}
+{%- endcapture -%}
+
+{%- assign link = link | relative_url -%}
+
+<link
+
+    {% case priority -%}
+    {%- when 'High' -%}
+        render = 'blocking'
+    {%- when 'Low' -%}
+        async
+    {%- endcase %}
+
+    rel = 'stylesheet'
+    type = 'text/css'
+    href = '{{- link -}}'
+/>

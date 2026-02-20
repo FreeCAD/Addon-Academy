@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html
+    lang = '{{- site.lang | default : 'en-US' -}}'
+>
+
+    <head>
+        {%- include Head.liquid -%}
+    </head>
+
+    <body>
+
+        {%- include Header.liquid -%}
+
+        <main class = 'outer' >
+            <section id = 'main_content' class = 'inner' >
+                {{- content -}}
+            </section>
+        <main>
+
+    </body>
+</html>

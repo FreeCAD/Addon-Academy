@@ -1,0 +1,54 @@
+
+{%- assign root = site.baseurl -%}
+
+{%- assign url = page.dir -%}
+
+{%- assign crumbs = url | remove_first : '/' | split : '/' -%}
+
+{%- if crumbs.size > 0 -%}
+
+    <nav>
+        <ul>
+
+            <li>
+                <a href = '{{- root -}}' >
+                    🏠
+                </a>
+            </li>
+
+            {%- assign path = root -%}
+
+            {%- for crumb in crumbs -%}
+
+                {%- capture path -%}
+                    {{- path -}}
+                    {{- '/' -}}
+                    {{- crumb -}}
+                {%- endcapture -%}
+
+                <li> » </li>
+
+                <li>
+
+                    {%- if forloop.last -%}
+
+                        <span>
+                            {{- crumb -}}
+                        </span>
+
+                    {%- else -%}
+
+                        <a href = '{{- path -}}' >
+                            {{- crumb -}}
+                        </a>
+
+                    {%- endif -%}
+
+                </li>
+
+            {%- endfor -%}
+
+        </ul>
+    </nav>
+
+{%- endif -%}
