@@ -12,23 +12,30 @@ the presentation to the user in places like the Addon Manager.
 
 ## Tags
 
-[![Button Package]][Package]  
-[![Button Name]][Identity]
-[![Button Description]][Identity]  
-[![Button Version]][Version]
-[![Button Date]][Version]  
-[![Button Author]][People]
-[![Button Maintainer]][People]
-[![Button License]][Licenses]  
-[![Button Icon]][Icon]
-[![Button Tag]][Tag]
-[![Button Url]][Url]  
-[![Button Depend]][Dependencies]
-[![Button Conflict]][Dependencies]
-[![Button Replace]][Dependencies]  
-[![Button FreeCADMin]][FreeCAD]
-[![Button FreeCADMax]][FreeCAD]
-[![Button PythonMin]][Python]  
+[![Button Package]][Package] 
+
+[![Button Name]][Identity] 
+[![Button Description]][Identity]
+
+[![Button Version]][Version] 
+[![Button Date]][Version]
+
+[![Button Author]][People] 
+[![Button Maintainer]][People] 
+[![Button License]][Licenses]
+
+[![Button Icon]][Icon] 
+[![Button Tag]][Tag] 
+[![Button Url]][Url]
+
+[![Button Depend]][Dependencies] 
+[![Button Conflict]][Dependencies] 
+[![Button Replace]][Dependencies]
+
+[![Button FreeCADMin]][FreeCAD] 
+[![Button FreeCADMax]][FreeCAD] 
+[![Button PythonMin]][Python]
+
 [![Button Content]][Content]
 
 <br/>
