@@ -22,6 +22,26 @@ How to contribute to this documentation.
 
 ## Jekyll
 
+### Install
 
+Install Jekyll and it's requirements.
+
+```sh
+sudo apt install ruby-bundler ruby-dev build-essential
+```
+
+Install the projects dependencies.
+
+```sh
+bundle install
+```
+
+### Running
+
+Start a local Jekyll web-server.
+
+```sh
+bundle exec jekyll serve
+```
 
 <br/>
