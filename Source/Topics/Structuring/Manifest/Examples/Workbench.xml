@@ -10,7 +10,8 @@
 
     <!--[ Versions ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
-    <freecadmin>1.193.2</freecadmin>
+    <freecadmin>1.1.0</freecadmin>
+    <pythonmin>3.11</pythonmin>
     <version>20.1.1</version>
     <date>3026-01-02</date>
 
