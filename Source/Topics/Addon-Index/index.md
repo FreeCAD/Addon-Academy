@@ -2,6 +2,8 @@
 layout : Default
 ---
 
+[ [Submission] ] [ [Removed] ] [ [Index] ]
+
 # Addon Index
 
 The `FreeCAD/Addons` repository is home to the 
@@ -13,15 +15,8 @@ packages can  be installed as dependencies.
 
 <br/>
 
-## Topics
-
--   [Submission]
-
--   [Index]
-
-<br/>
-
 <!----------------------------------------------------------------------------->
 
-[Submission]: ./Submission
-[Index]: ./Index
+[Submission]: ./Submission 'How to submit an addon to the Index'
+[Removed]: ./Removed 'List of addons removed from the Index'
+[Index]: ./Index 'Technical details of the Index'
