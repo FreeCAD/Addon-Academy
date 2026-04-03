@@ -8,7 +8,10 @@ layout : Default
 
 -   [Addon Index]
 
+-   [Ecosystem]
 
 
-[Addon Index]: ./Addon-Index
+
 [Structuring]: ./Structuring
+[Addon Index]: ./Addon-Index
+[Ecosystem]: ./Ecosystem

@@ -14,11 +14,11 @@ title : Addon Academy
 
 ## [Topics ⁺][Topics]
 
-- ~~Localization~~
-
 - [Addon Index]
 
 - [Structuring]
+
+- [Ecosystem]
 
 <br/>
 
@@ -38,6 +38,7 @@ title : Addon Academy
 
 [Structuring]: ./Topics/Structuring
 [Addon Index]: ./Topics/Addon-Index
+[Ecosystem]: ./Topics/Ecosystem
 
 <!----------------------------------------------------------------------------->
 
