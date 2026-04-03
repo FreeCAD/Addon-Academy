@@ -4,9 +4,7 @@ layout : Default
 title : Addon Academy
 ---
 
-# Pages
-
-## Guides
+## [Guides ⁺][Guides]
 
 - ~~Creating an addon~~
 
@@ -14,7 +12,7 @@ title : Addon Academy
 
 <br/>
 
-## Topics
+## [Topics ⁺][Topics]
 
 - ~~Localization~~
 
@@ -24,15 +22,7 @@ title : Addon Academy
 
 <br/>
 
-## Pages
-
-- ~~Module Structure~~
-
-- [Addon Manifest]
-
-<br/>
-
-## Demos
+## [Demos ⁺][Demos]
 
 -   [Add a command to an existing toolbar][Demo-Extend-Toolbar]
 
@@ -40,13 +30,17 @@ title : Addon Academy
 
 <!----------------------------------------------------------------------------->
 
+[Guides]: ./Guides
+
+<!----------------------------------------------------------------------------->
+
+[Topics]: ./Topics
+
 [Structuring]: ./Topics/Structuring
 [Addon Index]: ./Topics/Addon-Index
 
 <!----------------------------------------------------------------------------->
 
-[Addon Manifest]: ./Topics/Structuring/Manifest
-
-<!----------------------------------------------------------------------------->
+[Demos]: ./Demos
 
 [Demo-Extend-Toolbar]: ./Demos/Extend-Toolbar
