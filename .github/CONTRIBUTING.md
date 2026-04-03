@@ -45,3 +45,9 @@ bundle exec jekyll serve
 ```
 
 <br/>
+
+## Structure
+
+Guides : Longer step by step 
+Topics : Focused factual
+Demo : Small standalone examples
