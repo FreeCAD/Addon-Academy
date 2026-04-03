@@ -32,6 +32,13 @@ All of the addons listed have the base reason for removal being obsolete, outdat
 | [Navigation Indicator] | Controls for the navigation style. <br/> *Integrated into Core*
 | [Cura Engine] | Integration of the Cura engine.
 | [Assembly 2] | Legacy assembly workbench.
+| [BIM Bots] | Integration with the BIMBots service. <br/> *Service doesn't exist anymore*
+| [Extreme Pro Light] | Light theme. <br/> *Integrated into Core*
+| [Extreme Pro Dark] | Dark theme. <br/> *Integrated into Core*
+| [Vendor Parts] | Unknown
+| [Geo Data] | Geographic data support.
+| [Exploded Assembly] | Explode assemblies into it's parts. <br/> *Integrated info Core*
+| [Lattice] | Tools for working with arrays of parts.
 
 <br/>
 
@@ -39,14 +46,21 @@ All of the addons listed have the base reason for removal being obsolete, outdat
 
 [Navigation Indicator]: https://github.com/triplus/NavigationIndicator
 [Persistent Toolbars]: https://github.com/triplus/PersistentToolbars
+[Exploded Assembly]: https://github.com/JMG1/ExplodedAssembly
+[Extreme Pro Light]: https://github.com/MisterMakerNL/ExtremeProLight
+[Extreme Pro Dark]: https://github.com/MisterMakerNL/ExtremeProDark
 [OSE 3D Printer]: https://github.com/gbroques/ose-3d-printer-workbench
 [Reconstruction]: https://github.com/microelly2/reconstruction
+[Vendor Parts]: https://github.com/alexneufeld/FreeCAD_vendor_parts
 [Cura Engine]: https://github.com/cblt2l/FreeCAD-CuraEngine-Plugin
 [Assembly 2]: https://github.com/hamish2014/FreeCAD_assembly2
 [Modern UI]: https://github.com/HakanSeven12/Modern-UI
+[BIM Bots]: https://github.com/opensourceBIM/BIMbots-FreeCAD
+[Geo Data]: https://github.com/microelly2/geodata
 [Flamingo]: https://github.com/oddtopus/flamingo
 [Autoload]: https://github.com/triplus/Autoload
 [RemBench]: https://github.com/triplus/RemBench
+[Lattice]: https://github.com/DeepSOIC/Lattice
 [Timber]: https://github.com/j-wiedemann/FreeCAD-Timber
 [ExtMan]: https://github.com/mnesarco/FreeCAD_ExtMan
 [Retr3d]: https://github.com/Maaphoo/Retr3d
