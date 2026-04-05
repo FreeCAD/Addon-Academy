@@ -1,0 +1,30 @@
+---
+layout : Default
+---
+
+# Portable
+
+Publishing your addon as portable file.
+
+<br/>
+
+## Use Cases
+
+This approach can be useful if you for example want to install 
+your addon on an offline system or send it to someone by file.
+
+<br/>
+
+## Steps
+
+1.  Locate your addons repository folder.
+
+2.  Create a ZIP archive of the folder.
+
+    *Make sure no additional sub-folder is added*
+
+3.  Provide the archive to your users.
+
+    *Preferably with it's checksum for security*
+
+<br/>

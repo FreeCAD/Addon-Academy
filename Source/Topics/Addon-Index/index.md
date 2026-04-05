@@ -2,7 +2,7 @@
 layout : Default
 ---
 
-[ [Submission] ] [ [Removed] ] [ [Index] ]
+[ [Publishing] ] [ [Removed] ] [ [Index] ]
 
 # Addon Index
 
@@ -17,6 +17,6 @@ packages can  be installed as dependencies.
 
 <!----------------------------------------------------------------------------->
 
-[Submission]: ./Submission 'How to submit an addon to the Index'
+[Publishing]: ../../Guides/Publishing 'How to publish an addon to the Index'
 [Removed]: ./Removed 'List of addons removed from the Index'
 [Index]: ./Index 'Technical details of the Index'

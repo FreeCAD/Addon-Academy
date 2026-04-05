@@ -8,7 +8,7 @@ The following are the desired qualities used for the [Coverage].
 
 <br/>
 
->   [!NOTE]  
+>   ⚠ 𝗡𝗢𝗧𝗘  
 >   Addons that have been registered before the change  
 >   to the new Index are afforded time to get up to snuff.  
 >
@@ -19,12 +19,12 @@ The following are the desired qualities used for the [Coverage].
 
 ## Thresholds
 
-### 🔵 Low Threshold
+### Low
 
 Covering all of the qualities marked with 🔵 
 is a requirement for any `Indexed` addon.
 
-### 🔴 High Threshold
+### High
 
 Covering all of the qualities marked with 🔴 
 is a requirement for any `Curated` addon.

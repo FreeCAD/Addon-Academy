@@ -6,19 +6,19 @@ title : Addon Academy
 
 ## [Guides ⁺][Guides]
 
-- ~~Creating an addon~~
+-   ~~Creating an addon~~
 
-- ~~Publishing an addon~~
+-   [Publishing your addon][Publishing]
 
 <br/>
 
 ## [Topics ⁺][Topics]
 
-- [Addon Index]
+-   [Addon Index]
 
-- [Structuring]
+-   [Structuring]
 
-- [Ecosystem]
+-   [Ecosystem]
 
 <br/>
 
@@ -31,6 +31,8 @@ title : Addon Academy
 <!----------------------------------------------------------------------------->
 
 [Guides]: ./Guides
+
+[Publishing]: ./Guides/Publishing
 
 <!----------------------------------------------------------------------------->
 
