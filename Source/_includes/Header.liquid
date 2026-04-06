@@ -1,10 +1,13 @@
 
+{%- assign root = site.baseurl -%}
+
 <header class = 'outer' >
     <div class = 'inner' >
 
-        <div class = 'H1' >
-            {{- site.title -}}
-        </div>
+        <a
+            class = 'H1'
+            href = '{{- root -}}'
+        > {{- site.title -}} </a>
 
         {%- include Crumbs.liquid -%}
 

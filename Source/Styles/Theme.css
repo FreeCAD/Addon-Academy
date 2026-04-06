@@ -1,125 +1,220 @@
 
-
-/*******************************************************************************
-Theme Styles
-*******************************************************************************/
-
 body {
-  box-sizing: border-box;
-  color:#373737;
-  background: #212121;
-  font-size: 16px;
-  font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+
+    box-sizing : border-box ;
+    background : #212121 ;
+
+    -webkit-font-smoothing : antialiased ;
+    font-family : 'Myriad Pro' , Calibri , Helvetica , Arial , sans-serif ;
+    line-height : 1.5 ;
+    color : #373737 ;
 }
 
 h1 , .H1 ,
-h2, h3, h4, h5, h6 {
-  margin: 10px 0;
-  font-weight: 700;
-  color:#222222;
-  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
-  letter-spacing: -1px;
+h2 , h3 , h4 , h5 , h6 {
+
+    margin : 10px 0 ;
+
+    letter-spacing : -1px ;
+    font-family : 'Lucida Grande' , 'Calibri' , Helvetica , Arial , sans-serif ;
+    font-weight : 700 ;
+    color :#222222 ;
+
+    margin-bottom : 0px ;
+}
+
+
+body {
+    font-size : 14px ;
 }
 
 h1 , .H1 {
-  font-size: 36px;
-  font-weight: 700;
+    font-size : 24px ;
 }
 
 h2 {
-  padding-bottom: 10px;
-  font-size: 32px;
+    font-size : 21px ;
 }
 
 h3 {
-  font-size: 24px;
+    font-size : 18px ;
 }
 
 h4 {
-  font-size: 21px;
+    font-size : 16px ;
 }
 
 h5 {
-  font-size: 18px;
+    font-size : 14px ;
 }
 
 h6 {
-  font-size: 16px;
+    font-size : 12px ;
 }
 
+code , pre {
+    min-width : 240px ;
+    max-width : 320px ;
+    font-size : 11px ;
+}
+
+
+
+@media ( width > 320px ){
+
+    body {
+        font-size : 14px ;
+    }
+
+    h1 , .H1 {
+        font-size : 28px ;
+    }
+
+    h2 {
+        font-size : 24px ;
+    }
+
+    h3 {
+        font-size : 21px ;
+    }
+
+    h4 {
+        font-size : 18px ;
+    }
+
+    h5 {
+        font-size : 14px ;
+    }
+
+    h6 {
+        font-size : 12px ;
+    }
+
+    code , pre {
+        font-size : 11px ;
+    }
+}
+
+
+@media ( width > 480px ){
+
+    body {
+        font-size : 16px ;
+    }
+
+    h1 , .H1 {
+        font-weight : 700 ;
+        font-size : 36px ;
+    }
+
+    h2 {
+        font-size : 32px ;
+    }
+
+    h3 {
+        font-size : 24px ;
+    }
+
+    h4 {
+        font-size : 21px ;
+    }
+
+    h5 {
+        font-size : 18px ;
+    }
+
+    h6 {
+        font-size : 16px ;
+    }
+}
+
+
 p {
-  margin: 10px 0 15px 0;
+    margin : 10px 0 15px 0 ;
 }
 
 footer p {
-  color: #f2f2f2;
+    color : #f2f2f2 ;
 }
 
 a {
-  text-decoration: none;
-  color: #0F79D0;
-  text-shadow: none;
 
-  transition: color 0.5s ease;
-  transition: text-shadow 0.5s ease;
+    text-decoration : none ;
+    text-shadow : none ;
+
+    color : #0F79D0 ;
+
+    transition : text-shadow 500ms ease ;
+    transition : color 500ms ease ;
 }
 
-a:hover, a:focus {
-  text-decoration: underline;
+a:hover ,
+a:focus {
+    text-decoration : underline ;
 }
 
 footer a {
-  color: #F2F2F2;
-  text-decoration: underline;
+    text-decoration : underline ;
+    color : #F2F2F2 ;
 }
 
-em, cite {
-  font-style: italic;
+cite , em {
+    font-style : italic ;
 }
 
 strong {
-  font-weight: bold;
+    font-weight : bold ;
 }
 
 img {
-  position: relative;
-  margin: 0 auto;
-  max-width: 739px;
-  padding: 5px;
-  margin: 10px 0 10px 0;
+
+    position: relative;
+
+    max-width : 739px ;
+
+    padding : 5px ;
+    margin : 0 auto ;
+    margin : 10px 0 10px 0 ;
 }
 
 p img {
-  display: inline;
-  margin: 0;
-  padding: 0;
-  vertical-align: middle;
-  text-align: center;
-  border: none;
+
+    display : inline ;
+
+    padding : 0 ;
+    margin : 0 ;
+
+    vertical-align : middle ;
+    text-align : center ;
+
+    border : none ;
 }
 
-pre, code {
-  color: #222;
-  background-color: #fff;
+code , pre {
 
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  font-size: 0.875em;
+    background-color : #fff ;
+    border-radius : 2px ;
+    color : #222 ;
 
-  border-radius: 2px;
+    font-family : Monaco , 'Bitstream Vera Sans Mono' , 'Lucida Console' , Terminal , monospace ;
+    font-size : 0.875em ;
 }
 
 pre {
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,.1);
-  overflow: auto;
+
+    padding : 10px ;
+
+    box-shadow : 0 0 10px rgba(0,0,0,.1) ;
+
+    overflow : auto ;
 }
 
 code {
-  padding: 3px;
-  margin: 0 3px;
-  box-shadow: 0 0 10px rgba(0,0,0,.1);
+
+    box-shadow : 0 0 10px rgba(0,0,0,.1) ;
+
+    padding : 3px ;
+    margin : 0 3px ;
 }
 
 pre code {
@@ -212,35 +307,36 @@ Full-Width Styles
 }
 
 .inner {
-  position: relative;
-  max-width: 640px;
-  padding: 20px 10px;
-  margin: 0 auto;
-}
 
-@media (max-width: 320px) {
+    position : relative ;
 
-    .inner {
-        min-width: 240px;
-        max-width: 320px;
+    padding : 20px 10px ;
+    margin : 0 auto ;
+
+    min-width : 240px ;
+    max-width : 320px ;
+
+    @media ( width > 320px ){
+        min-width : 320px ;
+        max-width : 480px ;
     }
-}
 
-@media (max-width: 480px) {
-
-    .inner {
-        min-width: 320px;
-        max-width: 480px;
+    @media ( width > 480px ){
+        min-width : unset ;
+        max-width : 640px ;
     }
 }
 
 
 header {
-    background: #212121;
-    background: linear-gradient(to top, #373737, #212121);
-    position: sticky;
-    top: 0;
-    z-index: 1;
+
+    position : sticky ;
+    top : 0 ;
+
+    background : #212121 ;
+    background : linear-gradient( to top , #373737 , #212121 );
+
+    z-index : 1 ;
 }
 
 header
@@ -249,11 +345,14 @@ header
 }
 
 header .H1 {
-    margin: 0;
-    color: #fff;
-    font-weight: 700;
-    text-shadow: #111 0px 0px 10px;
-    user-select: none;
+
+    margin : 0 ;
+
+    text-shadow : #111 0px 0px 10px ;
+    font-weight : 700 ;
+    color : #fff ;
+
+    user-select : none ;
 }
 
 
@@ -273,81 +372,6 @@ main {
 
 
 
-/*******************************************************************************
-Small Device Styles
-*******************************************************************************/
-
-@media (max-width: 480px) {
-  body {
-    font-size:14px;
-  }
-
-  h1 , .H1 {
-    font-size: 28px;
-  }
-
-  h2 {
-    font-size: 24px;
-  }
-
-  h3 {
-    font-size: 21px;
-  }
-
-  h4 {
-    font-size: 18px;
-  }
-
-  h5 {
-    font-size: 14px;
-  }
-
-  h6 {
-    font-size: 12px;
-  }
-
-  code, pre {
-    font-size: 11px;
-  }
-
-}
-
-@media (max-width: 320px) {
-  body {
-        font-size:14px;
-  }
-
-  h1 , .H1 {
-    font-size: 24px;
-  }
-
-  h2 {
-    font-size: 21px;
-  }
-
-  h3 {
-    font-size: 18px;
-  }
-
-  h4 {
-    font-size: 16px;
-  }
-
-  h5 {
-    font-size: 14px;
-  }
-
-  h6 {
-    font-size: 12px;
-  }
-
-  code, pre {
-    min-width: 240px;
-    max-width: 320px;
-    font-size: 11px;
-  }
-
-}
 
 nav {
     user-select : none ;
@@ -374,4 +398,9 @@ nav
 li:first-child
 a:hover {
     text-decoration: none;
+}
+
+
+a.H1:hover {
+    text-decoration : none ;
 }
