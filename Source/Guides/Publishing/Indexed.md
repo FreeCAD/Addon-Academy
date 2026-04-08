@@ -25,14 +25,26 @@ however it comes with expectations, guidelines and standards.
 
 <br/>
 
+## Recommendations
+
+-   You should announce your addon before submission on the [Discord], 
+    [Forum], [Reddit], .. so people try it out and you receive real usage feedback.
+
+-   You should tag your repository with at least the 
+    `freecad` & `addon` topics improve searchability.
+
+<br/>
+
 ## Steps
 
-1.  Ensure your addon's code is in a publicly accessible repository.
+0.  Ensure your addon's code is in a publicly accessible repository.
 
-2.  Ensure your addon covers the low threshold of 
+0.  Ensure your addon covers the low threshold of 
     [Qualities] as far as you know how to on your own.
 
-3.  Send an email with your repository's url  
+0.  Ensure all functionality is in working order before requesting the review.
+
+0.  Send an email with your repository's url  
     to the AEC to start the review process.
     
     `PhoneDroid.FGL@proton.me`
@@ -51,5 +63,10 @@ day or so the addition should be reflected in the addon manager.
 
 <br/>
 
+<!----------------------------------------------------------------------------->
 
 [Qualities]: ../../Topics/Addon-Index/Index/Qualities.md
+
+[Discord]: https://discord.gg/w2cTKGzccC
+[Reddit]: https://www.reddit.com/r/freecad
+[Forum]: https://forum.freecad.org/

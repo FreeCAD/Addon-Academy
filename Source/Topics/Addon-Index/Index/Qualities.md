@@ -39,8 +39,8 @@ is a requirement for any `Curated` addon.
 -   🔵 The addon addresses user concerns such as 
     open issues, pull request, .. in a timely manner.
 
--   🔴 The addon provides tags & releases for every 
-    released version if the host platform supports it.
+-   🔴 Addons use a `Stable` + `Latest` branch combination with 
+    corresponding Index entries to stabilize the update cycle for users.
 
 <br/>
 
@@ -89,13 +89,22 @@ is a requirement for any `Curated` addon.
 
 <br/>
 
-### Assets
+### Resources
+
+-   🔵 The addon repository is kept to a reasonable size as not 
+    to consume unnecessary bandwidth and increase load times.
+
+-   🔵 The addon provides an SVG logo referenced in the manifest.
 
 -   🔴 The addon provides scalable icons.
 
+
 <br/>
 
-### Code
+### Codebase
+
+-   🔵 The repository is located on one of the supported hosts.  
+    [ [Codeberg] ] [ [GitHub] ] [ [GitLab] ] [ [FramaGit] ] [ [Salsa] ] 
 
 -   🔵 The addon's code is Python 3+ based.
 
@@ -143,3 +152,11 @@ The following qualities will be introduced at a later point.
 <!----------------------------------------------------------------------------->
 
 [OSI]: https://opensource.org/licenses
+
+<!----------------------------------------------------------------------------->
+
+[FramaGit]: https://framagit.org/public/projects
+[Codeberg]: https://codeberg.org
+[GitLab]: https://about.gitlab.com
+[GitHub]: https://github.com
+[Salsa]: https://salsa.debian.org/public
