@@ -128,6 +128,9 @@ is a requirement for any `Curated` addon.
 -   🔵 The addon doesn't require dependencies 
     unless they are functionally necessary.
 
+-   🔵 The addon only vendors dependencies when technically necessary 
+    and doesn't attempt to circumvent the package allow list.
+
 -   🔴 The addon provides support for and accepts 
     translations for any relevant user facing strings.
 
