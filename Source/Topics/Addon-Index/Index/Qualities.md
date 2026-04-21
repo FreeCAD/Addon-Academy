@@ -39,7 +39,7 @@ is a requirement for any `Curated` addon.
 -   🔵 The addon addresses user concerns such as 
     open issues, pull request, .. in a timely manner.
 
--   🔴 Addons use a `Stable` + `Latest` branch combination with 
+-   🔴 Addons use a **Release** + **Commit** branch combination with 
     corresponding Index entries to stabilize the update cycle for users.
 
 <br/>
