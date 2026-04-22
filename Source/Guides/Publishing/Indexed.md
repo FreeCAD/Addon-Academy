@@ -44,10 +44,7 @@ however it comes with expectations, guidelines and standards.
 
 0.  Ensure all functionality is in working order before requesting the review.
 
-0.  Send an email with your repository's url  
-    to the AEC to start the review process.
-    
-    `PhoneDroid.FGL@proton.me`
+0.  Open an issue for `Addon - Addition` on the [Addon Index].
 
 <br/>
 
@@ -70,3 +67,5 @@ day or so the addition should be reflected in the addon manager.
 [Discord]: https://discord.gg/w2cTKGzccC
 [Reddit]: https://www.reddit.com/r/freecad
 [Forum]: https://forum.freecad.org/
+
+[Addon Index]: https://github.com/FreeCAD/Addons/issues/new/choose
