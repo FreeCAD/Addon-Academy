@@ -11,20 +11,12 @@ layout : Default
 If you want to discuss something or ask questions 
 feel free to reach out via one of the following channels:
 
--   **Discord** : `phonedroid`
-
--   **Forum** : [PhoneDroid][Forum]
-
--   **Email** : [PhoneDroid.FGL@proton.me][Email]
-
-You can also come talk to us in an [Addons Meetup].
+[ [Forum] ] [ [Discord] ] [ [Meetups] ]
 
 <br/>
 
-[Addons Meetup]: ./Meetups.md
-
-[Forum]: https://forum.freecad.org/memberlist.php?mode=viewprofile&u=79133
-[Email]: mailto:PhoneDroid.FGL@proton.me
+[Discord]: https://discord.com/channels/870877411049357352/1458130438294999174
+[Forum]: https://forum.freecad.org/viewforum.php?f=65
 
 [Meetups]: ./Meetups
 [Team]: ./Team
