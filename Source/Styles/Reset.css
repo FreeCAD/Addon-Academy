@@ -54,11 +54,6 @@ h1 , h2 , h3 , h4 , h5 , h6 {
     text-wrap : balance ;
 }
 
-figcaption , li , p {
-    text-wrap : balance ;
-    max-width : 65ch ;
-}
-
 :is( ul , ol )[ role = 'list' ]{
     list-style : none ;
 }
