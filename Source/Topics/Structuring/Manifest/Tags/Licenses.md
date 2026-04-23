@@ -30,7 +30,7 @@ Specify the [SPDX License Identifier] as the content of the `<license>` tag and 
 -   If no license applies i.e. `All rights reserved.` set the  
     tag's value to `UNLICENSED` and don't specify a license file.
 
--   If you use a non-standard / custom license that doesn't have a  SPDX license identifier, set the tag's value to `SEE LICENSE IN ‹File›`
+-   If you use a non-standard / custom license that doesn't have a SPDX license identifier, set the tag's value to `SEE LICENSE IN ‹File›`
 
 
 ## Example

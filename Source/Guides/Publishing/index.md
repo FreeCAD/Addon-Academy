@@ -28,7 +28,7 @@ The `Portable` & `Reference` approaches are categorized as `Independent` as you 
 
 The `Indexed` approach is the easiest way for users to find and install your addon, however you are required to follow certain rules and your addon to have certain qualities.
 
-If you are unsure about which approach might suite you best, feel free to reach out. [» Contact][Contact]
+If you are unsure about which approach might suit you best, feel free to reach out. [» Contact][Contact]
 
 
 ## Start

@@ -14,7 +14,7 @@ This approach can be useful if you for example want to install your addon on an 
 
 ## Steps
 
-1.  Locate your addons repository folder.
+1.  Locate your addon's repository folder.
 
 2.  Create a ZIP archive of the folder.
 
@@ -22,5 +22,5 @@ This approach can be useful if you for example want to install your addon on an 
 
 3.  Provide the archive to your users.
 
-    *Preferably with it's checksum for security*
+    *Preferably with its checksum for security*
 

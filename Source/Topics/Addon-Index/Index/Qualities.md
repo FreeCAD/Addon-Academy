@@ -10,7 +10,7 @@ In order to be included in the FreeCAD Addon Index, an addon must comply with a 
 
 - The addon has at least one active maintainer or is in the process of finding a new maintainer.
 
-- The addon maintainers address user concerns such as open issues, pull request, and security advisores in a timely manner.
+- The addon maintainers address user concerns such as open issues, pull requests, and security advisories in a timely manner.
 
 ## Compliance
 

@@ -19,5 +19,5 @@ This approach is the best alternative to being Indexed as users will still be ab
 2.  Share the repository's url with your users to add to their settings.
 
     *The url should be in the form of:*  
-    `https://<Domain>/<Account>/<Repsitory>`
+    `https://<Domain>/<Account>/<Repository>`
 

@@ -34,7 +34,7 @@ All of the addons listed have the base reason for removal being obsolete, outdat
 | [Extreme Pro Dark] | Dark theme. <br/> *Integrated into Core* |
 | [Vendor Parts] | Unknown |
 | [Geo Data] | Geographic data support. |
-| [Exploded Assembly] | Explode assemblies into it's parts. <br/> *Integrated info Core* |
+| [Exploded Assembly] | Explode assemblies into its parts. <br/> *Integrated into Core* |
 | [Lattice] | Tools for working with arrays of parts. |
 
 <!----------------------------------------------------------------------------->

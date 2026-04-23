@@ -22,7 +22,7 @@ For every relationship to a dependency one tag should be added to the `<package>
 
 ### Bundles
 
-Bundle addons - which use the `<bundle>` content item - list a multitude of dependencies that will be installed when the the addon is installed.
+Bundle addons - which use the `<bundle>` content item - list a multitude of dependencies that will be installed when the addon is installed.
 
 
 ## Syntax
@@ -59,7 +59,7 @@ Use one or a combination of the `version` attributes to specify the what ranges 
 
 Add this attribute if your dependency is not strictly necessary for the base functionality.
 
-The user will be prompted on install whether they want to download these extra dependency.
+The user will be prompted on install whether they want to download these extra dependencies.
 
 Ensure your addon checks that the optional dependencies are available before using them.
 
@@ -117,7 +117,8 @@ Optional dependency on the [Curves] addon.
 ```xml
 <depend
     version_gte = '0.6.70'
-    type = 'optional'
+    optional = 'true'
+    type = 'addon'
 >Curves</depend>
 ```
 
