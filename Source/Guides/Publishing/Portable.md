@@ -23,4 +23,3 @@ This approach can be useful if you for example want to install your addon on an 
 3.  Provide the archive to your users.
 
     *Preferably with its checksum for security*
-

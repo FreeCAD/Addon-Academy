@@ -9,7 +9,7 @@ This demo shows how to extend an existing toolbar.
 
 ## Result
 
-The demo code will add a new command into the `File` 
+The demo code will add a new command into the `File`
 toolbar that when activated, will log a debug message.
 
 <img height = 30 src = './Media/Toolbar.webp' />

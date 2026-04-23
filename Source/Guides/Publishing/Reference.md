@@ -20,4 +20,3 @@ This approach is the best alternative to being Indexed as users will still be ab
 
     *The url should be in the form of:*  
     `https://<Domain>/<Account>/<Repository>`
-

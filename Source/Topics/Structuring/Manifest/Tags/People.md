@@ -4,7 +4,7 @@ layout : Default
 
 # People
 
-The `<maintainer>` & `<author>` tags specify the people working on an addon. 
+The `<maintainer>` & `<author>` tags specify the people working on an addon.
 
 
 ## General

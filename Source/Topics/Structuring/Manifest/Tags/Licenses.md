@@ -10,7 +10,7 @@ The `<license>` tag specifies the license of part or all of the content found in
 
 ## General
 
-At least one `<license>` tag has to be present inside the `<package>` tag, however multiple are common in cases where for example your code & assets use different licenses. 
+At least one `<license>` tag has to be present inside the `<package>` tag, however multiple are common in cases where for example your code & assets use different licenses.
 
 *» Check the [Manifest] of the [Template] for an example.*
 

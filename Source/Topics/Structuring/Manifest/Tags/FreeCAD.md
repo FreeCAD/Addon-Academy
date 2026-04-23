@@ -18,7 +18,7 @@ Both have to be placed inside the `<package>` tag.
 
 ### Versions
 
-New addons should use the latest version for the minimum. 
+New addons should use the latest version for the minimum.
 
 Reference the following list for the possible versions.
 
