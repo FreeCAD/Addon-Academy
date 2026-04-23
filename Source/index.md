@@ -4,14 +4,16 @@ layout : Default
 title : Addon Academy
 ---
 
-## [Guides ⁺][Guides]
+## [Guides][Guides]
+
+-   [Types of addon][Types]
 
 -   ~~Creating an addon~~
 
 -   [Publishing your addon][Publishing]
 
 
-## [Topics ⁺][Topics]
+## [Topics][Topics]
 
 -   [Addon Index]
 
@@ -20,7 +22,7 @@ title : Addon Academy
 -   [Ecosystem]
 
 
-## [Demos ⁺][Demos]
+## [Demos][Demos]
 
 -   [Add a command to an existing toolbar][Demo-Extend-Toolbar]
 
@@ -35,6 +37,7 @@ title : Addon Academy
 
 [Topics]: ./Topics
 
+[Types]: ./Topics/Types
 [Structuring]: ./Topics/Structuring
 [Addon Index]: ./Topics/Addon-Index
 [Ecosystem]: ./Topics/Ecosystem
