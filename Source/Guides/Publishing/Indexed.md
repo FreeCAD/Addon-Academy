@@ -21,7 +21,7 @@ This approach allows you to be found by new users the easiest, however it comes 
 
 ## Recommendations
 
--   You should announce your addon before submission on the [Discord], [Forum], [Reddit], .. so people try it out and you receive real usage feedback.
+-   You should announce your addon before submission on the [Discord], [Forum], [Reddit], … so people try it out and you receive real usage feedback.
 
 -   You should tag your repository with at least the `freecad` & `addon` topics to improve searchability.
 

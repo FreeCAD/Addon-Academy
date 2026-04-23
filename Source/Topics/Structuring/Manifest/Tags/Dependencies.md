@@ -22,7 +22,7 @@ For every relationship to a dependency one tag should be added to the `<package>
 
 ### Bundles
 
-Bundle addons - which use the `<bundle>` content item - list a multitude of dependencies that will be installed when the addon is installed.
+Bundle addons — which use the `<bundle>` content item — list a multitude of dependencies that will be installed when the addon is installed.
 
 
 ## Syntax
