@@ -10,8 +10,7 @@ The `<package>` tag encloses all other tags.
 
 ## General
 
-The `<package>` tag is placed at the top-level. 
-Only one can be specified per manifest / addon.
+The `<package>` tag is placed at the top-level. Only one can be specified per manifest / addon.
 
 *» Check the [Manifest] of the [Template] for an example.*
 

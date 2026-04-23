@@ -4,18 +4,15 @@ layout : Default
 
 # Version
 
-The `<version>` tag specifies 
-the version of your addon.
+The `<version>` tag specifies the version of your addon.
 
 <br/>
 
 ## General
 
-The `<version>` tag is required and has 
-to be placed inside the `<package>` tag.
+The `<version>` tag is required and has to be placed inside the `<package>` tag.
 
-It can either use [Semantic] ( `1.2.3` ) or 
-[Calender] ( `2026.01.20` ) versioning.
+It can either use [Semantic] ( `1.2.3` ) or [Calender] ( `2026.01.20` ) versioning.
 
 *» Check the [Manifest] of the [Template] for an example.*
 

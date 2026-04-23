@@ -6,8 +6,7 @@ layout : Default
 
 The following addons have been removed from the Index for various reasons.
 
-If you think of creating a new addon, have a look at this list, maybe you can 
-rework, extend or maintain an existing project instead of starting from scratch.
+If you think of creating a new addon, have a look at this list, maybe you can rework, extend or maintain an existing project instead of starting from scratch.
 
 All of the addons listed have the base reason for removal being obsolete, outdated or unmaintained, anything of note is listed in the Details column.
 

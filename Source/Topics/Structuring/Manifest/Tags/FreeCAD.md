@@ -4,15 +4,13 @@ layout : Default
 
 # FreeCAD
 
-The `<freecadmin>` & `<freecadmax>` tags specify 
-the range of FreeCAD versions your addon supports.
+The `<freecadmin>` & `<freecadmax>` tags specify the range of FreeCAD versions your addon supports.
 
 <br/>
 
 ## General
 
-The `<freecadmin>` tag is required, the `<freecadmax>`
-tag is optional and used for constraining older addon.
+The `<freecadmin>` tag is required, the `<freecadmax>` tag is optional and used for constraining older addon.
 
 Both have to be placed inside the `<package>` tag.
 

@@ -4,16 +4,13 @@ layout : Default
 
 # People
 
-The `<maintainer>` & `<author>` tags 
-specify the people working on an addon. 
+The `<maintainer>` & `<author>` tags specify the people working on an addon. 
 
 <br/>
 
 ## General
 
-At least one of each should be present in the 
-`<package>` tag, however there is no limit to 
-how many people can be credited this way.
+At least one of each should be present in the `<package>` tag, however there is no limit to how many people can be credited this way.
 
 *» Check the [Manifest] of the [Template] for an example.*
 
@@ -21,8 +18,7 @@ how many people can be credited this way.
 
 ## Syntax
 
-Specify the name of the person inside as the tag 
-value and optionally add the `email` attribute.
+Specify the name of the person inside as the tag value and optionally add the `email` attribute.
 
 ```xml
 <maintainer
@@ -38,8 +34,7 @@ value and optionally add the `email` attribute.
 
 ## Example
 
-In this example `The Progenitor` was the original author 
-of the addon and `The Descendant` took over maintainership.
+In this example `The Progenitor` was the original author of the addon and `The Descendant` took over maintainership.
 
 ```xml
 <maintainer

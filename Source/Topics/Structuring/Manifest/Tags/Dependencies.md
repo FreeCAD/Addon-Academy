@@ -4,24 +4,19 @@ layout : Default
 
 # Dependencies
 
-The `<depend>` , `<replace>` & `<conflict>` 
-tags declare the dependencies of your addon.
+The `<depend>` , `<replace>` & `<conflict>` tags declare the dependencies of your addon.
 
 <br/>
 
 ## General
 
-For every relationship to a dependency one 
-tag should be added to the `<package>` tag.
+For every relationship to a dependency one tag should be added to the `<package>` tag.
 
--   The `<depend>` tag declares a 
-    dependency your addon requires.
+-   The `<depend>` tag declares a dependency your addon requires.
 
--   The `<conflict>` tag declares that a 
-    dependency conflicts with your addon.
+-   The `<conflict>` tag declares that a dependency conflicts with your addon.
 
--   The `<replace>` tag declares that 
-    your addon replaces a dependency.
+-   The `<replace>` tag declares that your addon replaces a dependency.
 
 *» Check the [Manifest] of the [Template] for an example.*
 
@@ -29,16 +24,13 @@ tag should be added to the `<package>` tag.
 
 ### Bundles
 
-Bundle addons - which use the `<bundle>` content item - 
-list a multitude of dependencies that will be installed when 
-the the addon is installed.
+Bundle addons - which use the `<bundle>` content item - list a multitude of dependencies that will be installed when the the addon is installed.
 
 <br/>
 
 ## Syntax
 
-Set the tag value to the name of the dependency 
-and specify the type and version range you need.
+Set the tag value to the name of the dependency and specify the type and version range you need.
 
 ```xml
 <depend
@@ -64,28 +56,23 @@ and specify the type and version range you need.
 
 ### Version
 
-Use one or a combination of the `version` attributes 
-to specify the what ranges of versions you require.
+Use one or a combination of the `version` attributes to specify the what ranges of versions you require.
 
 <br/>
 
 ### Optional
 
-Add this attribute if your dependency is not 
-strictly necessary for the base functionality.
+Add this attribute if your dependency is not strictly necessary for the base functionality.
 
-The user will be prompted on install whether 
-they want to download these extra dependency.
+The user will be prompted on install whether they want to download these extra dependency.
 
-Ensure your addon checks that the optional 
-dependencies are available before using them.
+Ensure your addon checks that the optional dependencies are available before using them.
 
 <br/>
 
 ### Type
 
-Specify the `type` of the dependency, 
-this can be one of the following types:
+Specify the `type` of the dependency, this can be one of the following types:
 
 - `internal` : An internal mod like [PartDesign].
 

@@ -4,8 +4,7 @@ layout : Default
 
 # Python
 
-The `<pythonmin>` tag specifies the minimum
-version of the Python runtime your addon requires.
+The `<pythonmin>` tag specifies the minimum version of the Python runtime your addon requires.
 
 <br/>
 
@@ -20,8 +19,7 @@ to be placed inside the `<package>` tag.
 
 ### Versions
 
-Reference the following table for which versions
-of Python is available in what versions of FreeCAD.
+Reference the following table for which versions of Python is available in what versions of FreeCAD.
 
 | FreeCAD | Python |
 |:-------:|:------:|

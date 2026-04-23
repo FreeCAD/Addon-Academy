@@ -30,10 +30,8 @@ Source
 
 ## Pitfalls
 
-Toolbars don't have Ids, they are addressed only by their name, this 
-is problematic because names may change and thus break your code.
+Toolbars don't have Ids, they are addressed only by their name, this is problematic because names may change and thus break your code.
 
-Depending on the toolbar you may have to specify 
-a different names for different versions of FreeCAD.
+Depending on the toolbar you may have to specify a different names for different versions of FreeCAD.
 
 <br/>

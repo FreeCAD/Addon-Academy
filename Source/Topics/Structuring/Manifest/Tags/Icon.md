@@ -10,8 +10,7 @@ The `<icon>` tag specifies the logo of your addon.
 
 ## General
 
-The `<icon>` tag is required and has to 
-be placed inside the `<package>` tag.
+The `<icon>` tag is required and has to be placed inside the `<package>` tag.
 
 *» Check the [Manifest] of the [Template] for an example.*
 
@@ -19,8 +18,7 @@ be placed inside the `<package>` tag.
 
 ## Syntax
 
-Specify the relative path from your 
-repository root to your icon file.
+Specify the relative path from your repository root to your icon file.
 
 ```xml
 <icon>‹Path›</icon>
@@ -30,8 +28,7 @@ repository root to your icon file.
 
 ## Example
 
-The following example references the 
-[Template] repository's folder structure.
+The following example references the [Template] repository's folder structure.
 
 ```txt
 <Repository>

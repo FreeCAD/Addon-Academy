@@ -8,8 +8,7 @@ layout : Default
 
 # Meetups
 
-We hold a bi-weekly meeting on Tuesday where we give updates,
-discuss agenda topics and talk to addon authors about their concerns.
+We hold a bi-weekly meeting on Tuesday where we give updates, discuss agenda topics and talk to addon authors about their concerns.
 
 <br/>
 

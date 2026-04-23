@@ -8,15 +8,10 @@ layout : Default
 
 # Team
 
-Currently the Addons Team is comprised of 2 roles:
+The FPA-supported position `Addon Ecosystem Technical Lead` ( **AETL** ), currently held by [Mnesarco], exists to assist Addon authors, and the Addon Ecosystem as a whole. Addon authors are also welcome to reach out to anyone on the [FreeCAD Maintainers or Admin teams][Maintainers], who can help connect you with other resources in the community.
 
--   `Addon Ecosystem Technical Lead` ( **AETL** ) [Mnesarco]
-
-    *Designs the API package and the develops the launcher.*
-
-<br/>
+<!----------------------------------------------------------------------------->
 
 [Mnesarco]: https://github.com/mnesarco
-
-[Meetups]: ./Meetups
 [Contact]: ./Contact
+[Maintainers]: https://freecad.github.io/DevelopersHandbook/maintainersguide/

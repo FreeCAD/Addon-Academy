@@ -4,11 +4,7 @@ layout : Default
 
 # Manifest
 
-The addon manifest is a metadata file that contains various bits 
-of information used both for installation of the addon as well as 
-the presentation to the user in places like the Addon Manager.
-
-<br/>
+The addon manifest is a metadata file that contains various bits of information used both for installation of the addon as well as the presentation to the user in places like the Addon Manager.
 
 ## Tags
 
@@ -38,14 +34,10 @@ the presentation to the user in places like the Addon Manager.
 
 [![Button Content]][Content]
 
-<br/>
-
 ## Examples
 
 -   [Workbench]
 -   [Toolbar]
-
-<br/>
 
 <!----------------------------------------------------------------------------->
 

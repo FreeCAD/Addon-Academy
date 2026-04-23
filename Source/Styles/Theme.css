@@ -404,3 +404,15 @@ a:hover {
 a.H1:hover {
     text-decoration : none ;
 }
+
+#forkme_banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 50px 10px 10px;
+
+    background: #0090ff url('data:image/svg+xml;...') no-repeat 95% 50%;
+    color: #fff;
+    font-weight: 700;
+    z-index: 10;
+}

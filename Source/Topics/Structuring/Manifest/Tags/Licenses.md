@@ -6,16 +6,13 @@ layout : Default
 
 # Licenses
 
-The `<license>` tag specifies the license of part or all 
-of the content found in your addon / project / repository.
+The `<license>` tag specifies the license of part or all of the content found in your addon / project / repository.
 
 <br/>
 
 ## General
 
-At least one `<license>` tag has to be present inside the 
-`<package>` tag, however multiple are common in cases 
-where for example your code & assets use different licenses. 
+At least one `<license>` tag has to be present inside the `<package>` tag, however multiple are common in cases where for example your code & assets use different licenses. 
 
 *» Check the [Manifest] of the [Template] for an example.*
 
@@ -23,9 +20,7 @@ where for example your code & assets use different licenses.
 
 ## Syntax
 
-Specify the [SPDX License Identifier] as the content 
-of the `<license>` tag and the path from the root 
-to the license file in the `file` attribute.
+Specify the [SPDX License Identifier] as the content of the `<license>` tag and the path from the root to the license file in the `file` attribute.
 
 ```xml
 <license
@@ -38,18 +33,15 @@ to the license file in the `file` attribute.
 -   If no license applies i.e. `All rights reserved.` set the  
     tag's value to `UNLICENSED` and don't specify a license file.
 
--   If you use a non-standard / custom license that doesn't have a  SPDX 
-    license identifier, set the tag's value to `SEE LICENSE IN ‹File›`
+-   If you use a non-standard / custom license that doesn't have a  SPDX license identifier, set the tag's value to `SEE LICENSE IN ‹File›`
 
 <br/>
 
 ## Example
 
-The following example references the 
-[Template] repository's licensing setup.
+The following example references the [Template] repository's licensing setup.
 
-The addon has 2 licenses, a GPL license for the 
-code and a Creative Commons one for the icons.
+The addon has 2 licenses, a GPL license for the code and a Creative Commons one for the icons.
 
 ```txt
 <Repository>

@@ -10,9 +10,7 @@ Publishing your addon as repository url.
 
 ## Use Cases
 
-This approach is the best alternative to being Indexed as users
-will still be able to use the update functionality of the addon manager
-while you aren't constrained by it's guidelines.
+This approach is the best alternative to being Indexed as users will still be able to use the update functionality of the addon manager while you aren't constrained by it's guidelines.
 
 <br/>
 
