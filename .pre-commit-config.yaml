@@ -1,0 +1,16 @@
+
+repos:
+
+    -   repo : https://github.com/pre-commit/pre-commit-hooks
+        rev : v5.0.0
+
+        hooks:
+            -   id : trailing-whitespace
+                args : [ '--markdown-linebreak-ext=md,markdown' ]
+            -   id : end-of-file-fixer
+
+    -   repo : https://github.com/crate-ci/typos
+        rev : v1.45.1
+
+        hooks:
+            -   id : typos

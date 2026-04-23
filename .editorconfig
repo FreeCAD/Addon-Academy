@@ -11,7 +11,7 @@ root = true
 
 
 [*.{liquid,toml,yaml,yml,css,xml,py,md}]
-insert_final_newline = false
+insert_final_newline = true
 indent_style = space
 end_of_line = lf
 indent_size = 4

@@ -11,7 +11,7 @@ The `<version>` tag specifies the version of your addon.
 
 The `<version>` tag is required and has to be placed inside the `<package>` tag.
 
-It can either use [Semantic] ( `1.2.3` ) or [Calender] ( `2026.01.20` ) versioning.
+It can either use [Semantic] ( `1.2.3` ) or [Calendar] ( `2026.01.20` ) versioning.
 
 *» Check the [Manifest] of the [Template] for an example.*
 
@@ -36,7 +36,7 @@ Specify the version string inside.
 <version>0.2.0</version>
 ```
 
-### Calender
+### Calendar
 
 ```xml
 <version>2020.04.24</version>
@@ -50,4 +50,4 @@ Specify the version string inside.
 [Template]: https://github.com/FreeCAD/Addon-Template
 
 [Semantic]: https://semver.org
-[Calender]: https://calver.org
+[Calendar]: https://calver.org
