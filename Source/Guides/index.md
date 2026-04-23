@@ -6,6 +6,5 @@ layout : Default
 
 - [Publishing your addon][Publishing]
 
-<br/>
 
 [Publishing]: ./Publishing

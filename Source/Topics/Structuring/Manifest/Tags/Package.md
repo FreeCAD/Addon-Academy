@@ -6,7 +6,6 @@ layout : Default
 
 The `<package>` tag encloses all other tags.
 
-<br/>
 
 ## General
 
@@ -14,7 +13,6 @@ The `<package>` tag is placed at the top-level. Only one can be specified per ma
 
 *» Check the [Manifest] of the [Template] for an example.*
 
-<br/>
 
 ## Syntax
 
@@ -31,7 +29,6 @@ The values of `format` & `xmlns` are currently static.
 </package>
 ```
 
-<br/>
 
 
 [Manifest]: https://github.com/FreeCAD/Addon-Template/blob/Latest/package.xml

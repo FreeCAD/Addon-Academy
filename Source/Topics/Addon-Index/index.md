@@ -10,7 +10,6 @@ The `FreeCAD/Addons` repository is home to the metadata of the official index of
 
 It contains a list of all known addons and their sources as well as related data like what Python packages can  be installed as dependencies.
 
-<br/>
 
 <!----------------------------------------------------------------------------->
 

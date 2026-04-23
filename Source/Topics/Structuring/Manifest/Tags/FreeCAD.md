@@ -6,7 +6,6 @@ layout : Default
 
 The `<freecadmin>` & `<freecadmax>` tags specify the range of FreeCAD versions your addon supports.
 
-<br/>
 
 ## General
 
@@ -16,7 +15,6 @@ Both have to be placed inside the `<package>` tag.
 
 *» Check the [Manifest] of the [Template] for an example.*
 
-<br/>
 
 ### Versions
 
@@ -36,7 +34,6 @@ Reference the following list for the possible versions.
 -   `0.20.0`
 -   ...
 
-<br/>
 
 ## Syntax
 
@@ -47,7 +44,6 @@ Specify the version string of the FreeCAD.
 <freecadmax>‹Version›</freecadmax>
 ```
 
-<br/>
 
 ## Examples
 
@@ -59,7 +55,6 @@ A new addon created using the latest version.
 <freecadmin>1.1.0</freecadmin>
 ```
 
-<br/>
 
 ### Old Addon
 
@@ -70,7 +65,6 @@ An old addon that doesn't support new versions.
 <freecadmax>1.0.0</freecadmax>
 ```
 
-<br/>
 
 
 [Manifest]: https://github.com/FreeCAD/Addon-Template/blob/Latest/package.xml

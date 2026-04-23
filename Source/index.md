@@ -10,7 +10,6 @@ title : Addon Academy
 
 -   [Publishing your addon][Publishing]
 
-<br/>
 
 ## [Topics ⁺][Topics]
 
@@ -20,13 +19,11 @@ title : Addon Academy
 
 -   [Ecosystem]
 
-<br/>
 
 ## [Demos ⁺][Demos]
 
 -   [Add a command to an existing toolbar][Demo-Extend-Toolbar]
 
-<br/>
 
 <!----------------------------------------------------------------------------->
 

@@ -8,7 +8,6 @@ layout : Default
 
 -   [Team]
 
-<br/>
 
 [Contact]: ./Contact
 [Team]: ./Team

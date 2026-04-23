@@ -6,7 +6,6 @@ layout : Default
 
 The `<depend>` , `<replace>` & `<conflict>` tags declare the dependencies of your addon.
 
-<br/>
 
 ## General
 
@@ -20,13 +19,11 @@ For every relationship to a dependency one tag should be added to the `<package>
 
 *» Check the [Manifest] of the [Template] for an example.*
 
-<br/>
 
 ### Bundles
 
 Bundle addons - which use the `<bundle>` content item - list a multitude of dependencies that will be installed when the the addon is installed.
 
-<br/>
 
 ## Syntax
 
@@ -52,13 +49,11 @@ Set the tag value to the name of the dependency and specify the type and version
 >‹Id›</replace>
 ```
 
-<br/>
 
 ### Version
 
 Use one or a combination of the `version` attributes to specify the what ranges of versions you require.
 
-<br/>
 
 ### Optional
 
@@ -68,7 +63,6 @@ The user will be prompted on install whether they want to download these extra d
 
 Ensure your addon checks that the optional dependencies are available before using them.
 
-<br/>
 
 ### Type
 
@@ -80,7 +74,6 @@ Specify the `type` of the dependency, this can be one of the following types:
 
 - `addon` : Another addon listed on our [Index].
 
-<br/>
 
 ### Internal
 
@@ -90,11 +83,9 @@ The following `internal` mod types are available:
 `openscad` , `part` , `partdesign` , `plot` , `points` , `web` , `sketcher`  
 `reverseengineering` , `spreadsheet` , `techdraw` , `tux` , `robot`
 
-<br/>
 
 ## Examples
 
-<br/>
 
 ### Internal
 
@@ -106,7 +97,6 @@ Dependency on the internal [PartDesign] mod.
 >partdesign</depend>
 ```
 
-<br/>
 
 ### Python
 
@@ -119,7 +109,6 @@ Dependency on the [Numpy] python package.
 >numpy</depend>
 ```
 
-<br/>
 
 ### Addon
 
@@ -132,7 +121,6 @@ Optional dependency on the [Curves] addon.
 >Curves</depend>
 ```
 
-<br/>
 
 [PartDesign]: https://github.com/FreeCAD/FreeCAD/tree/main/src/Mod/PartDesign
 [Manifest]: https://github.com/FreeCAD/Addon-Template/blob/Latest/package.xml

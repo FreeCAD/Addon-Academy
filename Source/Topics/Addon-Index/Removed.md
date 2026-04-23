@@ -10,36 +10,32 @@ If you think of creating a new addon, have a look at this list, maybe you can re
 
 All of the addons listed have the base reason for removal being obsolete, outdated or unmaintained, anything of note is listed in the Details column.
 
-<br/>
-
-| Addon | Description |
-|------:|:------------|
-| [Modern UI] | Alternative toolbar layouts. <br/> *Succeeded by Ribbon UI*
-| [OSE 3D Printer] | Workbench for designing 3D printers.
-| [Glass] | Transparent tree viewer overlay. <br/> *Integrated into Core*
-| [RemBench] | Activates workbenches based on document. <br/> *Integrated into Core*
-| [GDT] | Geometric Dimensioning and Tolerancing.
-| [Help] | Help system showing relevant documentation. <br/> *Integrated into Core*
-| [BIM] | Building Information Modeling workbench. <br/> *Integrated into Core*
-| [ExtMan] | Alternative to the Addon Manager. <br/> *Succeeded by the FreeCAD Launcher*
-| [Autoload] | Automatically pre-loads workbenches. <br/> *Integrated into Core*
-| [Flamingo] | Tools to draw frames and pipelines.
-| [Timber] | Tools for framing houses.
-| [Retr3d] | Creating 3D printers from e-waste.
-| [Reconstruction] | Reconstruct models from images.
-| [Persistent Toolbars] | Restores toolbar positions. <br/> *Integrated into Core*
-| [Navigation Indicator] | Controls for the navigation style. <br/> *Integrated into Core*
-| [Cura Engine] | Integration of the Cura engine.
-| [Assembly 2] | Legacy assembly workbench.
-| [BIM Bots] | Integration with the BIMBots service. <br/> *Service doesn't exist anymore*
-| [Extreme Pro Light] | Light theme. <br/> *Integrated into Core*
-| [Extreme Pro Dark] | Dark theme. <br/> *Integrated into Core*
-| [Vendor Parts] | Unknown
-| [Geo Data] | Geographic data support.
-| [Exploded Assembly] | Explode assemblies into it's parts. <br/> *Integrated info Core*
-| [Lattice] | Tools for working with arrays of parts.
-
-<br/>
+| Addon | Details |
+|------:|:--------|
+| [Modern UI] | Alternative toolbar layouts. <br/> *Succeeded by Ribbon UI* |
+| [OSE 3D Printer] | Workbench for designing 3D printers. |
+| [Glass] | Transparent tree viewer overlay. <br/> *Integrated into Core* |
+| [RemBench] | Activates workbenches based on document. <br/> *Integrated into Core* |
+| [GDT] | Geometric Dimensioning and Tolerancing. |
+| [Help] | Help system showing relevant documentation. <br/> *Integrated into Core* |
+| [BIM] | Building Information Modeling workbench. <br/> *Integrated into Core* |
+| [ExtMan] | Alternative to the Addon Manager. <br/> *Succeeded by the FreeCAD Launcher* |
+| [Autoload] | Automatically pre-loads workbenches. <br/> *Integrated into Core* |
+| [Flamingo] | Tools to draw frames and pipelines. |
+| [Timber] | Tools for framing houses. |
+| [Retr3d] | Creating 3D printers from e-waste. |
+| [Reconstruction] | Reconstruct models from images. |
+| [Persistent Toolbars] | Restores toolbar positions. <br/> *Integrated into Core* |
+| [Navigation Indicator] | Controls for the navigation style. <br/> *Integrated into Core* |
+| [Cura Engine] | Integration of the Cura engine. |
+| [Assembly 2] | Legacy assembly workbench. |
+| [BIM Bots] | Integration with the BIMBots service. <br/> *Service doesn't exist anymore* |
+| [Extreme Pro Light] | Light theme. <br/> *Integrated into Core* |
+| [Extreme Pro Dark] | Dark theme. <br/> *Integrated into Core* |
+| [Vendor Parts] | Unknown |
+| [Geo Data] | Geographic data support. |
+| [Exploded Assembly] | Explode assemblies into it's parts. <br/> *Integrated info Core* |
+| [Lattice] | Tools for working with arrays of parts. |
 
 <!----------------------------------------------------------------------------->
 

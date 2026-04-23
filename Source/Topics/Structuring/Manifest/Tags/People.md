@@ -6,7 +6,6 @@ layout : Default
 
 The `<maintainer>` & `<author>` tags specify the people working on an addon. 
 
-<br/>
 
 ## General
 
@@ -14,7 +13,6 @@ At least one of each should be present in the `<package>` tag, however there is 
 
 *» Check the [Manifest] of the [Template] for an example.*
 
-<br/>
 
 ## Syntax
 
@@ -30,7 +28,6 @@ Specify the name of the person inside as the tag value and optionally add the `e
 >‹Name›</author>
 ```
 
-<br/>
 
 ## Example
 
@@ -48,7 +45,6 @@ In this example `The Progenitor` was the original author of the addon and `The D
 <author>The Progenitor</author>
 ```
 
-<br/>
 
 
 [Manifest]: https://github.com/FreeCAD/Addon-Template/blob/Latest/package.xml

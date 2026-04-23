@@ -6,7 +6,6 @@ layout : Default
 
 The `<pythonmin>` tag specifies the minimum version of the Python runtime your addon requires.
 
-<br/>
 
 ## General
 
@@ -15,7 +14,6 @@ to be placed inside the `<package>` tag.
 
 *» Check the [Manifest] of the [Template] for an example.*
 
-<br/>
 
 ### Versions
 
@@ -28,7 +26,6 @@ Reference the following table for which versions of Python is available in what 
 | `1.0.1` | `3.10` |
 | `1.0.0` | `3.10` |
 
-<br/>
 
 ## Syntax
 
@@ -38,7 +35,6 @@ Specify the version string of the Python runtime.
 <pythonmin>‹Version›</pythonmin>
 ```
 
-<br/>
 
 ## Example
 
@@ -46,7 +42,6 @@ Specify the version string of the Python runtime.
 <pythonmin>3.11</pythonmin>
 ```
 
-<br/>
 
 
 [Manifest]: https://github.com/FreeCAD/Addon-Template/blob/Latest/package.xml

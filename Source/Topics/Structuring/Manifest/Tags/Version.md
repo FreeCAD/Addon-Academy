@@ -6,7 +6,6 @@ layout : Default
 
 The `<version>` tag specifies the version of your addon.
 
-<br/>
 
 ## General
 
@@ -16,7 +15,6 @@ It can either use [Semantic] ( `1.2.3` ) or [Calender] ( `2026.01.20` ) versioni
 
 *» Check the [Manifest] of the [Template] for an example.*
 
-<br/>
 
 ## Syntax
 
@@ -26,7 +24,6 @@ Specify the version string inside.
 <version>‹Version›</version>
 ```
 
-<br/>
 
 ## Examples
 

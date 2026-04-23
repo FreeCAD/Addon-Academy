@@ -6,7 +6,6 @@ layout : Default
 
 Various approaches to publishing your addon.
 
-<br/>
 
 ## Approaches
 
@@ -22,7 +21,6 @@ You can publish your addon's code in a repository and share the repository url w
 
 You can publish your addon's code in a repository and have it be added to the Addon Index which lists it in the addon manager.
 
-<br/>
 
 ## Comparison
 
@@ -32,7 +30,6 @@ The `Indexed` approach is the easiest way for users to find and install your add
 
 If you are unsure about which approach might suite you best, feel free to reach out. [» Contact][Contact]
 
-<br/>
 
 ## Start
 
@@ -42,7 +39,6 @@ If you are unsure about which approach might suite you best, feel free to reach 
 
 -   [Publish your addon to the Index.][Indexed]
 
-<br/>
 
 
 [Contact]: ../../Topics/Ecosystem/Contact

@@ -6,13 +6,11 @@ layout : Default
 
 Publishing your addon to the Index.
 
-<br/>
 
 ## Use Cases
 
 This approach allows you to be found by new users the easiest, however it comes with expectations, guidelines and standards.
 
-<br/>
 
 ## Expectations
 
@@ -20,7 +18,6 @@ This approach allows you to be found by new users the easiest, however it comes 
 
 -   Your addon fulfills all of the [Qualities] of the low threshold upon being indexed and makes an effort to stay compliant with future changes.
 
-<br/>
 
 ## Recommendations
 
@@ -28,7 +25,6 @@ This approach allows you to be found by new users the easiest, however it comes 
 
 -   You should tag your repository with at least the `freecad` & `addon` topics improve searchability.
 
-<br/>
 
 ## Steps
 
@@ -40,7 +36,6 @@ This approach allows you to be found by new users the easiest, however it comes 
 
 0.  Open an issue for `Addon - Addition` on the [Addon Index].
 
-<br/>
 
 ## Review
 
@@ -48,7 +43,6 @@ In the review process your addon will be checked for compliance with the require
 
 Once it's in compliance you will be asked to make a new release / tag, after which your addon is added to the Index and after a day or so the addition should be reflected in the addon manager.
 
-<br/>
 
 <!----------------------------------------------------------------------------->
 

@@ -56,8 +56,8 @@ The addon manifest is a metadata file that contains various bits of information 
 [Python]: ./Tags/Python
 [People]: ./Tags/People
 [Icon]: ./Tags/Icon
-[Tag]: ./Tags/Tag
-[Url]: ./Tags/Url
+[Tag]: ./Tags/Tags
+[Url]: ./Tags/Urls
 
 <!----------------------------------------------------------------------------->
 

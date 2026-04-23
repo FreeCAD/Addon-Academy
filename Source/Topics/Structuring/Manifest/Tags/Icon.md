@@ -6,7 +6,6 @@ layout : Default
 
 The `<icon>` tag specifies the logo of your addon.
 
-<br/>
 
 ## General
 
@@ -14,7 +13,6 @@ The `<icon>` tag is required and has to be placed inside the `<package>` tag.
 
 *» Check the [Manifest] of the [Template] for an example.*
 
-<br/>
 
 ## Syntax
 
@@ -24,7 +22,6 @@ Specify the relative path from your repository root to your icon file.
 <icon>‹Path›</icon>
 ```
 
-<br/>
 
 ## Example
 
@@ -45,7 +42,6 @@ The resulting `<icon>` tag would be:
 <icon>freecad/Minimal/Resources/Icons/Logo.svg</icon>
 ```
 
-<br/>
 
 
 [Manifest]: https://github.com/FreeCAD/Addon-Template/blob/Latest/package.xml

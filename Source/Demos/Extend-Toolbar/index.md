@@ -6,7 +6,6 @@ layout : Default
 
 This demo shows how to extend an existing toolbar.
 
-<br/>
 
 ## Result
 
@@ -15,7 +14,6 @@ toolbar that when activated, will log a debug message.
 
 <img height = 30 src = './Media/Toolbar.webp' />
 
-<br/>
 
 ## Code
 
@@ -26,12 +24,9 @@ Source
 └─ Command.py       - Command that logs a message on activation.
 ```
 
-<br/>
 
 ## Pitfalls
 
 Toolbars don't have Ids, they are addressed only by their name, this is problematic because names may change and thus break your code.
 
 Depending on the toolbar you may have to specify a different names for different versions of FreeCAD.
-
-<br/>

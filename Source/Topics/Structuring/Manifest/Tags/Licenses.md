@@ -2,13 +2,11 @@
 layout : Default
 ---
 
-<br/>
 
 # Licenses
 
 The `<license>` tag specifies the license of part or all of the content found in your addon / project / repository.
 
-<br/>
 
 ## General
 
@@ -16,7 +14,6 @@ At least one `<license>` tag has to be present inside the `<package>` tag, howev
 
 *» Check the [Manifest] of the [Template] for an example.*
 
-<br/>
 
 ## Syntax
 
@@ -35,7 +32,6 @@ Specify the [SPDX License Identifier] as the content of the `<license>` tag and 
 
 -   If you use a non-standard / custom license that doesn't have a  SPDX license identifier, set the tag's value to `SEE LICENSE IN ‹File›`
 
-<br/>
 
 ## Example
 
@@ -59,7 +55,6 @@ The addon has 2 licenses, a GPL license for the code and a Creative Commons one 
 >CC-BY-SA-4.0</license>
 ```
 
-<br/>
 
 
 [SPDX License Identifier]: https://spdx.org/licenses

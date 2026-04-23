@@ -6,13 +6,11 @@ layout : Default
 
 Publishing your addon as repository url.
 
-<br/>
 
 ## Use Cases
 
 This approach is the best alternative to being Indexed as users will still be able to use the update functionality of the addon manager while you aren't constrained by it's guidelines.
 
-<br/>
 
 ## Steps
 
@@ -23,4 +21,3 @@ This approach is the best alternative to being Indexed as users will still be ab
     *The url should be in the form of:*  
     `https://<Domain>/<Account>/<Repsitory>`
 
-<br/>

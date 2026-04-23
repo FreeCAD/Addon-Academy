@@ -10,7 +10,6 @@ layout : Default
 
 We hold a bi-weekly meeting on Tuesday where we give updates, discuss agenda topics and talk to addon authors about their concerns.
 
-<br/>
 
 ## Links
 
@@ -20,7 +19,6 @@ We hold a bi-weekly meeting on Tuesday where we give updates, discuss agenda top
 
 -   [Agenda]
 
-<br/>
 
 [Schedule]: https://www.freecad.org/events.php
 [Meeting]: https://meet.jit.si/FreeCAD-Addon-Development
