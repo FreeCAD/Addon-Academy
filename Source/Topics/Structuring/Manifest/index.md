@@ -225,21 +225,21 @@ Provided for convenience to other tools, any number of other files may be listed
 
 A Uniform Resource Locator for the package's website, bug tracker, source repository, zip download link, readme file, or documentation (as specified by the `type` attribute, see below).
 
-When specifying the `readme` type, a direct link to a rendered version of the README should be provided. For example, on GitHub, this is a `blob`-type link such as `https://github.com/FreeCAD/FreeCAD-addons/blob/master/README.md`, or on a GitLab instance, `https://gitlab.com/opensimproject/cfdof/-/blob/master/README.md` (note the slightly different URL format between the two).
+When specifying the `readme` type, a raw link to a plain Markdown version of the README should be provided. For example, on GitHub, this is a `raw`-type link such as `https://github.com/FreeCAD/Addons/raw/main/README.md`, or on a GitLab instance, `https://gitlab.com/opensimproject/cfdof/-/raw/master/README.md` (note the slightly different URL format between the two).
 
 It is a good idea to include `<url>` tags pointing users to your package's online resources. The website is commonly a wiki page on `wiki.freecad.org` where users can find and update information about the package, for example. The Addon Manager lists these URLs and provides clickable links to them in the package description.
 
 #### Attributes
 
 -   `type="TYPE"` (required): The type should be one of the following identifiers: `website`, `bugtracker`, `repository`, `readme`, `documentation`, or `discussion`.
--   `branch="BRANCH"` (required for `type="repository"`): The name of the branch to check out to obtain this package. Typically the name of your main development branch. May also specify any other type of git reference, e.g. a tag or specific commit.
+-   `branch="BRANCH"` (required for `type="repository"`): The name of the branch to check out to obtain this package. Must correspond to the branch or tag that this package.xml file lives on.
 
 
 ### `<author>` {#author}
 
 **Multiple allowed**
 
-The name of a person who is an author of the package, as acknowledgement of their work and for questions.
+The name of a person who is an author of the package, as acknowledgement of their work and potentially for questions.
 
 #### Attributes
 
@@ -264,11 +264,11 @@ All dependencies and relationships may restrict their applicability to particula
 -   `version_gte="VERSION"` (optional): The dependency to the package is restricted to versions greater or equal than the stated version number.
 -   `version_gt="VERSION"` (optional): The dependency to the package is restricted to versions greater than the stated version number.
 -   `optional="true|false"`: If `optional` is `true`, then the dependency is treated as optional when the Addon is installed using the Addon Manager. In general this means that a failure to install the dependency does not prevent the Addon from installing, and the user may be prompted about whether they want to install it.
--   `type="automatic|addon|internal|python"`: Optional, defaults to `automatic`. Indicates what this dependency statement refers to. `addon` is for external addons, `internal` is for internal workbenches and `python` indicates a Python package dependency.
+-   `type="automatic|addon|internal|python"`: Optional, defaults to `automatic`. Indicates what this dependency statement refers to. `addon` is for external addons, `internal` is for internal workbenches and `python` indicates a Python package dependency. Including the specific `type` is strongly recommended to ensure the correct dependency is identified.
 
 ##### Type: internal
 
-The following internal workbench types are available:
+The following internal workbenches are available as dependencies (that is, if a user has a version of FreeCAD without one of these workbenches, typically because they self-compiled, you can prevent installation of your addon by declaring a dependency on it):
 
 -   `assembly`
 -   `bim`
