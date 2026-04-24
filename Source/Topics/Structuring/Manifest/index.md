@@ -10,7 +10,7 @@ Addons should be distributed with a manifest file describing their contents. Fre
 ## Contents
 
 * TOC
-{:toc levels="2..3"}
+{:toc}
 
 
 ## Overall file format
@@ -72,7 +72,7 @@ The following tags must be present in the `<package>` element:
 
 **REQUIRED**
 
-The name of this package. Must only contain characters that are valid for filenames (disallowed characters are `/\?%*:|"<>` and space).
+The displayed name of this package. Must only contain characters that are valid for filenames (disallowed characters are `/\?%*:|"<>`). Does *not* have to match the name of the repository. Serves as the canonical name of the Addon when another Addon declares it as a dependency.
 
 
 ### `<version>` {#version}
