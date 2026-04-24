@@ -6,20 +6,20 @@ title : Addon Academy
 
 ## [Guides][Guides]
 
--   [Types of addon][Types]
-
--   ~~Creating an addon~~
+-   [Creating an addon][Creating]
 
 -   [Publishing your addon][Publishing]
 
 
 ## [Topics][Topics]
 
+-   [Types of addon][Types]
+
 -   [Addon Index]
 
--   [Structuring]
+-   [Structure of an Addon][Structuring]
 
--   [Ecosystem]
+-   [Addon Ecosystem][Ecosystem]
 
 
 ## [Demos][Demos]
@@ -31,6 +31,7 @@ title : Addon Academy
 
 [Guides]: ./Guides
 
+[Creating]: ./Guides/Creating
 [Publishing]: ./Guides/Publishing
 
 <!----------------------------------------------------------------------------->
