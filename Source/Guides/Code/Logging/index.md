@@ -50,7 +50,7 @@ FreeCAD.Console.PrintError(f"Failed to parse file {path}: {exc}\n")
 Console output is for *developers* --- you, and users who are actively troubleshooting a problem --- not for the general user. In particular:
 
 -   **Do not use `PrintMessage` or `PrintError` to communicate important decisions or results to the user.** Many users never open the Report view, and even those who do may have it disabled or hidden during normal work. And it's noisy. FreeCAD's developers have not always been as judicious in their use of these warnings as users might prefer. If a serious error has occurred, that should be communicated via a dedicate GUI element, not buried in the incomprehensible text stream of the Report View.
--   **Logging strings are typically not translated.** Writing log output in English is the norm in FreeCAD. As a general rule the Console is is not translated, whereas strings displayed in dialogs *are*.
+-   **Logging strings are typically not translated.** Writing log output in English is the norm in FreeCAD. As a general rule the Console is not translated, whereas strings displayed in dialogs *are*.
 
 For user-visible feedback, e.g. "Are you sure?", "File saved", "This operation requires a selected face", etc., your addon should use Qt's dialog classes. `QMessageBox` provides ready-made information / warning / critical / question dialogs, and these *should* be translated.
 
@@ -74,11 +74,5 @@ FreeCADGui.getMainWindow().statusBar().showMessage(
     translate("MyAddon", "Recomputing..."), 3000  # milliseconds
 )
 ```
-
-
-## Python's `logging` module
-
-Python's standard-library `logging` module works inside FreeCAD and is useful for addons that also run outside of it (headless tooling, test suites). Its output does *not* automatically appear in the Report view, so if you want both audiences, install a custom handler that forwards records to `FreeCAD.Console`.
-
 
 [Translations]: ../Translations
