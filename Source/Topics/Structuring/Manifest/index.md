@@ -334,11 +334,6 @@ The maximum version of FreeCAD required to use package/element, as a semantic ve
 The minimum version of Python required to use package/element, as a semantic version 2.0 string in the format `MAJOR.MINOR`. The Addon Manager will not permit an Addon to be installed on a system running a version of Python before this one. Only Python 3.x versions are supported. Although you may specify a three-component version, only the minor number is considered during the compatibility check.
 
 
-## Quick guide
-
-For a quick guide on how to create a basic `package.xml` file and add a workbench to the [Addon Manager][AddonManager], see [Add Workbench to Addon Manager][AddWorkbench].
-
-
 ## Examples
 
 Note that comments (the text between `<!--` and `-->`) are ignored by the XML parser, and are not a required part of the file format. They are provided here for information purposes and may be omitted from the final `package.xml` if desired.
@@ -352,13 +347,13 @@ A simple workbench-only package (for example, to add a metadata file to a packag
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <package format="1" xmlns="https://wiki.freecad.org/Package_Metadata">
   <name>Legacy Workbench</name> <!-- What the Addon Manager displays to users -->
-  <description>Text that the Addon Manager shows for the Addon. Any length, but remember that Addon Manager's compact view only shows the first sentence or so.</description>
-  <version>1.0.1</version> <!-- Semantic versioning (1.2.3-beta) or CalVer-based, (2022.01.07), don't omit or non-git installations won't see your updates -->
+  <description>Text that the Addon Manager shows for the Addon. Remember that Addon Manager's compact view only shows the first sentence or so.</description>
+  <version>1.0.1</version> <!-- Semantic versioning (1.2.3-beta) or CalVer-based, (2022.01.07) -->
   <date>2022-01-07</date> <!-- Date of the last update to the version number -->
   <maintainer email="your_address@null.com">Your Name</maintainer>
   <license file="LICENSE">LGPL-2.1-or-later</license> <!-- Make sure you actually have this file in your Addon repo if the license requires it -->
   <url type="repository" branch="main">https://github.com/chennes/FreeCAD-Package</url> <!-- Don't forget to update the branch name here -->
-  <url type="readme">https://github.com/chennes/FreeCAD-Package/blob/main/README.md</url> <!-- Link to the HTML-rendered README page -->
+  <url type="readme">https://github.com/chennes/FreeCAD-Package/raw/main/README.md</url> <!-- Link to the README markdown document -->
   <icon>Resources/icons/PackageIcon.svg</icon> <!-- If you include your icon here, you don't have to submit it to the main FreeCAD repo -->
 
   <content>
@@ -473,7 +468,6 @@ A `package.xml` for an addon that uses the `<other/>` content type to ship a too
 
 [AddonManager]: https://wiki.freecad.org/Std_AddonMgr
 [AddonCatalog]: https://github.com/FreeCAD/FreeCAD-addons/blob/master/AddonCatalog.json
-[AddWorkbench]: https://wiki.freecad.org/Add_Workbench_to_Addon_Manager
 [REP149]: https://ros.org/reps/rep-0149.html
 [SemVer]: https://semver.org
 [CalVer]: https://calver.org/
