@@ -13,16 +13,17 @@ This page walks through the pattern, using the [SheetMetal workbench][SheetMetal
 
 Every preferences page is made up of three components:
 
-1.  **A Qt Designer `.ui` file** describing the page layout, using `Gui::Pref*` widgets for every value you want persisted.
-2.  **A registration call** in `init_gui.py` that tells FreeCAD about the `.ui` file.
+1.  **A Qt Designer `.ui` file** describing the page layout, using `Gui::Pref*` widgets for every value you want saved into the FreeCAD parameter system.
+2.  **A registration call** in `init_gui.py` that tells FreeCAD where to find the `.ui` file for the preference page.
 3.  **Python code that reads the stored values** when your addon needs them.
 
-FreeCAD handles the save and restore automatically: no code is needed to write a value when the user clicks *OK* or to read the initial value when the preferences dialog opens.
+FreeCAD handles the save and restore automatically as long as you use the `Gui::*` widgets described below. No code is needed to write a value when the user clicks *OK*/*Apply*, or to read the initial value when the preferences dialog opens.
 
 
 ## Designing the `.ui` form
 
-Create the preferences page as a standard Qt Designer form. For every value the user should configure, drop in a widget from FreeCAD's `Gui::Pref*` family instead of the corresponding plain Qt widget. The most common ones are `Gui::PrefCheckBox`, `Gui::PrefComboBox`, `Gui::PrefSpinBox`, `Gui::PrefDoubleSpinBox`, `Gui::PrefLineEdit`, and `Gui::PrefColorButton`; the full set mirrors Qt's basic input widgets.
+Create the preferences page as a standard Qt Designer form. For every value the user should configure, usse a widget from FreeCAD's `Gui::Pref*` family instead of the corresponding plain Qt widget. The most common ones are `Gui::PrefCheckBox`, `Gui::PrefComboBox`, `Gui::PrefSpinBox`, `Gui::PrefDoubleSpinBox`, `Gui::PrefLineEdit`, and `Gui::PrefColorButton`; the full set mirrors Qt's basic input widgets. **NOTE:** To use the `Gui::Pref*` widgets directly in Qt Designer you will need to install FreeCAD's Designer plugin. As an alternative you can edit the `.ui` XML by hand after saving the original using the basic Qt widget set.
+
 
 Each `Gui::Pref*` widget has two custom properties that control how it's persisted:
 
@@ -44,8 +45,6 @@ Set both on every `Gui::Pref*` widget you add. For example, a combo box in Sheet
 ```
 
 When the preferences dialog opens, FreeCAD reads the stored value (from `User parameter:BaseApp/Preferences/Mod/SheetMetal/EngineeringUXMode` in that example) and populates the widget; when the user clicks *OK*, the widget's current value is written back.
-
-**NOTE:** To use the `Gui::Pref*` widgets directly in Qt Designer you will need to install FreeCAD's Designer plugin. As an alternative you can edit the `.ui` XML by hand after saving the original using the basic Qt widget set.
 
 SheetMetal's [`Resources/panels/SMprefs.ui`][SMprefsUI] is a complete, representative example of a FreeCAD preferences form.
 
