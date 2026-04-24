@@ -1,7 +1,0 @@
----
-layout : Default
----
-
-# Content
-
-TBD
