@@ -64,16 +64,16 @@ from urllib.request import Request, urlopen, urlretrieve
 
 
 # =============================================================================
-# CONFIGURATION — edit these constants for your addon
+# CONFIGURATION --- edit these constants for your addon
 # =============================================================================
 
 # The name of your addon as it appears on Crowdin.
 CROWDIN_PROJECT_NAME = "YourAddon"
 
-# The filename of your master .ts source file (typically <addon-name>.ts).
+# The filename of your primary .ts source file (typically <addon-name>.ts).
 CROWDIN_FILE_NAME = f"{CROWDIN_PROJECT_NAME}.ts"
 
-# Minimum translation ratio (0.0–1.0) a language must reach before a .qm
+# Minimum translation ratio (0.0->1.0) a language must reach before a .qm
 # file will be produced for it. This prevents shipping mostly-untranslated
 # languages where users would see inconsistent mixes of their language
 # and English.
@@ -83,7 +83,7 @@ MIN_TRANSLATION_THRESHOLD = 0.5
 # Dot-directories (.git, .venv, etc.) are skipped automatically.
 SKIP_DIRS = ["__pycache__", "build", "dist"]
 
-# Crowdin project identifier. Rarely changes — stays "freecad-addons" for
+# Crowdin project identifier. Rarely changes - stays "freecad-addons" for
 # addons hosted on the shared FreeCAD addons Crowdin project.
 CROWDIN_API_PROJECT_ID = "freecad-addons"
 
