@@ -4,7 +4,7 @@ layout : Default
 
 # Code
 
-*Work in progress.* Guides for writing the code inside a FreeCAD addon.
+Guides for writing the code inside a FreeCAD addon. For complete runnable examples that exercise these patterns end to end, see the [Demos][Demos].
 
 -   [Workbench registration][Workbench]
 -   [Gui Commands][Commands]
@@ -24,3 +24,5 @@ layout : Default
 [Icons]: ./Icons
 [Translations]: ./Translations
 [Logging]: ./Logging
+
+[Demos]: ../../Demos
