@@ -1,0 +1,48 @@
+# Vexorg.FCMacro
+#
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileNotice: Part of the Addon Academy "Macro" demo.
+
+"""Vexorg, dread overlord of the Yard, files a daily report on the chickens
+devoured and cats destroyed under Vexorg's reign.
+
+This macro demonstrates the minimum useful FreeCAD macro: a single .FCMacro
+file that runs top-to-bottom when invoked from the Macros dialog.
+"""
+
+import random
+
+import FreeCAD
+import FreeCADGui
+from PySide import QtWidgets
+
+
+__title__   = "Vexorg"
+__author__  = "Addon Academy"
+__version__ = "0.1.0"
+__date__    = "2026-04-24"
+__license__ = "CC0-1.0"
+
+
+# Today's tally of Vexorg's misdeeds.
+cats_destroyed    = random.randint(1, 12)
+chickens_devoured = random.randint(20, 144)
+terror_inflicted  = cats_destroyed * 7 + chickens_devoured * 3
+
+
+# Log to the Report view for posterity.
+FreeCAD.Console.PrintMessage("=== Vexorg's daily report ===\n")
+FreeCAD.Console.PrintMessage(f"Cats destroyed:    {cats_destroyed}\n")
+FreeCAD.Console.PrintMessage(f"Chickens devoured: {chickens_devoured}\n")
+FreeCAD.Console.PrintMessage(f"Terror inflicted:  {terror_inflicted} units\n")
+
+
+# Confront the user with the tally.
+QtWidgets.QMessageBox.information(
+    FreeCADGui.getMainWindow(),
+    "Vexorg's daily report",
+    f"Today, Vexorg has destroyed {cats_destroyed} cats and devoured "
+    f"{chickens_devoured} chickens.\n\n"
+    f"Total terror inflicted: {terror_inflicted} units.\n\n"
+    f"Vexorg is, on the whole, satisfied."
+)

@@ -216,7 +216,7 @@ then the `package.xml` file expects:
 
 **Optional**
 
-Provided for convenience to other tools, any number of other files may be listed here. Their use depends on the type of content. In a macro content item, each file entry is a single macro, and will be linked into the user's Macros installation directory by the [Addon Manager][AddonManager].
+Provided for convenience to other tools, any number of other files may be listed here. Their use depends on the type of content. In a macro content item, each file entry is a single macro, and will be copied into the user's Macros installation directory by the [Addon Manager][AddonManager].
 
 
 ### `<url>` {#url}
