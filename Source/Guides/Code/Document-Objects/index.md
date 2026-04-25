@@ -254,7 +254,7 @@ See [Data & schema migrations][Migrations] for more information.
 
 ## See also
 
--   [Parametric Feature demo][DemoParam]: a complete runnable `FeaturePython` example. *(Stub at time of writing.)*
+-   [Parametric Feature demo][DemoParam]: a complete runnable `FeaturePython` example.
 -   [Gui Commands][Commands]: how a command creates a document object from the user's action.
 -   [Translations][Translations]: wrapping property descriptions for translation.
 -   [Data & schema migrations][Migrations]: evolving your document-object schema across addon releases.
