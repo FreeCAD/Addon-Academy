@@ -40,17 +40,65 @@ Practical guidance:
 -   **Pick words a user would actually search for.** Names that only mean something inside your project (a project codename, your username) will never appear in a real search. Domain and function words will.
 -   **Use established terms when they exist.** Tagging your addon `fem` rather than `finite-element-method` places it next to the other addons in that space, where users browsing by tag can find it.
 -   **Use lowercase.** The tag system is broadly case-insensitive in practice, but real addons mostly use lowercase, and that is what most filter UIs display.
--   **Keep the count reasonable.** Three to seven tags covers almost every addon. Longer lists dilute the signal of any individual tag.
+-   **Keep the count reasonable.** Three to seven tags covers almost every addon. Longer lists dilute the usefulness of any individual tag.
 -   **Skip noise.** Year numbers (`2024`), status markers (`beta`, `wip`), your own name, and made-up words add nothing to discoverability and clutter the shared tag pool.
 
-## More? 
+## Screenshots and media
 
-**Planned scope:**
+Visual examples carry significant weight in the Addon Manager. A single well-chosen screenshot communicates more than several paragraphs of text in the seconds a user spends deciding whether to install.
 
--   Writing a searchable, concise, user-facing `<description>`.
--   Choosing `<tag>` values that match how users search.
--   Screenshot conventions in the README vs the overview page.
--   GitHub repository topics (`freecad`, `addon`, workbench-specific).
+**Format.** Use PNG for screenshots; the format handles UI text and high-contrast elements without compression artifacts. Use GIF for short workflow animations, kept under several seconds and several megabytes. Avoid JPEG for screenshots: visible compression artifacts on text and on UI edges. Avoid WebP entirely: the Qt plugin that decodes it is not universally present in FreeCAD installations.
+
+**Location.** The recommended path is `Resources/Media/` at the repository root, matching the convention that the [Overview][Overview] page uses. The wider ecosystem is not strict about this path; consistency within a single repository matters more than alignment with any one location.
+
+**Reference style.** Images displayed in the Addon Manager must be referenced by absolute URL. The Addon Manager fetches the markdown over HTTP and resolves relative paths against the URL it fetched, which generally does not produce a working link to the image. The canonical form for GitHub-hosted images is:
+
+```
+![Toolbar layout](https://raw.githubusercontent.com/<account>/<repo>/<branch>/Resources/Media/toolbar.png)
+```
+
+Avoid two patterns that appear in some existing addons:
+
+-   **Blob URLs with a `?raw=true` query parameter.** They render unreliably across markdown engines.
+-   **`user-images.githubusercontent.com` URLs from GitHub's drag-and-drop uploader.** These are tied to an upload session rather than to your repository, and a future GitHub policy change could orphan them.
+
+For images displayed only in the repository's `README.md` rather than in the Addon Manager, both relative and absolute URLs work. Using the same absolute-URL convention throughout is the simplest way to keep the Overview and the README consistent.
+
+**Sizing.** The Addon Manager panel is typically 400 to 600 pixels wide on default layouts. Source images at approximately 1024 pixels wide downscale cleanly and remain legible. Significantly wider images scroll horizontally rather than fitting the panel.
+
+For animated demonstrations, the same width applies. Reduce frame rate or duration before reducing dimensions; a smaller image that conveys the workflow is more useful than a large image that is too heavy to render smoothly.
+
+**Naming.** Descriptive, lowercase, hyphenated filenames produce readable file trees and useful `<img alt>` fallback text:
+
+```
+command-toolbar.png
+parametric-feature-demo.gif
+preferences-dialog.png
+```
+
+Numeric or sequential names (`1.png`, `screenshot.png`) carry no information and produce no useful alternate text.
+
+**Content.** The first image at the top of the Overview should be a single illustrative screenshot conveying what the addon does. Subsequent images should show the addon in context: a toolbar visible alongside the workbench selector, a property panel populated with realistic values. Avoid screenshots that capture rapidly-changing parts of FreeCAD's core UI (the main toolbar layout, theme defaults), as such images age visibly and reduce the perceived freshness of the Overview.
+
+
+## GitHub repository topics
+
+Repository topics on GitHub or Codeberg are distinct from the manifest's `<tag>` elements. Topics influence search and discovery on the git host itself, not in the Addon Manager. They are set on the repository's web UI (the gear icon in the "About" panel on GitHub).
+
+Two topics every FreeCAD addon repository should set:
+
+-   `freecad`
+-   `addon`
+
+Together these support cross-host queries such as `topic:freecad topic:addon`. This is the path through which addons are discovered outside the official Index, both by contributors looking for projects to assist and by users browsing the git host directly.
+
+Beyond these, three to five additional topics describing the addon's domain, specific technologies, or workflow are appropriate:
+
+-   **Domain.** `assembly`, `cam`, `fem`, `architecture`, `electrical`, `sheetmetal`.
+-   **Technology.** `gcode`, `step`, `kicad`, `gridfinity`, `python`.
+-   **Workflow.** `parametric`, `import`, `export`, `simulation`.
+
+Five or six topics in total is generally sufficient. As with manifest tags, topics work best when they match terms users actually search for, and lose value when padded with vanity entries or year numbers.
 
 [Overview]: ../Overview-Page
 
