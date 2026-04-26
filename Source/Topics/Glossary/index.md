@@ -22,11 +22,11 @@ layout : Default
 
 **Group**: A container that holds a collection of DocumentObjects, primarily for tree organization.
 
-**Gui Command**: A user-invokable action, usually bound to a toolbar button or menu item. Registered with `FreeCADGui.addCommand()` and referenced by name elsewhere.
+**Gui Command**: A user-invocable action, usually bound to a toolbar button or menu item. Registered with `FreeCADGui.addCommand()` and referenced by name elsewhere.
 
 **Link**: An `App::Link` object that references another DocumentObject (in the same or a different document) without copying its geometry. The basis of assembly re-use.
 
-**Macro**: Formally any `.FCMacro` file. Usually a small, simgle-file Addon that adds a one-off tool or automation. The line between Macro and Workbench is blurry.
+**Macro**: Formally any `.FCMacro` file. Usually a small, single-file Addon that adds a one-off tool or automation. The line between Macro and Workbench is blurry.
 
 **Mesh**: A polygonal surface representation (`Mesh::Feature`), as distinct from a BRep Shape.
 
@@ -50,7 +50,7 @@ layout : Default
 
 **Theme**: A stylesheet + icon set that changes FreeCAD's appearance. Distributed as a preference pack with a `<type>Theme</type>` tag, which has special meaning within FreeCAD's preferences system.
 
-**Topological naming**: The problem (and proposed solutions) of stably identifying a topological element like an edge or face across feature edits. An ongoing engineering topic in FreeCAD. The Topoligical Naming Problem ("TNP") is an often-referenced challenge in parametric CAD.
+**Topological naming**: The problem (and proposed solutions) of stably identifying a topological element like an edge or face across feature edits. An ongoing engineering topic in FreeCAD. The Topological Naming Problem ("TNP") is an often-referenced challenge in parametric CAD.
 
 **Touched**: A flag set on a DocumentObject when one of its inputs has changed, scheduling it for the next recompute.
 
@@ -113,7 +113,7 @@ layout : Default
 
 **pyproject.toml**: The standard Python project metadata file ([PEP 517][PEP517] / [PEP 621][PEP621]).
 
-**PySide / PySide6**: Official Python bindings for Qt. Addon GUI code should import from these (via FreeCAD's wrappers) rather than from PyQt. FreeCAD provides wrappers that insulate Addon developers from needing to update their addon to accomodate new major versions of Qt by using `import PySide` rather than, e.g. `import PySide6`.
+**PySide / PySide6**: Official Python bindings for Qt. Addon GUI code should import from these (via FreeCAD's wrappers) rather than from PyQt. FreeCAD provides wrappers that insulate Addon developers from needing to update their addon to accommodate new major versions of Qt by using `import PySide` rather than, e.g. `import PySide6`.
 
 **Qt**: The cross-platform application framework FreeCAD's GUI is built on.
 

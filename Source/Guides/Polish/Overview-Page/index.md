@@ -57,7 +57,7 @@ Notably absent: `<script>`, `<iframe>`, `<form>` and any of its input controls, 
 
 ## Recommended structure
 
-A good Overview begins with a basic description of your Addon's purpose. Since it's targetted at Addon Manager users there's no need for installation instructions (if they've already gotten as far into the Addon Manager to read your overview, they can figure out how to click the "Install" button). As a second section, consider some screenshots to give users a better idea of what it's going to look like. Finally, consider including some basic "Quick Start"-style documentation. This document is generally not going to be a primary reference, but you want to get your users oriented as quickly as possible.
+A good Overview begins with a basic description of your Addon's purpose. Since it's targeted at Addon Manager users there's no need for installation instructions (if they've already gotten as far into the Addon Manager to read your overview, they can figure out how to click the "Install" button). As a second section, consider some screenshots to give users a better idea of what it's going to look like. Finally, consider including some basic "Quick Start"-style documentation. This document is generally not going to be a primary reference, but you want to get your users oriented as quickly as possible.
 
 
 [Manifest]: ../../../Topics/Structuring/Manifest

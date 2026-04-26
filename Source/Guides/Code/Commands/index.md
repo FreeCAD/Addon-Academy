@@ -4,7 +4,7 @@ layout : Default
 
 # Gui Commands
 
-A Command is a single user-invokable action, bound to a toolbar button, menu item, context-menu entry, or keyboard shortcut. Commands are the granular building blocks of an addon's user interface; a [Workbench][Workbench] bundles them into toolbars and menus. This page covers how to write and register a command.
+A Command is a single user-invocable action, bound to a toolbar button, menu item, context-menu entry, or keyboard shortcut. Commands are the granular building blocks of an addon's user interface; a [Workbench][Workbench] bundles them into toolbars and menus. This page covers how to write and register a command.
 
 For a complete working example, see the [Minimal Workbench demo][MinimalWB].
 

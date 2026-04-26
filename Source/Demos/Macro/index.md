@@ -48,7 +48,7 @@ Source: [`Vexorg.FCMacro`][Source-macro]
 
 ## Trying it out
 
-1.  The Addon Manager does most of the work when installing a macro. To simulate its work, simply copy the macro into your user macro directory. You can als copy the addon directory into the FreeCAD user `Mod/` directory, but it won't do anything special.
+1.  The Addon Manager does most of the work when installing a macro. To simulate its work, simply copy the macro into your user macro directory. You can also copy the addon directory into the FreeCAD user `Mod/` directory, but it won't do anything special.
 2.  Restart FreeCAD.
 3.  Open **Macro → Macros…**. The Vexorg macro appears in the list.
 4.  Select it and click **Execute**.
