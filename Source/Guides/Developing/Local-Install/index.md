@@ -112,4 +112,3 @@ Preferences stored under `User parameter:BaseApp/Preferences/Mod/MyAddon` are no
 
 
 [MinimalWB]: ../../../Demos/Minimal-Workbench
-[ManifestValidation]: ../../../Topics/Structuring/Manifest#validation

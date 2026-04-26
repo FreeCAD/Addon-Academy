@@ -119,7 +119,7 @@ FreeCADGui.__unit_test__ += [
 
 ### Running your tests on the command line
 
-Once your tests are registered, FreeCAD can run them from the command line and exit with a status code suitable for use in CI. The headless build, `freecadcmd`, is the right choice for tests that do not need the GUI:
+Once your tests are registered, FreeCAD can run them from the command line and exit with a status code suitable for use in CI. The headless build, `freecadcmd`, is the appropriate option for tests that do not need the GUI:
 
 ```
 freecadcmd --run-test 0

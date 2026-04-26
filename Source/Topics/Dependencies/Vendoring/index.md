@@ -124,7 +124,7 @@ Vendored code freezes at the version you ship. Each subsequent upstream release,
 -   **Pin the upstream version explicitly** in `_vendor/README.md` so a future maintainer (or you, in a year) can compare against current upstream.
 -   **Watch the upstream repository** for releases, especially security advisories.
 -   **Avoid modifying the vendored code.** A clean copy is easy to update; a heavily-patched copy means every upstream update requires re-applying patches.
--   **Re-evaluate periodically** whether vendoring is still the right choice. If the package has since been added to the allow-list, switch.
+-   **Re-evaluate periodically** whether vendoring is still appropriate. If the package has since been added to the allow-list, switch.
 
 
 ## See also

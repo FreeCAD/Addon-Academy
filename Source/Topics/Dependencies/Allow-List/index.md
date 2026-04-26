@@ -58,7 +58,7 @@ The Addon Manager will not automatically install a Python package that is not on
 -   Users who already have the package installed in FreeCAD's Python environment will see the addon work normally.
 -   Users who do not have the package will see the dependency flagged as unavailable. They can install it manually through their system's Python package manager, but this is awkward and error-prone, and often not an option for users who are not comfortable at a command line.
 
-If your addon requires a Python package that is not on the allow-list, most users will not be able to install the addon successfully. Getting the package added is usually the right path. If that fails, see [Vendoring][Vendoring] for when it might be appropriate to ship a copy of the package with your addon instead.
+If your addon requires a Python package that is not on the allow-list, most users will not be able to install the addon successfully. Getting the package added is usually the appropriate next step. If that fails, see [Vendoring][Vendoring] for when it might be appropriate to ship a copy of the package with your addon instead.
 
 
 ## Requesting a new package
