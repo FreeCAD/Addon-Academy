@@ -4,7 +4,7 @@ layout : Default
 
 # Types of Addon
 
-FreeCAD supports many different types of Addon, with more types added with each subsequent version. As of the FreeCAD v1.1 release, the following types of addon are supported:
+FreeCAD supports many different types of Addon, with more types added with each subsequent version. The following sections cover each type supported by FreeCAD v1.1, plus the new Machine type forthcoming in v1.2:
 
 ## Workbench
 
@@ -22,8 +22,13 @@ A distributable bundle of FreeCAD user preferences that other users can apply in
 
 An addon that serves only to install other Addons (and their dependencies). No direct content on its own.
 
+## Machine
+
+**Forthcoming in FreeCAD v1.2.** A definition of a physical CNC machine, used by the CAM workbench for multi-axis operations and machine-based postprocessing. A Machine addon ships one or more `.fcm` files: JSON documents describing the machine's kinematics and axis configuration, its working envelope, the recommended postprocessor, and any G-code customization options. The `<machine>` content item in `package.xml` points at a subdirectory where the `.fcm` files live, and the CAM workbench discovers them at startup. The canonical example is the community-curated [FreeCAD/Machines][FreeCAD-Machines] repository.
+
 ## Other
 
 The Addon content system is open-ended: addons with the `other` type are simply unzipped into the User App Data Mod directory, but the Addon Manager takes no further action with them. This is also true of any unrecognized content item type, allowing the Addon Manager to be forwards-compatible with future types that have not been codified at the time of its creation.
 
 [FreeCAD Macros]: https://github.com/FreeCAD/FreeCAD-Macros
+[FreeCAD-Machines]: https://github.com/FreeCAD/Machines
