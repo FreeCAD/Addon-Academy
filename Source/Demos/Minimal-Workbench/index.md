@@ -14,6 +14,9 @@ Every file in this demo is dedicated to the public domain under [CC0-1.0][CC0]. 
 ```
 MinimalWorkbench/
 ├─ package.xml
+├─ Resources/
+│  └─ Icons/
+│     └─ Logo.svg
 └─ freecad/
    └─ MinimalWorkbench/
       ├─ __init__.py
@@ -65,11 +68,9 @@ Source: [`Commands.py`][Source-cmds]
 
 ## Trying it out
 
-1.  Copy the four files into a directory called `MinimalWorkbench/` somewhere on your computer.
-2.  Create an icon at `Resources/Icons/Logo.svg` (referenced from `package.xml`). Any simple SVG will do.
-3.  Symlink or copy the `MinimalWorkbench/` directory into your FreeCAD user `Mod/` directory. See [Installing your addon locally][LocalInstall].
-4.  Start FreeCAD. "Minimal" should appear in the Workbench selector.
-5.  Switch to the Minimal workbench. A single-button "Minimal" toolbar appears. Click it, and "Hello from the Minimal workbench!" will appear in the Report view.
+1.  Install the addon by downloading [`MinimalWorkbench.zip`][Zip] and extracting it into your FreeCAD user `Mod/` directory. To install from source instead, or to symlink for live edits, follow [Installing your addon locally][LocalInstall] using the [`Source/`][Source-root] directory next to this page.
+2.  Start FreeCAD. "Minimal" should appear in the Workbench selector.
+3.  Switch to the Minimal workbench. A single-button "Minimal" toolbar appears. Click it, and "Hello from the Minimal workbench!" will appear in the Report view.
 
 
 ## Where to go next
@@ -90,7 +91,9 @@ Source: [`Commands.py`][Source-cmds]
 [CC0]: https://creativecommons.org/publicdomain/zero/1.0/
 [PEP420]: https://peps.python.org/pep-0420/
 
+[Source-root]: ./Source/
 [Source-pkg]: ./Source/package.xml
 [Source-init]: ./Source/freecad/MinimalWorkbench/__init__.py
 [Source-gui]: ./Source/freecad/MinimalWorkbench/init_gui.py
 [Source-cmds]: ./Source/freecad/MinimalWorkbench/Commands.py
+[Zip]: ./MinimalWorkbench.zip

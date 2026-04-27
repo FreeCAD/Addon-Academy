@@ -16,8 +16,8 @@ Transmogrifier/
 ├─ package.xml
 ├─ Resources/
 │  ├─ Icons/
-│  │  ├─ Logo.svg                          (supply your own)
-│  │  └─ preferences-transmogrifier.svg    (supply your own)
+│  │  ├─ Logo.svg
+│  │  └─ preferences-transmogrifier.svg
 │  └─ panels/
 │     └─ TransmogrifierPrefs.ui
 └─ freecad/
@@ -75,13 +75,12 @@ Source: [`__init__.py`][Source-init]
 
 ## Trying it out
 
-1.  Copy the addon directory into the FreeCAD user `Mod/` directory. See [Installing your addon locally][LocalInstall].
-2.  Provide an icon at `Resources/Icons/Logo.svg` (the workbench icon) and one at `Resources/Icons/preferences-transmogrifier.svg` (the preferences sidebar icon).
-3.  Restart FreeCAD.
-4.  Open **Edit → Preferences**. The Transmogrifier group should appear in the sidebar.
-5.  Adjust the values and click OK to save them.
-6.  Switch to the Transmogrifier workbench and click the Engage Transmogrifier toolbar button. The Report view and a dialog show the values that were saved.
-7.  Reopen the preferences dialog. The values from step 5 are restored into the form.
+1.  Install the addon by downloading [`Transmogrifier.zip`][Zip] and extracting it into your FreeCAD user `Mod/` directory. To install from source instead, or to symlink for live edits, follow [Installing your addon locally][LocalInstall] using the [`Source/`][Source-root] directory next to this page.
+2.  Restart FreeCAD.
+3.  Open **Edit → Preferences**. The Transmogrifier group should appear in the sidebar.
+4.  Adjust the values and click OK to save them.
+5.  Switch to the Transmogrifier workbench and click the Engage Transmogrifier toolbar button. The Report view and a dialog show the values that were saved.
+6.  Reopen the preferences dialog. The values from step 4 are restored into the form.
 
 
 ## Where to go next
@@ -99,8 +98,10 @@ Source: [`__init__.py`][Source-init]
 
 [CC0]: https://creativecommons.org/publicdomain/zero/1.0/
 
+[Source-root]:  ./Source/
 [Source-pkg]:   ./Source/package.xml
 [Source-ui]:    ./Source/Resources/panels/TransmogrifierPrefs.ui
 [Source-init]:  ./Source/freecad/Transmogrifier/__init__.py
 [Source-gui]:   ./Source/freecad/Transmogrifier/init_gui.py
 [Source-cmds]:  ./Source/freecad/Transmogrifier/Commands.py
+[Zip]:          ./Transmogrifier.zip

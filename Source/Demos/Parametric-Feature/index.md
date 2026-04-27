@@ -14,6 +14,9 @@ This demo is the runnable companion to the [Custom document objects][DocObjects]
 ```
 ParametricFeature/
 ├─ package.xml
+├─ Resources/
+│  └─ Icons/
+│     └─ Logo.svg
 └─ freecad/
    └─ ParametricFeature/
       ├─ __init__.py
@@ -66,13 +69,12 @@ Source: [`ParametricBox.py`][Source-box]
 
 ## Trying it out
 
-1.  Copy the addon directory into the FreeCAD user `Mod/` directory. See [Installing your addon locally][LocalInstall].
-2.  Create an icon at `Resources/Icons/Logo.svg` (referenced from `package.xml`).
-3.  Restart FreeCAD. "Parametric Feature" appears in the Workbench selector.
-4.  Switch to that workbench. A single-button "Parametric Feature" toolbar appears.
-5.  Click the button. A "ParametricBox" object is added to the tree and a 10 x 10 x 10 mm box appears in the 3D view.
-6.  Select the object and adjust Length, Width, or Height in the property panel. The box geometry updates on each change.
-7.  Save the document, exit FreeCAD, and reopen the document. The box reloads with its property values intact and remains parametrically editable, provided the addon is installed.
+1.  Install the addon by downloading [`ParametricFeature.zip`][Zip] and extracting it into your FreeCAD user `Mod/` directory. To install from source instead, or to symlink for live edits, follow [Installing your addon locally][LocalInstall] using the [`Source/`][Source-root] directory next to this page.
+2.  Restart FreeCAD. "Parametric Feature" appears in the Workbench selector.
+3.  Switch to that workbench. A single-button "Parametric Feature" toolbar appears.
+4.  Click the button. A "ParametricBox" object is added to the tree and a 10 x 10 x 10 mm box appears in the 3D view.
+5.  Select the object and adjust Length, Width, or Height in the property panel. The box geometry updates on each change.
+6.  Save the document, exit FreeCAD, and reopen the document. The box reloads with its property values intact and remains parametrically editable, provided the addon is installed.
 
 
 ## Where to go next
@@ -94,8 +96,10 @@ Source: [`ParametricBox.py`][Source-box]
 
 [CC0]: https://creativecommons.org/publicdomain/zero/1.0/
 
+[Source-root]: ./Source/
 [Source-pkg]:  ./Source/package.xml
 [Source-init]: ./Source/freecad/ParametricFeature/__init__.py
 [Source-gui]:  ./Source/freecad/ParametricFeature/init_gui.py
 [Source-cmds]: ./Source/freecad/ParametricFeature/Commands.py
 [Source-box]:  ./Source/freecad/ParametricFeature/ParametricBox.py
+[Zip]:         ./ParametricFeature.zip

@@ -22,7 +22,7 @@ If you need the path without a running FreeCAD, the conventions for v1.x release
 
 | OS      | Path                                                          |
 |---------|---------------------------------------------------------------|
-| Windows | `%APPDATA%\Roaming\FreeCAD\v<MAJOR>-<MINOR>\Mod\`             |
+| Windows | `%APPDATA%\FreeCAD\v<MAJOR>-<MINOR>\Mod\`                     |
 | Linux   | `~/.local/share/FreeCAD/v<MAJOR>-<MINOR>/Mod/`                |
 | macOS   | `~/Library/Application Support/FreeCAD/v<MAJOR>-<MINOR>/Mod/` |
 

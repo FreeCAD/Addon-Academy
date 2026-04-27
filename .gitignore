@@ -5,3 +5,6 @@ Page/**
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+__pycache__/
+*.pyc
