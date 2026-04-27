@@ -6,6 +6,8 @@ layout : Default
 
 A workbench that registers a preferences page in FreeCAD's preferences dialog. The page exposes six controls (combo box, line edit, spin box, double spin box, two check boxes) for configuring a Transmogrifier. A single command reads the current preferences and reports the configured operation in the Report view and a dialog.
 
+![Transmogrifier preferences page in FreeCAD's preferences dialog](Media/transmogrifier-preferences-page.png)
+
 This demo is the runnable companion to the [Preferences pages][Preferences] guide. Every file is dedicated to the public domain under [CC0-1.0][CC0]; copy and adapt freely. Many thanks to Bill Watterson for the invention of the transmogrifier in the first place.
 
 

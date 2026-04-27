@@ -8,6 +8,20 @@ There are two common ways to lay out a FreeCAD addon: a **Modern**, namespaced s
 
 New addons should prefer the Modern layout. It is what both the [Addon-Template] and the [workbench starter kit][Starterkit] produce by default, it places the addon's code in its own namespace rather than in FreeCAD's global namespace, and it opens up the possibility of using standard Python packaging tools (such as `pip` and `uv`) for installing the addon and managing its development dependencies.
 
+The two layouts at a glance:
+
+```
+Modern (recommended)          Legacy
+MyAddon/                      MyAddon/
+├─ package.xml                ├─ package.xml
+└─ freecad/                   ├─ Init.py
+   └─ MyAddon/                └─ InitGui.py
+      ├─ __init__.py
+      └─ init_gui.py
+```
+
+The remaining sections detail each side.
+
 
 ## Modern
 

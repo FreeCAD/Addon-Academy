@@ -4,9 +4,11 @@ layout : Default
 
 # Workbench registration
 
-One of the best ways of adding large-scale new functionality to FreeCAD is to create a custom Workbench. In FreeCAD terminology, a Workbench is a collection of commands, menus, toolbars, and task panels all oriented towards a specific task. Within FreeCAD itself these are things like Sketcher, Part, CAM, BIM, FEM, etc. In terms of structuring your Addon, you can think of it as a sort of "container" for your addon's user interface: the entry that appears in FreeCAD's Workbench selector and owns any toolbars and menus your addon contributes. This page walks through the Workbench class, the `init_gui.py` file that defines it, and how FreeCAD discovers and activates your workbench at runtime.
+One of the best ways of adding large-scale new functionality to FreeCAD is to create a custom Workbench. In FreeCAD terminology, a Workbench is a collection of commands, menus, toolbars, and task panels all oriented towards a specific task. Within FreeCAD itself these are things like Sketcher, Part, CAM, BIM, FEM, etc. In terms of structuring your Addon, you can think of it as a sort of "container" for your addon's user interface: the entry that appears in FreeCAD's Workbench selector and owns any toolbars and menus your addon contributes.
 
-For a complete working example, see the [Minimal Workbench demo][MinimalWB]. This page details the patterns shown there.
+![Parametric Feature workbench in the Workbench selector dropdown, alongside the built-in workbenches and another addon (Transmogrifier)](Media/parametric-feature-in-workbench-selector.png)
+
+This page walks through the Workbench class, the `init_gui.py` file that defines it, and how FreeCAD discovers and activates your workbench at runtime. For a complete working example, see the [Minimal Workbench demo][MinimalWB]. This page details the patterns shown there.
 
 
 ## Where `init_gui.py` lives
@@ -164,6 +166,8 @@ FreeCAD uses `<classname>` to dynamically create your workbench's icon from its 
 Two methods from the Workbench class create its UI, both normally called in the `Initialize()` method.
 
 **`self.appendToolbar(title, command_names)`** creates a new toolbar with the given title and populates it with the named commands. Command names are the strings you passed to `FreeCADGui.addCommand()`. See [Gui Commands][Commands] for how commands are defined and registered.
+
+![The "Create Parametric Box" command appearing in its own toolbar after the workbench is activated](Media/parametric-object-toolbar-item.png)
 
 **`self.appendMenu(menu_path, command_names)`** creates a menu entry. `menu_path` is either a string (for a top-level menu) or a list of strings (for a submenu path):
 

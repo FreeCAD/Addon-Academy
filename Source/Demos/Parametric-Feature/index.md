@@ -6,6 +6,8 @@ layout : Default
 
 A small workbench whose single command creates a parametric box: a `Part::FeaturePython` document object whose Length, Width, and Height properties drive its geometry. Adjusting any of those properties from the property panel triggers a recompute and updates the 3D view.
 
+![ParametricBox in the tree, property panel, and 3D view](Media/parametric-feature-with-tree-and-properties.png)
+
 This demo is the runnable companion to the [Custom document objects][DocObjects] guide. Every file is dedicated to the public domain under [CC0-1.0][CC0]; copy and adapt freely.
 
 

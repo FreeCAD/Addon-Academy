@@ -6,6 +6,10 @@ layout : Default
 
 Historically the Addon Manager always displayed an addon's README.md file, which is the main display on sites like GitHub and Codeberg. Most addons still adhere to this convention and simply focus the contents of that README file on their expected users in the Addon Manager. However, this is not *required*, and it's possible to provide a dedicated "overview" file in your addon's repo. This allows README to continue to serve to orient the developer-centric audience on the git host (providing information on how to *develop* the addon), while the overview file is user-focused, with instructions purely intended for an end-user audience.
 
+The overview file is rendered in the right-hand panel of the Addon Manager's Composite view, or using the whole window in either Compact or Expanded views:
+
+![Addon Manager rendering an addon's Overview file](Media/addon-manager-rendered-overview.png)
+
 A good place to put such a document is in `Resources/Documents/Overview.md`:
 
 ```

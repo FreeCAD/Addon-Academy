@@ -12,9 +12,23 @@ The `<name>` and `<description>` tags are your first point of communication with
 
 ## Description
 
-The description is a little more challenging, because the Addon Manager has three different view modes, each of which show differing amount of the description. First, the `<description>` tag can *only* contain text, and it is *never* parsed. So no markdown, html, etc. Second, in some view modes readers will only see the first few words of this description, so keep the first sentence very brief and focused. As with the `<name>` tag, there's no reason at all to include the word "FreeCAD" here (what if your users are actually running [AstoCAD] or [LinkStage3]?). Second, avoid the temptation to start with "This is an addon that...". They already know it's an addon, it's being displayed in the Addon Manager right now, that's where this text is shown. Those twenty characters are better spent saying what it does: "Adds a toolbar with buttons that destroy your model". Hopefully not *literally* that, of course.
+The description is a little more challenging, because the Addon Manager has three different view modes, each of which shows a differing amount of the description. First, the `<description>` tag can *only* contain text, and it is *never* parsed. So no markdown, html, etc. Second, in some view modes readers will only see the first few words of this description, so keep the first sentence very brief and focused. As with the `<name>` tag, there's no reason at all to include the word "FreeCAD" here (what if your users are actually running [AstoCAD] or [LinkStage3]?). Third, avoid the temptation to start with "This is an addon that...". They already know it's an addon, it's being displayed in the Addon Manager right now, that's where this text is shown. Those twenty characters are better spent saying what it does: "Adds a toolbar with buttons that destroy your model". Hopefully not *literally* that, of course.
 
-Once you're past the first sentence you have more flexibility. The addon manager truncates the display to a very small amount of text in "Combined" and "Compact" modes, but in "Details" mode it displays all of your "description" text. It's not a good practice to have more than a couple hundred words here, users will be annoyed at you occupying so much screen real estate, but the Addon Manager won't prevent you from doing so. The team reviewing your addon might ask you to shorten it up a bit, though. Remember your primary location for telling users about your addon is in your [Overview] file.
+The three view modes are selected by the icons at the top left of the Addon Manager window:
+
+**Compact** shows only the addon name, version, and the first sentence of the description, one row per addon. Designed for quickly scanning a long list.
+
+![Addon Manager in Compact view](Media/addon-manager-compact-view-example-screenshot.png)
+
+**Expanded** adds the addon icon, tags, a longer excerpt of the description, and the maintainer line.
+
+![Addon Manager in Expanded view](Media/addon-manager-expanded-view-example-screenshot.png)
+
+**Composite** splits the window into a list on the left and a full detail panel on the right. The detail panel renders the addon's full Overview document (or its README), including images. No "description" text is displayed.
+
+![Addon Manager in Composite view](Media/addon-manager-composite-view-example-screenshot.png)
+
+Once you're past the first sentence you have more flexibility. The Addon Manager truncates the display to a very small amount of text in Compact mode and to an excerpt in Expanded mode, while Composite mode hands off to the Overview document. It's not a good practice to have more than a couple hundred words in `<description>`; users will be annoyed at you occupying so much screen real estate, and the team reviewing your addon might ask you to shorten it. Remember your primary location for telling users about your addon is in your [Overview] file.
 
 ## Tags
 
