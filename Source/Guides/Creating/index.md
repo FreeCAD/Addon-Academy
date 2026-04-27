@@ -20,17 +20,17 @@ The [Addon-Template] repository describes itself as an
 
 ### Usage
 
-From the [Usage wiki page][Template-Usage]:
+To use the template:
 
-1.  To use this template for your new addon, simply click the green `Use this template` button.
+1.  Click the green `Use this template` button on the [Addon-Template] repository page.
 
-2.  Click on `Create a new repository` next, this should open a new dialog to create the repository.
+2.  Click on `Create a new repository`. This opens a dialog for creating the new repository.
 
-3.  Select at least the account you want to create the repository in and give it a simple name i.e. the name of your addon.
+3.  Select the account to create the repository in and give it a simple name (typically the name of your addon).
 
-4.  After your repository is created, you might want to customize things like the [License][Template-Licensing] you use for your addon.
+4.  After your repository is created, customize the [License][Licensing] for your addon and any other metadata.
 
-For a file-by-file breakdown of what the template ships with, see the [Structure wiki page][Template-Structure].
+For a file-by-file breakdown of what the template ships with, see [Structure of an Addon][Structuring].
 
 
 ## Cookiecutter
@@ -78,9 +78,8 @@ Look for the workbench in the FreeCAD → View → Workbenches menu; it should b
 
 
 [Addon-Template]: https://github.com/FreeCAD/Addon-Template
-[Template-Usage]: https://github.com/FreeCAD/Addon-Template/wiki/Usage
-[Template-Structure]: https://github.com/FreeCAD/Addon-Template/wiki/Structure
-[Template-Licensing]: https://github.com/FreeCAD/Addon-Template/wiki/Licensing
+[Starterkit]:     https://github.com/FreeCAD/freecad.workbench_starterkit
+[cookiecutter]:   https://cookiecutter.readthedocs.io
 
-[Starterkit]: https://github.com/FreeCAD/freecad.workbench_starterkit
-[cookiecutter]: https://cookiecutter.readthedocs.io
+[Licensing]:      ../../Topics/Licensing
+[Structuring]:    ../../Topics/Structuring

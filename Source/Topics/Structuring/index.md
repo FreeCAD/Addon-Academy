@@ -27,7 +27,7 @@ The remaining sections detail each side.
 
 In the Modern layout, all of the addon's Python code lives under a `freecad/<ModName>/` subdirectory, a namespace package under the shared `freecad` import namespace. The top of the repository contains only metadata, documentation, resources, and packaging files; no Python source sits at the top level.
 
-A typical Modern addon looks like this (based on the [Addon-Template Structure reference][Template-Structure]):
+A typical Modern addon looks like this:
 
 ```
 MyAddon/
@@ -58,9 +58,7 @@ Additional Python modules for the addon's tools and commands also live inside `f
 
 -   `package.xml`: the [addon manifest][Manifest] read by the Addon Manager.
 -   `pyproject.toml`: standard Python project metadata; consumed by `pip`, `uv`, or any PEP 517-compatible tool, typically to install development dependencies such as `freecad-stubs` and `pyside6`.
--   `CHANGELOG.md`, `README.md`, and license files (the Addon-Template splits them by what they cover, e.g. `LICENSE-Code` and `LICENSE-Assets`).
-
-For a file-by-file breakdown of every entry the template ships with, see the Addon-Template's [Structure wiki page][Template-Structure].
+-   `CHANGELOG.md`, `README.md`, and license files. It is conventional to split licenses by what they cover, e.g. `LICENSE-Code` and `LICENSE-Assets` (see [Licensing][Licensing]).
 
 
 ## Legacy
@@ -91,9 +89,9 @@ The wiki describes this as "the classic way of creating a new workbench." Unless
 -   [Addon Manifest][Manifest]: the `package.xml` file read by the Addon Manager.
 
 
-[Manifest]: ./Manifest
+[Manifest]:           ./Manifest
+[Licensing]:          ../Licensing
 
-[Addon-Template]: https://github.com/FreeCAD/Addon-Template
-[Template-Structure]: https://github.com/FreeCAD/Addon-Template/wiki/Structure
-[Starterkit]: https://github.com/FreeCAD/freecad.workbench_starterkit
+[Addon-Template]:     https://github.com/FreeCAD/Addon-Template
+[Starterkit]:         https://github.com/FreeCAD/freecad.workbench_starterkit
 [Workbench-Creation]: https://wiki.freecad.org/Workbench_creation
