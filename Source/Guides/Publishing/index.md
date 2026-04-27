@@ -28,8 +28,6 @@ The `Portable` & `Reference` approaches are categorized as `Independent` as you 
 
 The `Indexed` approach is the easiest way for users to find and install your addon, however you are required to follow certain rules and your addon to have certain qualities.
 
-If you are unsure about which approach might suit you best, feel free to reach out. [» Contact][Contact]
-
 
 ## Start
 
@@ -40,8 +38,6 @@ If you are unsure about which approach might suit you best, feel free to reach o
 -   [Publish your addon to the Index.][Indexed]
 
 
-
-[Contact]: ../../Topics/Ecosystem/Contact
 
 [Reference]: ./Reference
 [Portable]: ./Portable

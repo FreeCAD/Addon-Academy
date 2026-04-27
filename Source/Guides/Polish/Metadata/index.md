@@ -4,11 +4,11 @@ layout : Default
 
 # Metadata & discoverability
 
-Your Manifest file contains metadata about your addon intended for use by the Addon Manager and by FreeCAD itself. See the [Manifest] documentation for complete details: this page is focused on creating the best possible user-facing metadata, including how to craft a good description, how to select the right tags, etc.
+Your Manifest file contains metadata about your addon intended for use by the Addon Manager and by FreeCAD itself. See the [Manifest] documentation for complete details: this page is focused on creating the best possible user-facing metadata, including how to craft a good description, how to select appropriate tags, etc.
 
 ## Name
 
-The `<name>` and `<description>` tags are your first point of communication with your users. `<name>` is a human readable name for your addon, displayed in the Addon Manager and in the list of installed addons inside FreeCAD. As such, it *should not* contain the word "FreeCAD"---your users are reading it from within FreeCAD itself already, it's clear that "Thing Creator 9000" is really "(FreeCAD) Thing Creator 9000". Also, it's generally not necessary to include the word "Workbench", that's a bit of technical detail that your users probably don't care about. If they really care, they can tell the Addon Manager to *only* display Workbenches, in which case your Workbench will be displayed as long as it used the `<workbench>` content item.
+The `<name>` and `<description>` tags are your first point of communication with your users. `<name>` is a human readable name for your addon, displayed in the Addon Manager and in the list of installed addons inside FreeCAD. As such, it *should not* contain the word "FreeCAD". Your users are reading it from within FreeCAD itself already; it's clear that "Thing Creator 9000" is really "(FreeCAD) Thing Creator 9000". Also, it's generally not necessary to include the word "Workbench", that's a bit of technical detail that your users probably don't care about. If they really care, they can tell the Addon Manager to *only* display Workbenches, in which case your Workbench will be displayed as long as it used the `<workbench>` content item.
 
 ## Description
 

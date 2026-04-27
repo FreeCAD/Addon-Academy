@@ -16,8 +16,6 @@ layout : Default
 
 -   [Glossary]
 
--   [Ecosystem]
-
 
 
 [Types]: ./Types
@@ -26,4 +24,3 @@ layout : Default
 [Licensing]: ./Licensing
 [Addon Index]: ./Addon-Index
 [Glossary]: ./Glossary
-[Ecosystem]: ./Ecosystem

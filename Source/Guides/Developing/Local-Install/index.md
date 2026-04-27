@@ -4,12 +4,12 @@ layout : Default
 
 # Installing your addon locally
 
-Once you have an addon scaffold and some code, you need to get it into a running FreeCAD to test it. This page covers how to find the right directory, how to install the addon there (copy or symlink), and how to iterate on it.
+Once you have an addon scaffold and some code, you need to get it into a running FreeCAD to test it. This page covers how to find the correct directory, how to install the addon there (copy or symlink), and how to iterate on it.
 
 
 ## Finding the user Mod directory
 
-The simplest way to find the right path is to ask FreeCAD. In the Python console (**View → Panels → Python console**), run:
+The simplest way to find the correct path is to ask FreeCAD. In the Python console (**View → Panels → Python console**), run:
 
 ```python
 import FreeCAD, os

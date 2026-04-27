@@ -11,7 +11,7 @@ New addons should prefer the Modern layout. It is what both the [Addon-Template]
 
 ## Modern
 
-In the Modern layout, all of the addon's Python code lives under a `freecad/<ModName>/` subdirectory — a namespace package under the shared `freecad` import namespace. The top of the repository contains only metadata, documentation, resources, and packaging files; no Python source sits at the top level.
+In the Modern layout, all of the addon's Python code lives under a `freecad/<ModName>/` subdirectory, a namespace package under the shared `freecad` import namespace. The top of the repository contains only metadata, documentation, resources, and packaging files; no Python source sits at the top level.
 
 A typical Modern addon looks like this (based on the [Addon-Template Structure reference][Template-Structure]):
 

@@ -6,8 +6,8 @@ layout : Default
 
 There are two main ways to scaffold a new FreeCAD addon:
 
--   The [GitHub template repository][Addon-Template] — one click, no tooling required, produces a minimal addon of any type.
--   The [cookiecutter template][Starterkit] — driven by the Python `cookiecutter` CLI, tailored to generating a new Workbench.
+-   The [GitHub template repository][Addon-Template]: one click, no tooling required, produces a minimal addon of any type.
+-   The [cookiecutter template][Starterkit]: driven by the Python `cookiecutter` CLI, tailored to generating a new Workbench.
 
 
 ## GitHub Template

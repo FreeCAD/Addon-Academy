@@ -33,8 +33,6 @@ title : Addon Academy
 
 -   [Glossary]
 
--   [Addon Ecosystem][Ecosystem]
-
 
 ## [Demos][Demos]
 
@@ -70,7 +68,6 @@ title : Addon Academy
 [Licensing]: ./Topics/Licensing
 [Addon Index]: ./Topics/Addon-Index
 [Glossary]: ./Topics/Glossary
-[Ecosystem]: ./Topics/Ecosystem
 
 <!----------------------------------------------------------------------------->
 

@@ -22,7 +22,7 @@ In order to be included in the FreeCAD Addon Index, an addon must comply with a 
 
 - The addon makes an effort to use secure storage options of the user's system if it saves data locally.
 
-- The addon accepts and addresses security reports as soon as possible and implements necessary fixes in a timely manner — including previously released versions.
+- The addon accepts and addresses security reports as soon as possible and implements necessary fixes in a timely manner, including previously released versions.
 
 - The addon informs users about security issues as soon as is appropriate and if needed provides adequate instructions on how to resolve the problem locally.
 
