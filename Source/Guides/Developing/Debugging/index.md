@@ -26,37 +26,17 @@ For anything more involved, move to one of the interactive options below.
 
 ## `breakpoint()` and `pdb`
 
-Python's standard library provides `pdb`, an interactive command-line debugger. It works inside FreeCAD's running Python interpreter, with FreeCAD's Python console serving as the debugger's terminal.
+Python's standard library provides `pdb`, an interactive command-line debugger, and a built-in `breakpoint()` that drops into it by default. In a regular Python script, calling `breakpoint()` halts execution at that line and presents a `(Pdb)` prompt for stepping, inspecting variables, and continuing.
 
-Insert a breakpoint by calling Python's built-in `breakpoint()`:
+Inside FreeCAD, the practical experience is uneven and depends on how the process was launched:
 
-```python
-def Activated(self):
-    selection = FreeCADGui.Selection.getSelection()
-    breakpoint()
-    # ... rest of the command ...
-```
+-   **Launched from a terminal on Linux or macOS:** `pdb` may attach its I/O to that terminal. The GUI freezes and debugger commands are typed into the launching shell. This is platform-dependent and has not been recently confirmed in print.
+-   **Launched from a GUI shortcut on Windows:** the FreeCAD process typically has no console attached. `sys.stdin` is unusable and a `breakpoint()` call hangs.
+-   **From the embedded Python console panel:** historically not a working `pdb` terminal. An [early forum thread][PdbForum] (2008) describes `pdb.set_trace()` triggering the debugger but with input arriving via a modal dialog box, and breakpoints not surviving across event dispatches. [Bug 826][PdbTracker] (closed/fixed in FreeCAD 0.14, May 2013) removed the dialog-box requirement, but the current upstream [Debugging wiki page][WikiDebugging] does not mention `breakpoint()` or `pdb.set_trace()` at all and jumps straight to remote debuggers. The wiki also documents a user-defined helper that prints a message and then triggers a divide-by-zero exception as a halt-and-inspect substitute, which is a strong hint that stock `pdb` is not currently a smooth path from the console panel.
 
-When execution reaches the call, FreeCAD's main thread suspends and a `(Pdb)` prompt appears in the Python console. The standard `pdb` commands all work:
+For anything beyond a single inspection, and any time you are working on Windows or relying on the embedded Python console, attach `debugpy` (below).
 
-| Command   | Purpose                                                    |
-|-----------|------------------------------------------------------------|
-| `n`       | Step over the current line.                                |
-| `s`       | Step into the next call.                                   |
-| `c`       | Continue execution until the next breakpoint or end.       |
-| `l`       | List source around the current line.                       |
-| `p expr`  | Evaluate `expr` in the current frame and print the result. |
-| `pp expr` | Pretty-print the result.                                   |
-| `bt`      | Show the call stack.                                       |
-| `q`       | Quit the debugger and abort the program.                   |
-
-`breakpoint()` is appropriate when:
-
--   The question is "what does this look like at this point in the code?"
--   You only need a single inspection, not stepping through a long sequence.
--   You do not mind editing the source file each time you change where the breakpoint lives.
-
-For repeated inspection or step-through debugging across many lines, attach an external debugger.
+If you find a current, reliable way to drive `pdb` from FreeCAD's Python console, both this page and the upstream wiki would benefit from a writeup of the steps.
 
 
 ## Reading the Report view
@@ -172,3 +152,5 @@ For C++ crashes inside FreeCAD itself rather than Python errors in your addon, t
 [LocalInstall]: ../Local-Install
 [Testing]: ../Testing
 [WikiDebugging]: https://wiki.freecad.org/Debugging
+[PdbForum]: https://forum.freecad.org/viewtopic.php?t=231
+[PdbTracker]: https://tracker.freecad.org/view.php?id=826
