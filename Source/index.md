@@ -4,6 +4,8 @@ layout : Default
 title : Addon Academy
 ---
 
+![Addon Academy](Assets/addon-academy-header.png)
+
 The **Addon Academy** is your one-stop shop for documentation about creating and maintaining a FreeCAD Addon of any variety. The **Guides** section below is a top-down list of steps you'll want to go through to author an Addon, while the **Topics** section covers several specific topics, and of course the **Demos** section contains sample code (all licensed CC0, so you are welcome to take whatever you need, no attribution is required, etc.).
 
 ## [Guides][Guides]
