@@ -178,7 +178,7 @@ Package Directory/
     sparkles.svg
 ```
 
-See [Themes][Themes] for the full theme-authoring pattern, including overlay stylesheets and the layout of multi-theme addons.
+See [Themes][Themes] for complete theme-authoring instructions, including overlay stylesheets and the layout of multi-theme addons.
 
 In addition to the other elements of `<package>`, content items can optionally provide information in `<icon>`, `<classname>`, `<file>`, `<subdirectory>`, and `<type>` tags (technically these can be provided to the root `<package>` tag as well, but they are generally unused there).
 
