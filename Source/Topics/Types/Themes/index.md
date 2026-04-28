@@ -98,7 +98,7 @@ FreeCAD's overlay panels are translucent floating versions of the standard docke
 
 The companion `.cfg` is a slice of FreeCAD's preference store, in the same XML format that `User parameter:BaseApp` exports to. The simplest way to produce one is to set the colors and defaults in FreeCAD interactively, then use the **Preference Pack** export feature to dump the relevant subtree. Trim the export to only the keys you intend the theme to set; including unrelated keys means the theme will overwrite a user's unrelated settings on apply.
 
-![FreeCAD's Save New Preference Pack dialog, where the .cfg is exported](Media/save-new-preference-pack.png)
+![FreeCAD's Save New Preference Pack dialog, where the .cfg is exported](Media/save-new-preference-pack.png){: style="max-width: 60%; display: block; margin: 10px auto;"}
 
 A typical theme `.cfg` covers entries under:
 
