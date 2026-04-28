@@ -151,15 +151,18 @@ Commonly-used license strings for other non-code resources (typically in a `LICE
 
 **REQUIRED**
 
-The `<content>` tag describes the actual contents of the package. It has no attributes, and contains any number of children. Those children can have arbitrary tag names, only some of which may be recognized by FreeCAD. FreeCAD currently supports `workbench`, `macro`, `preferencepack`, `bundle`, and `other` elements. Each child is then defined recursively by this standard, containing any or all of the elements allowed for the root `<package>` node. For example:
+The `<content>` tag describes the actual contents of the package. It has no attributes, and contains any number of children. Those children can have arbitrary tag names, only some of which may be recognized by FreeCAD. FreeCAD currently supports `workbench`, `macro`, `preferencepack`, `bundle`, `machine`, and `other` elements. Each child is then defined recursively by this standard, containing any or all of the elements allowed for the root `<package>` node. For example, a theme:
 
 ```xml
 <content>
   <preferencepack>
     <name>Unicorn Sparkles Theme</name>
-    <version>1.0.0</version>
+    <type>Theme</type>
+    <tag>light</tag>
     <url type="readme">https://github.com/chennes/FreeCAD-themes/blob/main/Unicorn%20Sparkles%20Theme/Readme.md</url>
     <icon>sparkles.svg</icon>
+    <file>Unicorn Sparkles Theme.qss</file>
+    <file>Unicorn Sparkles Theme.cfg</file>
   </preferencepack>
 </content>
 ```
@@ -170,12 +173,14 @@ The existence of most `<content>` items implies a set of subfolders, one for eac
 Package Directory/
   package.xml
   Unicorn Sparkles Theme/
+    Unicorn Sparkles Theme.qss
     Unicorn Sparkles Theme.cfg
     sparkles.svg
-    (the theme's other files)
 ```
 
-In addition to the other elements of `<package>`, content items can optionally provide information in `<icon>`, `<classname>`, and `<file>` tags (technically these can be provided to the root `<package>` tag as well, but they are generally unused there).
+See [Themes][Themes] for the full theme-authoring pattern, including overlay stylesheets and the layout of multi-theme addons.
+
+In addition to the other elements of `<package>`, content items can optionally provide information in `<icon>`, `<classname>`, `<file>`, `<subdirectory>`, and `<type>` tags (technically these can be provided to the root `<package>` tag as well, but they are generally unused there).
 
 **Backwards-compatibility note:** to avoid having to restructure packages that pre-date this metadata standard, the optional [`<subdirectory>`](#subdirectory) tag is allowed to specify `./` as the subdirectory for a content item, in which case no subdirectory is required. This matches the pre-standard system where a single workbench was located at the top of the directory structure.
 
@@ -217,6 +222,13 @@ then the `package.xml` file expects:
 **Optional**
 
 Provided for convenience to other tools, any number of other files may be listed here. Their use depends on the type of content. In a macro content item, each file entry is a single macro, and will be copied into the user's Macros installation directory by the [Addon Manager][AddonManager].
+
+
+#### `<type>` {#type}
+
+**Optional**
+
+Specifies a specialized sub-type of a content item. The most important use is `<type>Theme</type>` on a `<preferencepack>` content item: it causes FreeCAD to display the pack in the theme picker rather than only in the plain Preference-pack list. Without this tag, a preference pack containing theme files (a `.qss` stylesheet, color `.cfg`, etc.) is treated as a plain preference pack and is not offered as a theme. See [Themes][Themes] for the full theme-authoring pattern.
 
 
 ### `<url>` {#url}
@@ -386,8 +398,12 @@ A simple workbench-only package (for example, to add a metadata file to a packag
       <name>FreeCAD Classic Colors</name>
       <description>FreeCAD default colors for core app and included Mods.</description>
       <version>1.0.0</version>
+      <type>Theme</type>
       <tag>color</tag>
       <tag>stylesheet</tag>
+      <tag>light</tag>
+      <file>FreeCAD Classic Colors.qss</file>
+      <file>FreeCAD Classic Colors.cfg</file>
     </preferencepack>
     <workbench>
       <name>Metadata Creation Workbench</name>
@@ -474,4 +490,6 @@ A `package.xml` for an addon that uses the `<other/>` content type to ship a too
 [SPDX]: https://spdx.org/licenses/
 
 [ExampleWorkbench]: ./Examples/Workbench.xml
-[ExampleToolbar]: ./Examples/Toolbar.xml
+[ExampleToolbar]:   ./Examples/Toolbar.xml
+
+[Themes]:           ../../Types/Themes
