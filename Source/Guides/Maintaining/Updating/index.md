@@ -10,6 +10,8 @@ Once your Addon is published in the Index, you have complete control over the up
 
 For most Addon authors, the best long-term release strategy is to do all active  development on a branch that is not made available via the Addon Manager, and to periodically sync that branch with a "release" branch anytime you want to update the version number. It's important that you update the version number and date in the `package.xml` file on that branch anytime you update the code: the Addon Manager will display *any changes* as an available update, and if the version number doesn't change, this appears to users as an update from one version *to the same version*.
 
+![Addon Manager showing an available update where the installed and available versions are identical](Media/addon-manager-same-version-update.png)
+
 ## Alternative 1: Tagged Releases
 
 For Addons that are mature and rarely release new versions, or that want very strict control over the release process, an alternative is to have the main Addon Index list a specific git tag for the Addon Manager to fetch, and to update the Index itself when a new release is made. The Addon Manager will then never display work-in-progress from the git repo, regardless of any changes on any branches there. To make a new release, you would create a new tag on your repo, and then submit a PR to the Addons Index changing the available release tag.
