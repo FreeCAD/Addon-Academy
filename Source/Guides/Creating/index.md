@@ -7,7 +7,7 @@ layout : Default
 There are two main ways to scaffold a new FreeCAD addon:
 
 -   The [GitHub template repository][Addon-Template]: one click, no tooling required, produces a minimal addon of any type.
--   The [cookiecutter template][Starterkit]: driven by the Python `cookiecutter` CLI, tailored to generating a new Workbench.
+-   The [cookiecutter template][Addon-Template-Cookie]: driven by the Python `cookiecutter` CLI, tailored to generating a new Workbench.
 
 
 ## GitHub Template
@@ -35,36 +35,54 @@ For a file-by-file breakdown of what the template ships with, see [Structure of 
 
 ## Cookiecutter
 
-The [freecad.workbench_starterkit][Starterkit] repository is a [cookiecutter] template for generating FreeCAD workbenches.
-
-### Dependencies
-
--   `python3`
--   [cookiecutter]
+The [freecad.workbench_starterkit][Addon-Template-Cookie] repository is a [cookiecutter] template for generating FreeCAD workbenches.
 
 ### Quick Start
 
-Launch cookiecutter and point it at the template repo:
+Install [uv] (if you haven't already), then use it to run [cookiecutter]:
 
+To install `uv`:
 ```bash
-$ cookiecutter https://github.com/FreeCAD/freecad.workbench_starterkit.git
+$ curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+To run `cookiecutter`:
+```bash
+$ uvx cookiecutter https://github.com/FreeCAD/Addon-Template.git --checkout cookie
 ```
 
 Answer the questions:
 
 ```
-  [1/13] workbench_project_name (cool_wb):
-  [2/13] workbench_module_name (cool_wb):
-  [3/13] workbench_class_name (CoolWorkbench):
-  [4/13] workbench_menu_text (cool workbench):
-  [5/13] workbench_tooltip (FreeCAD workbench to make cool parametric objects):
-  [6/13] workbench_icon (cool.svg):
-  [8/13] workbench_maintainer_name (me):
-  [9/13] workbench_maintainer_email (me@foobar.com):
-  [10/13] workbench_project_url (https://foobar.com/me/coolWB):
-  [11/13] workbench_description (The cool WB creates cool parametric objects):
-  [12/13] workbench_dependencies ('numpy',):
-  [13/13] workbench_version (0.1.0):
+  [1/13] Addon name (MyAddon):
+  [2/13] Project directory (MyAddon):
+  [3/13] Python sub-module name (MyAddon):
+  [4/13] Name of the svg icon file (addon.svg):
+  [5/13] Name of the author/maintainer (me):
+  [6/13] Email of the author/maintainer (me@foobar.com):
+  [7/13] Short description of the addon (MyAddon does something cool.):
+  [8/13] Required pypi dependencies (optional, separated by comma. i.e. numpy,pillow) ():
+  [9/13] Initial version using format major.minor.review (0.1.0):
+  [10/13] Select addon_license
+    1 - LGPL-2.1-or-later
+    2 - LGPL-3.0-or-later
+    3 - GPL-3.0-or-later
+    4 - MIT
+    5 - CC0
+    6 - CC-BY-SA-4.0
+    7 - OTHER
+    Choose from [1/2/3/4/5/6/7] (1):
+  [11/13] Select assets_license
+    1 - CC-BY-SA-4.0
+    2 - CC0
+    3 - LGPL-2.1-or-later
+    4 - LGPL-3.0-or-later
+    5 - GPL-3.0-or-later
+    6 - MIT
+    7 - OTHER
+    Choose from [1/2/3/4/5/6/7] (1):
+  [12/13] Full url of the git repository (https://github.com/me/MyAddon):
+  [13/13] Name of the default git branch (main):
 ```
 
 The workbench is generated in a directory under the current directory. The easiest way to install a newly created workbench is to symlink it into the `Mod` directory of your FreeCAD installation:
@@ -74,12 +92,13 @@ cd [FreeCAD installation directory]/Mod
 ln -s [path to the created workbench] CoolWB
 ```
 
-Look for the workbench in the FreeCAD → View → Workbenches menu; it should be there. See the [starter kit README][Starterkit] for additional installation options, including building into FreeCAD source and submitting to the Addon Manager.
+Look for the workbench in the FreeCAD → View → Workbenches menu; it should be there.
 
 
 [Addon-Template]: https://github.com/FreeCAD/Addon-Template
-[Starterkit]:     https://github.com/FreeCAD/freecad.workbench_starterkit
-[cookiecutter]:   https://cookiecutter.readthedocs.io
+[Addon-Template-Cookie]: https://github.com/FreeCAD/Addon-Template/tree/cookie
+[uv]: https://github.com/astral-sh/uv
+[cookiecutter]: https://cookiecutter.readthedocs.io
 
 [Licensing]:      ../../Topics/Licensing
 [Structuring]:    ../../Topics/Structuring
