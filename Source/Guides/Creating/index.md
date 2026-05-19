@@ -35,23 +35,19 @@ For a file-by-file breakdown of what the template ships with, see [Structure of 
 
 ## Cookiecutter
 
-The [freecad.workbench_starterkit][Addon-Template-Cookie] repository is a [cookiecutter] template for generating FreeCAD workbenches.
+An alternative to the GitHub template, particularly for those interested in creating a full workbench (as opposed to a simpler addon like a theme, macro, or CAM machine), is to use the [cookiecutter]-based mechanism in the [`cookie` branch of the template][Addon-Template-Cookie]. 
 
-### Quick Start
-
-Install [uv] (if you haven't already), then use it to run [cookiecutter]:
-
-To install `uv`:
+To use it, first install [uv] (if you haven't already):
 ```bash
 $ curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-To run `cookiecutter`:
+Once `uv` is installed, use it to run `cookiecutter` with our tooling:
 ```bash
 $ uvx cookiecutter https://github.com/FreeCAD/Addon-Template.git --checkout cookie
 ```
 
-Answer the questions:
+Answer the questions as they are presented:
 
 ```
   [1/13] Addon name (MyAddon):
