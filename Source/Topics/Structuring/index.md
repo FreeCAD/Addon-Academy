@@ -6,7 +6,7 @@ layout : Default
 
 There are two common ways to lay out a FreeCAD addon: a **Modern**, namespaced structure used by the current addon templates, and a **Legacy** structure that keeps Python files at the top level with `Init.py` and `InitGui.py`. 
 
-New addons should prefer the Modern layout. It is what both the [Addon-Template] and the [workbench starter kit][Starterkit] produce by default, it places the addon's code in its own namespace rather than in FreeCAD's global namespace, and it opens up the possibility of using standard Python packaging tools (such as `pip` and `uv`) for installing the addon and managing its development dependencies.
+New addons should use the Modern layout -- this is what the [Addon-Template] produces if it is use to create the addon from scratch (the recommended workflow). It places the addon's code in its own namespace rather than in FreeCAD's global namespace, and it opens up the possibility of using standard Python packaging tools (such as `pip` and `uv`) for installing the addon and managing its development dependencies.
 
 The two layouts at a glance:
 
@@ -63,7 +63,9 @@ Additional Python modules for the addon's tools and commands also live inside `f
 
 ## Legacy
 
-The legacy layout predates namespaced packaging and is still supported. From the wiki's [Workbench creation][Workbench-Creation] page:
+The legacy layout predates the namespaced packaging and is still supported for legacy addons. New Addons should use the Modern layout to ensure their commands do not pollute the global namespace. 
+
+From the wiki's [Workbench creation][Workbench-Creation] page:
 
 > You need a folder, with any name you like, placed in the user Mod directory, with an `Init.py` file, and, optionally an `InitGui.py` file. The `Init.py` file is executed when FreeCAD starts, and the `InitGui.py` file is executed immediately after, but only when FreeCAD starts in GUI mode. That's all it needs for FreeCAD to find your workbench at startup and add it to its interface.
 
@@ -93,5 +95,4 @@ The wiki describes this as "the classic way of creating a new workbench." Unless
 [Licensing]:          ../Licensing
 
 [Addon-Template]:     https://github.com/FreeCAD/Addon-Template
-[Starterkit]:         https://github.com/FreeCAD/freecad.workbench_starterkit
 [Workbench-Creation]: https://wiki.freecad.org/Workbench_creation
