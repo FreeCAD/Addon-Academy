@@ -90,8 +90,7 @@ ln -s [path to the created workbench] CoolWB
 
 Look for the workbench in the FreeCAD → View → Workbenches menu; it should be there.
 
-
-[Addon-Template]: https://github.com/FreeCAD/Addon-Template
+[Addon-Template]: https://github.com/FreeCAD/Addon-Template/tree/main
 [Addon-Template-Cookie]: https://github.com/FreeCAD/Addon-Template/tree/cookie
 [uv]: https://github.com/astral-sh/uv
 [cookiecutter]: https://cookiecutter.readthedocs.io
