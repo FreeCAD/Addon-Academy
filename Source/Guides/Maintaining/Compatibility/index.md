@@ -134,6 +134,7 @@ For more rigorous testing, see [Testing][Testing].
 ## See also
 
 -   [Manifest: `<freecadmin>`, `<freecadmax>`][ManifestVersions]: the manifest tags this page is built around.
+-   [Manifest: feature availability by FreeCAD version][ManifestAvailability]: which manifest tags exist in which FreeCAD release, and what older versions do with the ones they do not recognize.
 -   [Data & schema migrations][Migrations]: the corresponding concern for `FeaturePython` document objects when their schema changes.
 -   [Custom document objects][DocObjects]: the schema-evolution side of compatibility.
 -   [Testing][Testing]: strategies for testing across FreeCAD versions.
@@ -141,6 +142,7 @@ For more rigorous testing, see [Testing][Testing].
 
 [Manifest]: ../../../Topics/Structuring/Manifest
 [ManifestVersions]: ../../../Topics/Structuring/Manifest#freecadmin
+[ManifestAvailability]: ../../../Topics/Structuring/Manifest#availability
 [Migrations]: ../Migrations
 [DocObjects]: ../../Code/Document-Objects
 [Testing]: ../../Developing/Testing
