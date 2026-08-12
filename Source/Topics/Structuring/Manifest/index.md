@@ -24,6 +24,26 @@ The metadata file must be a valid, well-formed XML 1.0 document. It must be call
 Any file path specified in `package.xml` must use the slash (`/`) as the directory separator: on systems that expect a different separator during execution (e.g. Windows) FreeCAD will automatically convert to the correct separator.
 
 
+## Feature availability by FreeCAD version {#availability}
+
+The manifest format has been stable since its introduction in FreeCAD 0.20, and most of the tags described on this page are understood by every FreeCAD version that reads `package.xml` at all. A small number of features arrived later. Those are listed below; anything not in this table has been available since 0.20.
+
+| Feature                                                                     | Available from |
+|-----------------------------------------------------------------------------|----------------|
+| Format 1 base tags, with `workbench`, `macro`, and `preferencepack` content | 0.20           |
+| [`<date>`](#date)                                                           | 0.21           |
+| [`<pythonmin>`](#pythonmin)                                                 | 0.21           |
+| `optional` and `type` attributes on [`<depend>`](#depend)                   | 0.21           |
+| `discussion` value for the [`<url>`](#url) `type` attribute                 | 0.21           |
+| [`<type>Theme</type>`](#type) recognized by the theme picker                | 1.0            |
+| `bundle` and `other` [`<content>`](#content) types                          | 1.1            |
+| `machine` [`<content>`](#content) type                                      | 26.3           |
+
+Using a newer feature does not prevent an addon from working on an older FreeCAD. As noted above, unrecognized tags and attributes are ignored rather than treated as errors, so a manifest that declares `machine` content parses correctly on FreeCAD 1.0: the content item simply has no effect there. Version gating therefore applies to the individual feature, not to the addon as a whole, and there is rarely any reason to avoid a newer tag purely on compatibility grounds.
+
+When an addon genuinely cannot function on an older FreeCAD release, exclude those versions explicitly with [`<freecadmin>`](#freecadmin) rather than relying on a tag being ignored. See [FreeCAD version compatibility][Compatibility] for the full set of version-targeting strategies.
+
+
 ## Tags
 
 ### `<package>` {#package}
@@ -86,7 +106,7 @@ Note that you should increment this *anytime* you publish a change to your addon
 
 ### `<date>` {#date}
 
-**REQUIRED**
+**REQUIRED** (available from FreeCAD 0.21)
 
 The date of the current version, in the format `YYYY-MM-DD` or `YYYY.MM.DD`. Required even if the version is CalVer style.
 
@@ -151,7 +171,7 @@ Commonly-used license strings for other non-code resources (typically in a `LICE
 
 **REQUIRED**
 
-The `<content>` tag describes the actual contents of the package. It has no attributes, and contains any number of children. Those children can have arbitrary tag names, only some of which may be recognized by FreeCAD. FreeCAD currently supports `workbench`, `macro`, `preferencepack`, `bundle`, `machine`, and `other` elements. Each child is then defined recursively by this standard, containing any or all of the elements allowed for the root `<package>` node. For example, a theme:
+The `<content>` tag describes the actual contents of the package. It has no attributes, and contains any number of children. Those children can have arbitrary tag names, only some of which may be recognized by FreeCAD. FreeCAD currently supports `workbench`, `macro`, `preferencepack`, `bundle`, `machine`, and `other` elements. The first three have been recognized since FreeCAD 0.20; `bundle` and `other` were added in 1.1, and `machine` in 1.2. Each child is then defined recursively by this standard, containing any or all of the elements allowed for the root `<package>` node. For example, a theme:
 
 ```xml
 <content>
@@ -228,7 +248,7 @@ Provided for convenience to other tools, any number of other files may be listed
 
 **Optional**
 
-Specifies a specialized sub-type of a content item. The most important use is `<type>Theme</type>` on a `<preferencepack>` content item: it causes FreeCAD to display the pack in the theme picker rather than only in the plain Preference-pack list. Without this tag, a preference pack containing theme files (a `.qss` stylesheet, color `.cfg`, etc.) is treated as a plain preference pack and is not offered as a theme. See [Themes][Themes] for the full theme-authoring pattern.
+Specifies a specialized sub-type of a content item. The most important use is `<type>Theme</type>` on a `<preferencepack>` content item: it causes FreeCAD to display the pack in the theme picker rather than only in the plain Preference-pack list. Without this tag, a preference pack containing theme files (a `.qss` stylesheet, color `.cfg`, etc.) is treated as a plain preference pack and is not offered as a theme. The theme picker began honoring this value in FreeCAD 1.0; on 0.21 and earlier the tag parses without error, but the pack is only ever offered as a plain preference pack. See [Themes][Themes] for the full theme-authoring pattern.
 
 
 ### `<url>` {#url}
@@ -243,7 +263,7 @@ It is a good idea to include `<url>` tags pointing users to your package's onlin
 
 #### Attributes
 
--   `type="TYPE"` (required): The type should be one of the following identifiers: `website`, `bugtracker`, `repository`, `readme`, `documentation`, or `discussion`.
+-   `type="TYPE"` (required): The type should be one of the following identifiers: `website`, `bugtracker`, `repository`, `readme`, `documentation`, or `discussion`. The `discussion` type is available from FreeCAD 0.21; earlier versions fall back to treating it as `website`.
 -   `branch="BRANCH"` (required for `type="repository"`): The name of the branch to check out to obtain this package. Must correspond to the branch or tag that this package.xml file lives on.
 
 
@@ -275,8 +295,8 @@ All dependencies and relationships may restrict their applicability to particula
 -   `version_eq="VERSION"` (optional): The dependency to the package is restricted to a version equal than the stated version number.
 -   `version_gte="VERSION"` (optional): The dependency to the package is restricted to versions greater or equal than the stated version number.
 -   `version_gt="VERSION"` (optional): The dependency to the package is restricted to versions greater than the stated version number.
--   `optional="true|false"`: If `optional` is `true`, then the dependency is treated as optional when the Addon is installed using the Addon Manager. In general this means that a failure to install the dependency does not prevent the Addon from installing, and the user may be prompted about whether they want to install it.
--   `type="automatic|addon|internal|python"`: Optional, defaults to `automatic`. Indicates what this dependency statement refers to. `addon` is for external addons, `internal` is for internal workbenches and `python` indicates a Python package dependency. Including the specific `type` is strongly recommended to ensure the correct dependency is identified.
+-   `optional="true|false"` (available from FreeCAD 0.21): If `optional` is `true`, then the dependency is treated as optional when the Addon is installed using the Addon Manager. In general this means that a failure to install the dependency does not prevent the Addon from installing, and the user may be prompted about whether they want to install it.
+-   `type="automatic|addon|internal|python"` (available from FreeCAD 0.21): Optional, defaults to `automatic`, but setting the true value directly is strongly recommended. Indicates what this dependency statement refers to. `addon` is for external addons, `internal` is for internal workbenches and `python` indicates a Python package dependency. Including the specific `type` is recommended to ensure the correct dependency is identified.
 
 ##### Type: internal
 
@@ -342,6 +362,8 @@ The maximum version of FreeCAD required to use package/element, as a semantic ve
 
 
 ### `<pythonmin>` {#pythonmin}
+
+**Available from FreeCAD 0.21**
 
 The minimum version of Python required to use package/element, as a semantic version 2.0 string in the format `MAJOR.MINOR`. The Addon Manager will not permit an Addon to be installed on a system running a version of Python before this one. Only Python 3.x versions are supported. Although you may specify a three-component version, only the minor number is considered during the compatibility check.
 
@@ -493,3 +515,4 @@ A `package.xml` for an addon that uses the `<other/>` content type to ship a too
 [ExampleToolbar]:   ./Examples/Toolbar.xml
 
 [Themes]:           ../../Types/Themes
+[Compatibility]:    ../../../Guides/Maintaining/Compatibility
