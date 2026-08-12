@@ -25,4 +25,4 @@ jobs:
                 uses : actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
 
             -   name : Spell Check
-                uses : crate-ci/typos@37bb98842b0d8c4ffebdb75301a13db0267cef89  # v1.47.2
+                uses : crate-ci/typos@8a48f81b6c64dcfea44b3633223084c4be58ac5f  # v1.49.0
