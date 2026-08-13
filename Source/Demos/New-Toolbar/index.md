@@ -8,7 +8,7 @@ An addon that adds a new toolbar, holding several buttons, to a workbench it doe
 
 This is the counterpart to the [Extend Toolbar][ExtendToolbar] demo, which adds a single command to a toolbar that already exists. Creating a whole toolbar takes a different technique, described under [How the toolbar is built](#how) below.
 
-Every file in this demo is dedicated to the public domain under [CC0-1.0][CC0]. Copy and adapt freely.
+Every file in this demo is dedicated to the public domain under [CC0-1.0][CC0]. Copy and adapt freely. No attribution is required.
 
 
 ## Contents
@@ -66,13 +66,13 @@ Source: [`package.xml`][Source-pkg]
 
 The file FreeCAD runs when starting the GUI. FreeCAD imports `init_gui.py` for every installed addon regardless of what the addon contains, which is what makes a workbench-less addon possible at all.
 
-It registers the icons directory and the manipulator, and that is all. There is no `FreeCADGui.addWorkbench()` call.
+It registers the icons directory and the manipulator, and that is all.
 
 Source: [`init_gui.py`][Source-gui]
 
 ### `freecad/Calvinball/Manipulator.py`
 
-The interesting file. It defines the [workbench manipulator][Manipulators] that builds the toolbar, plus the helper that works out which workbench is being set up.
+The interesting file. It defines the [workbench manipulator][Manipulators] that builds the toolbar, plus the helper that determines which workbench is being set up.
 
 Source: [`Manipulator.py`][Source-manip]
 
@@ -92,20 +92,14 @@ changes = [{"append": _TOOLBAR, "toolBar": ""}]
 changes += [{"append": command, "toolBar": _TOOLBAR} for command in _COMMANDS]
 ```
 
-Order matters. The first dictionary creates the toolbar; the rest fill it, and cannot run until the toolbar exists as a named child. Reversing the two steps produces no error and no toolbar.
+Order matters. The first dictionary creates the toolbar; the rest fill it, and cannot run until the toolbar exists as a named child. Reversing the two steps produces no error, but also no toolbar.
 
 
 ## Restricting the toolbar to one workbench
 
-A manipulator runs on **every** workbench activation, so the code above by itself would put the Calvinball toolbar in every workbench in FreeCAD. Confining it to Part means knowing which workbench is being set up, and the obvious way to ask fails:
+A manipulator runs on **every** workbench activation, so the code above by itself would put the Calvinball toolbar in every workbench in FreeCAD. Confining it to Part means knowing which workbench is being set up, and the obvious way to ask fails: see the guide on Manipulators for the gory details.
 
-```python
-FreeCADGui.activeWorkbench().name()   # AttributeError, sometimes
-```
-
-During a core workbench's first activation the handler object does not yet carry the attribute that `name()` delegates to, and the call raises. On every later activation it works. An addon that gets this wrong therefore behaves correctly for the developer who switches back and forth while testing, and fails for the user whose FreeCAD opens in Part.
-
-The handler object itself is correct even on first activation, so the demo recovers the name by identity:
+The handler object itself is correct even on first activation, so this demo recovers the name by identity (the reliable way to do it, so you should use this code in your Addon as well):
 
 ```python
 def active_workbench_name():
