@@ -4,9 +4,9 @@ layout : Default
 
 # Workbench manipulators
 
-A workbench manipulator is an object that edits FreeCAD's toolbars, menus, and context menus as each workbench is set up. It is the mechanism for contributing user interface to workbenches your addon does not own, including the case of an addon that defines no [workbench][Workbench] at all.
+A workbench manipulator is an object that edits FreeCAD's toolbars, menus, and context menus as each workbench is set up. It is the mechanism used for contributing user interface elements to workbenches your addon does not own, including the case of an addon that defines no [workbench][Workbench] at all.
 
-Manipulators are available from FreeCAD 1.0.
+Manipulators are available beginning in FreeCAD 1.0.
 
 For complete working examples, see the [Extend Toolbar demo][ExtendToolbar], which adds one command to an existing toolbar, and the [New Toolbar demo][NewToolbar], which builds a new toolbar in an existing workbench.
 
@@ -48,18 +48,18 @@ Four methods are recognized:
 
 ## When manipulators run
 
-Every registered manipulator runs on **every workbench activation**, not once at startup and not only for your own workbench. Switching from Part to Sketcher and back runs your manipulator three times, and the toolbar and menu trees it edits are rebuilt from scratch each time.
+Every registered manipulator runs on **every workbench activation** (*not* e.g. once at startup, or only for your own workbench). For example, switching from Part to Sketcher and back runs your manipulator three times, and the toolbar and menu trees it edits are rebuilt from scratch each time.
 
-Three consequences shape how manipulator methods should be written:
+This leads to three guidelines about how manipulator methods should be written:
 
--   **Keep them cheap.** They sit directly in the path of a user action that is expected to feel instant.
--   **They must decide for themselves which workbench they are being called for.** Nothing is passed in; see [Scoping to one workbench](#scoping) below.
--   **Failures are swallowed.** FreeCAD catches any exception a manipulator method raises, reports it to the Report view, and carries on with the activation. Your toolbar quietly fails to appear rather than breaking FreeCAD, which is good for users and unhelpful for you. Check the Report view when a manipulator seems to do nothing.
+-   **Keep them cheap.** They are instantiated directly in the path of a user action that should feel instant.
+-   **They must determine for themselves which workbench they are being called for.** Nothing is passed in; see [Scoping to one workbench](#scoping) below.
+-   **Failures are not reported.** FreeCAD catches any exception a manipulator method raises, reports it to the Report view, and carries on with the activation. Your toolbar quietly fails to appear rather than breaking FreeCAD, which is good for users, but unhelpful for *you*. Check the Report view when a manipulator seems to do nothing.
 
 
 ## Return values
 
-Every method returns either a single dictionary or any sequence of dictionaries. Both of these are valid:
+Every method returns either a single dictionary or a sequence of dictionaries. Both of these are valid:
 
 ```python
 return {"append": "MyAddon_Hello", "toolBar": "File"}
@@ -74,7 +74,7 @@ return [
 
 Anything else, including `None`, is ignored without complaint. Returning an empty list is the conventional way to say "no changes for this workbench".
 
-Each dictionary describes one change, keyed by the operation: `insert`, `append`, or `remove`. The value is the command name to act on. If a dictionary carries more than one operation key, only the first of `insert`, `append`, `remove` is honored, in that order. Companion keys name the target the operation applies to.
+Each individual dictionary describes **one** change, keyed by the operation: `insert`, `append`, or `remove`. The value is the command name to act on. If a dictionary carries more than one operation key, only the first of `insert`, `append`, `remove` is honored, in that order. Companion keys name the target the operation applies to. To apply multiple operations, return multiple dictionaries, one operation in each.
 
 
 ## `modifyToolBars()`
@@ -147,7 +147,7 @@ These strings are capitalized and are the same values passed to a workbench's ow
 
 ## `modifyDockWindows()`
 
-Reserved, and currently a no-op. FreeCAD calls the method and parses its return value, then discards the result: the function that would apply the changes has an empty body. Do not rely on it. To contribute a dock widget today, add it directly through Qt with `FreeCADGui.getMainWindow().addDockWidget(...)`.
+Reserved, and currently a no-op. FreeCAD calls the method and parses its return value, then discards the result: the function that would apply the changes is currently unimplemented. Do not rely on it, or its absence. To contribute a dock widget today, add it directly through Qt with `FreeCADGui.getMainWindow().addDockWidget(...)`.
 
 
 ## Creating a new toolbar {#new-toolbar}
@@ -170,11 +170,11 @@ The new toolbar behaves in every respect like a core one. It is visible by defau
 
 ## Scoping to one workbench {#scoping}
 
-Because a manipulator runs on every activation, the code above adds its toolbar to *every* workbench. Restricting it to one means working out which workbench is currently being set up, and the obvious way to do that fails.
+Because a manipulator runs on every activation, the code above adds its toolbar to *every* workbench. Restricting it to one means determining which workbench is currently being set up. The correct way of doing this is not the one you are expecting!
 
-`FreeCADGui.activeWorkbench()` returns the correct handler object even mid-activation, but calling `.name()` on it raises `AttributeError` during a core workbench's first activation. `name()` is a thin wrapper that delegates to a `__Workbench__` attribute FreeCAD injects into the handler, and for workbenches implemented in C++ that injection happens only after activation finishes, which is after your manipulator has already run.
+`FreeCADGui.activeWorkbench()` returns the correct handler object even mid-activation, but calling `.name()` on it raises `AttributeError` during a core workbench's first activation. `name()` is a thin wrapper that delegates to a `__Workbench__` attribute FreeCAD injects into the handler, and for workbenches implemented in C++ that injection happens only after activation finishes, which is **after your manipulator has already run**.
 
-The failure is order-dependent, which makes it a particularly unpleasant trap. Measured from inside `modifyToolBars()`:
+The failure is order-dependent, which makes it a particularly unpleasant trap. I'm not bitter. Measured from inside `modifyToolBars()`:
 
 | Situation                                        | `activeWorkbench().name()` | Identity lookup |
 |--------------------------------------------------|----------------------------|-----------------|
@@ -185,7 +185,7 @@ The failure is order-dependent, which makes it a particularly unpleasant trap. M
 
 An addon author who tests by switching away and back, or who only tests against their own Python workbench, sees none of this. The user whose FreeCAD starts in Part does.
 
-Since the handler object itself is already correct, recover the name by identity instead:
+Since the handler object itself is already correct, recover the name by identity instead by including this method in your Addon:
 
 ```python
 def active_workbench_name():
@@ -200,7 +200,7 @@ def active_workbench_name():
 
 ```python
 def modifyToolBars(self):
-    if active_workbench_name() != "PartWorkbench":
+    if active_workbench_name() != "ThatOneWorkbenchICareAbout":
         return []
     ...
 ```
