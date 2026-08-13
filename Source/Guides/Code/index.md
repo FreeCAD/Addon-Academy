@@ -7,6 +7,7 @@ layout : Default
 Guides for writing the code inside a FreeCAD addon. For complete runnable examples that exercise these patterns end to end, see the [Demos][Demos].
 
 -   [Workbench registration][Workbench]
+-   [Workbench manipulators][Manipulators]
 -   [Gui Commands][Commands]
 -   [Qt & PySide][Qt]
 -   [Preferences pages][Preferences]
@@ -17,6 +18,7 @@ Guides for writing the code inside a FreeCAD addon. For complete runnable exampl
 
 
 [Workbench]: ./Workbench
+[Manipulators]: ./Manipulators
 [Commands]: ./Commands
 [Qt]: ./Qt
 [Preferences]: ./Preferences

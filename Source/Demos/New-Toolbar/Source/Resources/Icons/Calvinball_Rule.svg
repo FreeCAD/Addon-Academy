@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+    SPDX-License-Identifier: CC0-1.0
+    SPDX-FileNotice: Part of the Addon Academy "New Toolbar" demo.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <rect x="4" y="4" width="56" height="56" rx="10" ry="10" fill="#6A4C93"/>
+    <rect x="18" y="14" width="28" height="36" rx="3" ry="3" fill="#ffffff"/>
+    <path d="M 24 24 H 40 M 24 32 H 40 M 24 40 H 34"
+          stroke="#6A4C93" stroke-width="3" stroke-linecap="round"/>
+</svg>
