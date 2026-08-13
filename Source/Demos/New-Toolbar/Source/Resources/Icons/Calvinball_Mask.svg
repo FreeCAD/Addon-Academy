@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+    SPDX-License-Identifier: CC0-1.0
+    SPDX-FileNotice: Part of the Addon Academy "New Toolbar" demo.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <rect x="4" y="4" width="56" height="56" rx="10" ry="10" fill="#C9A227"/>
+    <path d="M 12 24 Q 32 18 52 24 Q 52 42 32 44 Q 12 42 12 24 Z" fill="#1F1F1F"/>
+    <ellipse cx="23" cy="30" rx="6" ry="5" fill="#C9A227"/>
+    <ellipse cx="41" cy="30" rx="6" ry="5" fill="#C9A227"/>
+</svg>

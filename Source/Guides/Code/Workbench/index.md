@@ -112,13 +112,23 @@ Avoid expensive work in `Activated` unless it is genuinely scoped to "workbench 
 
 ### `ContextMenu(recipient)`
 
-Called whenever the user right-clicks inside FreeCAD's main window. The `recipient` argument is `"view"` for a right-click in the 3D view or `"tree"` for a right-click in the model tree. Use `self.appendContextMenu` to add commands:
+Called whenever the user right-clicks inside FreeCAD's main window. The `recipient` argument identifies where the click happened, and is one of three capitalized strings:
+
+| `recipient` | Where the click happened |
+|-------------|--------------------------|
+| `"Tree"`    | The model tree           |
+| `"View"`    | The 3D view              |
+| `"Sketch"`  | The Sketcher editor      |
+
+Use `self.appendContextMenu` to add commands:
 
 ```python
 def ContextMenu(self, recipient):
-    if recipient == "view":
+    if recipient == "View":
         self.appendContextMenu("My actions", ["MyAddon_Another_Command"])
 ```
+
+The capitalization matters. Comparing against `"view"` matches nothing, and does so silently.
 
 `ContextMenu` is optional. Most workbenches do not implement it.
 
@@ -203,6 +213,7 @@ FreeCAD users expect the application to launch quickly, and you can help with th
 
 -   [Minimal Workbench demo][MinimalWB]: a complete working workbench with SPDX headers.
 -   [Gui Commands][Commands]: what the command-name strings in `appendToolbar` and `appendMenu` refer to.
+-   [Workbench manipulators][Manipulators]: how to contribute toolbars and menus to workbenches you do not own, including without defining a workbench at all.
 -   [Icons & resources][Icons]: detail on the `Icon` path and addon icon directories.
 -   [Structuring][Structuring]: the addon directory layout `init_gui.py` lives inside.
 -   [Manifest][Manifest]: the `<classname>` element in `package.xml`.
@@ -211,6 +222,7 @@ FreeCAD users expect the application to launch quickly, and you can help with th
 
 [MinimalWB]: ../../../Demos/Minimal-Workbench
 [Commands]: ../Commands
+[Manipulators]: ../Manipulators
 [Icons]: ../Icons
 [Structuring]: ../../../Topics/Structuring
 [Manifest]: ../../../Topics/Structuring/Manifest
