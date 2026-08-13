@@ -208,6 +208,76 @@ def modifyToolBars(self):
 Returning an empty list for other workbenches gives exactly the behavior core workbenches get: the toolbar object persists but is hidden, and its entry in the visibility menu is hidden with it.
 
 
+## Toolbars that appear only in edit mode {#edit-mode}
+
+Sketcher's Geometries toolbar appears when a sketch is opened for editing and disappears when the edit session ends. An addon can produce the same behavior for its own toolbar, but not by the route the core uses.
+A manipulator alone cannot express "hidden unless editing". Adding your commands to Sketcher's existing `Geometries` toolbar with `{"append": ..., "toolBar": "Geometries"}` is one way around that, and is reasonable if your commands genuinely belong beside the sketch geometry tools. It is not the only way.
+
+### Driving visibility from a document observer
+
+Create the toolbar in the ordinary way, then show and hide it in response to edit-mode notifications. `FreeCADGui.addDocumentObserver` accepts an object with `slotInEdit` and `slotResetEdit` methods, and the resulting `QToolBar` can be manipulated directly through Qt:
+
+```python
+import FreeCADGui
+from PySide import QtCore, QtWidgets
+
+_TOOLBAR = "Calvinball"
+
+_in_edit = False
+
+
+def _set_shown(shown):
+    for bar in FreeCADGui.getMainWindow().findChildren(QtWidgets.QToolBar):
+        if bar.objectName() == _TOOLBAR:
+            bar.setVisible(shown)
+            bar.toggleViewAction().setVisible(shown)
+            return
+
+
+class EditModeObserver:
+
+    def slotInEdit(self, view_provider):
+        global _in_edit
+        if not view_provider.Object.isDerivedFrom("Sketcher::SketchObject"):
+            return
+        _in_edit = True
+        _set_shown(True)
+
+    def slotResetEdit(self, view_provider):
+        global _in_edit
+        if not view_provider.Object.isDerivedFrom("Sketcher::SketchObject"):
+            return
+        _in_edit = False
+        _set_shown(False)
+
+
+FreeCADGui.addDocumentObserver(EditModeObserver())
+```
+
+The manipulator itself needs one extra line:
+
+```python
+class Manipulator:
+
+    def modifyToolBars(self):
+        # FreeCAD is about to rebuild the toolbar and show it. Re-apply the
+        # current edit state once it has, since the QToolBar does not exist yet.
+        QtCore.QTimer.singleShot(0, lambda: _set_shown(_in_edit))
+        return [
+            {"append": _TOOLBAR, "toolBar": ""},
+            {"append": "Calvinball_Score", "toolBar": _TOOLBAR},
+        ]
+```
+
+Three details:
+
+-   **The timer is not optional.** Every workbench activation rebuilds the toolbar and applies the user's saved visibility preference, which undoes anything the observer did. Scheduling the re-apply with a zero-delay timer from inside `modifyToolBars()` puts it after that rebuild. The `QToolBar` does not yet exist while the manipulator is running, so the work cannot be done inline.
+-   **Track the edit state in a variable.** The user can switch workbenches without leaving edit mode, and the manipulator has no other way to know which state to restore.
+-   **Filter on the view provider.** `slotInEdit` fires for *every* object that enters edit mode, not only sketches. Without the `isDerivedFrom` guard the toolbar would also appear for PartDesign features, mesh dialogs, and anything else that opens an edit session.
+
+Note that a command that lives on an edit-mode toolbar needs an appropriate [`CmdType`][CmdType]. With the default type, the button is disabled for exactly as long as a task dialog is open, which is exactly when this toolbar is visible. Set `CmdType` explicitly if you use this technique.
+
+
 ## Pitfalls
 
 **Toolbar and menu names are a global namespace.** There are no identifiers, only names, and yours share one namespace with every core toolbar and every other addon's. Prefix new toolbar names with your addon's name for the same reason you prefix [command names][Commands].
@@ -220,6 +290,8 @@ Returning an empty list for other workbenches gives exactly the behavior core wo
 
 **Nothing tells you a name was wrong.** Every operation here fails silently when its target cannot be found. If a change does not appear, the first thing to check is the spelling of the target name, and the second is the Report view.
 
+**Toolbar visibility policy is C++ only.** A manipulator can create a toolbar but cannot say anything about when it should be shown. Every toolbar it creates is visible by default and user-toggleable. Conditional visibility has to be arranged separately; see [toolbars that appear only in edit mode](#edit-mode).
+
 
 ## See also
 
@@ -231,6 +303,7 @@ Returning an empty list for other workbenches gives exactly the behavior core wo
 
 
 [Commands]: ../Commands
+[CmdType]: ../Commands#cmdtype
 [Workbench]: ../Workbench
 [Icons]: ../Icons
 [Translations]: ../Translations
