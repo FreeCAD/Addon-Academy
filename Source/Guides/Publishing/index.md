@@ -39,6 +39,6 @@ The `Indexed` approach is the easiest way for users to find and install your add
 
 
 
-[Reference]: ./Reference
-[Portable]: ./Portable
-[Indexed]: ./Indexed
+[Reference]: ./Reference.md
+[Portable]: ./Portable.md
+[Indexed]: ./Indexed.md
