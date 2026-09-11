@@ -14,14 +14,18 @@ This approach is the easiest way for new users to discover your addon, but it co
 
 ## Expectations
 
--   You are expected to maintain your addon for as long as it's indexed. *If it falls into disrepair and is not updated, it may be removed from the index.*
+-   Addons in the index are expected to be substantially complete and functional. Do not advertise your addon as being capable of more than it actually is. The Index is not suitable for "alpha"-level testing.
+
+-   Patience! Each addon submitted to the Index is reviewed by a FreeCAD team member: the larger the addon, the more time this process takes. Please ensure your addon is ready for review before submission.
+
+-   You are expected to maintain your addon for as long as it's indexed. *If it falls into disrepair and is not updated, it will be removed from the index.*
 
 -   Your addon meets the required [Qualities] upon being indexed and works with the Addons team to stay compliant with future changes.
 
 
 ## Recommendations
 
--   You should ask a small set of users to test your addon before submission (consider reaching out on the [Discord], [Forum], [Reddit]), so people try it out and you receive real usage feedback and can catch important bugs before "going live" to a larger audience.
+-   You should ask a small set of users to test your addon before submission (consider reaching out on the [Discord], [Forum], [Reddit]), so people try it out and you receive real usage feedback and can catch important bugs before "going live" to a larger audience. An addon with no evidence of user testing, or that is clearly too new to have received meaningful community feedback, is not yet suitable for inclusion in the Index.
 
 -   You should tag your repository with at least the `freecad` & `addon` topics to improve searchability.
 
