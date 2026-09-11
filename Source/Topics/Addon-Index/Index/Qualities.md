@@ -12,6 +12,8 @@ In order to be included in the FreeCAD Addon Index, an addon must comply with a 
 
 - The addon maintainers address user concerns such as open issues, pull requests, and security advisories in a timely manner.
 
+- The addon's repository and overall codebase must be at least 30 days old.
+
 ## Compliance
 
 - The addon complies with GDPR, doesn't send user data to 3rd parties unless expressly permitted by the user, and in permitted cases keeps the data to the minimum required.
@@ -48,7 +50,9 @@ In order to be included in the FreeCAD Addon Index, an addon must comply with a 
 
 - The addon doesn't require dependencies unless they are functionally necessary, and every Python [dependency][ManifestDepend] it declares is on the package [allow list][AllowList].
 
-- The addon only [vendors][Vendoring] dependencies when technically necessary and doesn't attempt to circumvent the package [allow list][AllowList].
+- The addon only [vendors][Vendoring] dependencies when technically necessary and doesn't attempt to circumvent the package [allow list][AllowList]. Vendoring is **strongly** discouraged and is grounds for rejection from the Index.
+
+- The addon is substantially complete: "pre-alpha" and "alpha"-level code is not suitable for inclusion in the Index. The addon's main documentation page should be clear which features a user should expect to work and which should not.
 
 ## Best Practices
 
