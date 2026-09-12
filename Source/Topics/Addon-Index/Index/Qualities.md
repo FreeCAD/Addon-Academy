@@ -54,6 +54,8 @@ In order to be included in the FreeCAD Addon Index, an addon must comply with a 
 
 - The addon is substantially complete: "pre-alpha" and "alpha"-level code is not suitable for inclusion in the Index. The addon's main documentation page should be clear which features a user should expect to work and which should not.
 
+- Addons in the Index are periodically scanned using [Bandit](https://bandit.readthedocs.io/) and the results posted publicly at https://freecad.github.io/Addon-Reports/ -- addon authors are encouraged to address the issues in that report.
+
 ## Best Practices
 
 - The addon uses the modern, [namespaced `freecad/<ModName>/` layout][Structuring] and does not manipulate `sys.path` or rely on top-level module names that can collide with other addons. Use of the legacy Init.py/InitGui.py layout is permitted, but strongly discouraged. If the old layout is used, `sys.path` must not be manipulated by the addon.
