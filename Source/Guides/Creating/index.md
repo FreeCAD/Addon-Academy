@@ -6,8 +6,10 @@ layout : Default
 
 There are two main ways to scaffold a new FreeCAD addon:
 
--   The [GitHub template repository][Addon-Template]: one click, no tooling required, produces a minimal addon of any type.
--   The [cookiecutter template][Addon-Template-Cookie]: driven by the Python `cookiecutter` CLI, tailored to generating a new Workbench.
+-   The [GitHub template repository][Addon-Template]: is a minimal addon of any type.
+    - Option 1: git clone
+    - Option 2: download the zip version from github, and unzip in local dir.
+-   The [cookiecutter template][Addon-Template-Cookie]: driven by the Python `cookiecutter` CLI, tailored to generating a minimal Addon with optional examples.
 
 
 ## GitHub Template
@@ -35,7 +37,7 @@ For a file-by-file breakdown of what the template ships with, see [Structure of 
 
 ## Cookiecutter
 
-An alternative to the GitHub template, particularly for those interested in creating a full workbench (as opposed to a simpler addon like a theme, macro, or CAM machine), is to use the [cookiecutter]-based mechanism in the [`cookie` branch of the template][Addon-Template-Cookie]. 
+An alternative to the GitHub template, particularly for those interested in creating a full workbench (as opposed to a simpler addon like a theme, macro, or CAM machine), is to use the [cookiecutter]-based mechanism in the [`cookie` branch of the template][Addon-Template-Cookie].
 
 To use it, first install [uv] (if you haven't already):
 ```bash
