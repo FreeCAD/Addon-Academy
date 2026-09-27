@@ -28,6 +28,7 @@ For larger addons, split into multiple files (`CommandsFoo.py`, `CommandsBar.py`
 A command is a plain Python class (not a subclass of anything) with three methods that FreeCAD looks up by name via duck typing (Python's most delightfully-named thing):
 
 ```python
+# freecad/MyAddon/Commands.py
 import FreeCAD
 import FreeCADGui
 
@@ -49,7 +50,7 @@ class RuinThingsCommand:
         FreeCAD.Console.PrintMessage("This was probably a mistake...\n")
 
 
-FreeCADGui.addCommand("MyAddon_Hello", RuinThingsCommand())
+FreeCADGui.addCommand("MyAddon_Ruin", RuinThingsCommand())
 ```
 
 
@@ -193,15 +194,16 @@ Commands are registered once and then referenced by name wherever you want them 
 Short version:
 
 ```python
-# inside your Workbench class's Initialize(self):
-self.appendToolbar("My tools", ["MyAddon_Hello"])
-self.appendMenu("My Addon",    ["MyAddon_Hello"])
+# freecad/MyAddon/init_gui.py, inside your Workbench class's Initialize(self):
+self.appendToolbar("My tools", ["MyAddon_Ruin"])
+self.appendMenu("My Addon",    ["MyAddon_Ruin"])
 ```
 
 You can also reference core FreeCAD commands from your own toolbars and menus, since all registered commands share the same global namespace:
 
 ```python
-self.appendToolbar("My tools", ["Std_New", "MyAddon_Hello"])
+# inside Initialize(self):
+self.appendToolbar("My tools", ["Std_New", "MyAddon_Ruin"])
 ```
 
 Useful built-ins include `Std_New`, `Std_Open`, `Std_Save`, `Std_Undo`, `Std_Redo`, and `Std_SelectAll`.
@@ -212,6 +214,7 @@ Useful built-ins include `Std_New`, `Std_Open`, `Std_Save`, `Std_Undo`, `Std_Red
 To insert a separator between groups of commands in a toolbar or menu, use the special string `"Separator"`:
 
 ```python
+# inside Initialize(self):
 self.appendToolbar("My tools", ["MyAddon_One", "Separator", "MyAddon_Two"])
 ```
 
