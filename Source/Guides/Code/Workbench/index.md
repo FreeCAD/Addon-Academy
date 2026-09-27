@@ -35,13 +35,14 @@ FreeCAD loads every addon's `init_gui.py` once at startup, before the user has h
 Your workbench is a class that inherits from `FreeCADGui.Workbench`:
 
 ```python
+# freecad/MyAddon/init_gui.py
 import FreeCADGui
 
 
 class MyWorkbench(FreeCADGui.Workbench):
     MenuText = "Destroyer of Things"
     ToolTip = "Basically just ruins everything. You've been warned."
-    Icon = _icon_path  # see below
+    Icon = _ICON  # see below
 
     def Initialize(self):
         ...
@@ -62,7 +63,10 @@ In practice you will set at least `MenuText`, `Icon`, `Initialize`, and `GetClas
 **`Icon`**: the icon shown next to `MenuText` in the selector. It must be set before the workbench is registered (before `FreeCADGui.addWorkbench()` is called), which in practice means setting it as a class attribute using an absolute filesystem path. The idiomatic pattern within the FreeCAD addon ecosystem derives the path from `__file__`:
 
 ```python
+# freecad/MyAddon/init_gui.py
 import os
+
+import FreeCADGui
 
 _ADDON_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 _ICON = os.path.join(_ADDON_ROOT, "Resources", "Icons", "Logo.svg")
