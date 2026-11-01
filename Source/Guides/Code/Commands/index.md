@@ -11,16 +11,16 @@ For a complete working example, see the [Minimal Workbench demo][MinimalWB].
 
 ## Where commands live
 
-Convention is to put commands in a `Commands.py` module inside your addon's namespace package, alongside `init_gui.py`:
+Convention is to put commands in a `commands.py` module inside your addon's namespace package, alongside `init_gui.py`:
 
 ```
 freecad/MyAddon/
 ├─ __init__.py
 ├─ init_gui.py
-└─ Commands.py
+└─ commands.py
 ```
 
-For larger addons, split into multiple files (`CommandsFoo.py`, `CommandsBar.py`) or a `commands/` subpackage. Each file registers its commands with `FreeCADGui.addCommand(...)` at module scope, so that importing the file has the side effect of making the commands available.
+For larger addons, split into multiple files (`commands_foo.py`, `commands_bar.py`) or a `commands/` subpackage. Each file registers its commands with `FreeCADGui.addCommand(...)` at module scope, so that importing the file has the side effect of making the commands available.
 
 
 ## The command class
@@ -28,7 +28,7 @@ For larger addons, split into multiple files (`CommandsFoo.py`, `CommandsBar.py`
 A command is a plain Python class (not a subclass of anything) with three methods that FreeCAD looks up by name via duck typing (Python's most delightfully-named thing):
 
 ```python
-# freecad/MyAddon/Commands.py
+# freecad/MyAddon/commands.py
 import FreeCAD
 import FreeCADGui
 

@@ -29,7 +29,7 @@ A FeaturePython object is two pieces wired together:
 Here is a complete minimal parametric box (*not* the one that exists in FreeCAD, a new one we're making in our sample Addon). The proxy class goes in its own module inside your addon's namespace package:
 
 ```python
-# freecad/MyAddon/ParametricBox.py
+# freecad/MyAddon/parametric_box.py
 import Part
 
 
@@ -53,10 +53,10 @@ class ParametricBox:
 Code elsewhere in the addon, usually a command's `Activated()` method (see [Gui Commands][Commands]), imports the class to create instances:
 
 ```python
-# freecad/MyAddon/Commands.py
+# freecad/MyAddon/commands.py
 import FreeCAD
 
-from .ParametricBox import ParametricBox
+from .parametric_box import ParametricBox
 
 # ... inside a command's Activated(self):
 doc = FreeCAD.ActiveDocument
@@ -176,7 +176,7 @@ Write a custom ViewProvider when you need any of:
 The minimal pattern is a second proxy class attached to `obj.ViewObject`. It should be in its own file, separate from the document-object class, so that GUI code is not loaded in the module FreeCAD imports when a file is opened:
 
 ```python
-# freecad/MyAddon/ViewProviderParametricBox.py
+# freecad/MyAddon/viewprovider_parametric_box.py
 class ParametricBoxViewProvider:
     def __init__(self, vobj):
         vobj.Proxy = self
@@ -207,11 +207,11 @@ class ParametricBoxViewProvider:
 Then, when creating the object, attach an instance of it in place of `obj.ViewObject.Proxy = 0`:
 
 ```python
-# freecad/MyAddon/Commands.py
+# freecad/MyAddon/commands.py
 import FreeCAD
 
-from .ParametricBox import ParametricBox
-from .ViewProviderParametricBox import ParametricBoxViewProvider
+from .parametric_box import ParametricBox
+from .viewprovider_parametric_box import ParametricBoxViewProvider
 
 # ... inside a command's Activated(self):
 doc = FreeCAD.ActiveDocument

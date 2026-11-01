@@ -19,15 +19,15 @@ Avoid bitmap formats (PNG, JPEG, WebP) for icons. They look blurry at non-native
 
 ## Where icons go
 
-We recommend placing icons under a top-level `Resources/Icons/` directory in your addon repository, for example:
+We recommend placing icons under a resources module `freecad/MyAddon/resources/icons/` in your addon repository, for example:
 
 ```
-Resources/
-└── Icons/
-    └── MyGreatLogo.svg
-└── Screenshots/
-    └── WowLookAtThisThing.png
-└── Data/
+freecad/MyAddon/resources/
+├── icons/
+│   └── MyGreatLogo.svg
+├── screenshots/
+│   └── WowLookAtThisThing.png
+└── data/
     └── TableOfStuff.csv
 ```
 
@@ -51,7 +51,7 @@ Add your addon's icon directory to FreeCAD's icon search path at startup, typica
 import os
 import FreeCADGui
 FreeCADGui.addIconPath(
-    os.path.join(os.path.dirname(__file__), "Resources", "Icons")
+    os.path.join(os.path.dirname(__file__), "resources", "icons")
 )
 ```
 
@@ -71,7 +71,7 @@ def GetResources(self):
     }
 ```
 
-**Addon Manager.** The `<icon>` tag in your [Manifest][Manifest] points at a path relative to `package.xml`. This icon is shown next to your addon in the Addon Manager listing. A common choice is `Resources/Icons/Logo.svg`.
+**Addon Manager.** The `<icon>` tag in your [Manifest][Manifest] points at a path relative to `package.xml`. This icon is shown next to your addon in the Addon Manager listing. A common choice is `freecad/MyAddon/resources/icons/Logo.svg`.
 
 **Preferences pages.** If your addon contributes a preferences page, FreeCAD looks for a file named `preferences-<modulename>.svg` (all lowercase) on the icon search path to use as that page's sidebar icon. Place it somewhere on a path you have registered with `addIconPath()`.
 
