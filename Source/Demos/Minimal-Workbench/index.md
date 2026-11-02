@@ -14,14 +14,14 @@ Every file in this demo is dedicated to the public domain under [CC0-1.0][CC0]. 
 ```
 MinimalWorkbench/
 ├─ package.xml
-├─ Resources/
-│  └─ Icons/
-│     └─ Logo.svg
 └─ freecad/
    └─ MinimalWorkbench/
+      ├─ resources/
+      │  └─ icons/
+      │     └─ Logo.svg
       ├─ __init__.py
       ├─ init_gui.py
-      └─ Commands.py
+      └─ commands.py
 ```
 
 The top-level `MinimalWorkbench/` is your git repository root. The `freecad/` directory has no `__init__.py` because `freecad` is a [namespace package][PEP420] shared with every other addon on the user's system. Your addon lives in `freecad/<YourAddonName>/`, and *that* directory has a normal `__init__.py`. See [Structuring][Structuring] for background.
@@ -53,7 +53,7 @@ The file FreeCAD runs when starting the GUI. It:
 
 Source: [`init_gui.py`][Source-gui]
 
-### `freecad/MinimalWorkbench/Commands.py`
+### `freecad/MinimalWorkbench/commands.py`
 
 Defines `HelloCommand`, a class with:
 
@@ -63,7 +63,7 @@ Defines `HelloCommand`, a class with:
 
 At module import time the file calls `FreeCADGui.addCommand("Minimal_Hello", HelloCommand())`, registering the command by name so `init_gui.py` can refer to it.
 
-Source: [`Commands.py`][Source-cmds]
+Source: [`commands.py`][Source-cmds]
 
 
 ## Trying it out
@@ -95,5 +95,5 @@ Source: [`Commands.py`][Source-cmds]
 [Source-pkg]: ./Source/package.xml
 [Source-init]: ./Source/freecad/MinimalWorkbench/__init__.py
 [Source-gui]: ./Source/freecad/MinimalWorkbench/init_gui.py
-[Source-cmds]: ./Source/freecad/MinimalWorkbench/Commands.py
+[Source-cmds]: ./Source/freecad/MinimalWorkbench/commands.py
 [Zip]: ./MinimalWorkbench.zip

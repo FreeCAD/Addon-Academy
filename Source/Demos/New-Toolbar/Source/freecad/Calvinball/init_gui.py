@@ -9,17 +9,16 @@ every installed addon regardless of what it contains, which is what makes a
 workbench-less addon possible at all.
 """
 
-import os
+from pathlib import Path
 
 import FreeCADGui
 
-from .Manipulator import Manipulator
+from .manipulator import Manipulator
 
 # This file is at <addon-root>/freecad/Calvinball/init_gui.py.
-_ADDON_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-_ICONS_DIR  = os.path.join(_ADDON_ROOT, "Resources", "Icons")
+_ICONS_DIR = Path(__file__).parent / "resources" / "icons"
 
 # Registers the directory the commands' Pixmap filenames are resolved against.
-FreeCADGui.addIconPath(_ICONS_DIR)
+FreeCADGui.addIconPath(str(_ICONS_DIR))
 
 FreeCADGui.addWorkbenchManipulator(Manipulator())

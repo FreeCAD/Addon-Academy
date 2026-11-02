@@ -12,5 +12,4 @@ class Command:
         }
 
     def Activated ( self ):
-
         print('Command::Activated')

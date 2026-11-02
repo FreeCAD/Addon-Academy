@@ -3,14 +3,11 @@
 
 """FreeCAD startup hook: defines and registers the Minimal Workbench."""
 
-import os
+from pathlib import Path
 
 import FreeCADGui
 
-# This file is at <addon-root>/freecad/MinimalWorkbench/init_gui.py, so the
-# addon root is three directories up.
-_ADDON_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-_ICON = os.path.join(_ADDON_ROOT, "Resources", "Icons", "Logo.svg")
+_ICON = Path(__file__).parent / "resources" / "icons" / "Logo.svg"
 
 
 class MinimalWorkbench(FreeCADGui.Workbench):
@@ -21,14 +18,14 @@ class MinimalWorkbench(FreeCADGui.Workbench):
 
     MenuText = "Minimal"
     ToolTip = "A minimal example workbench."
-    Icon = _ICON
+    Icon = str(_ICON.absolute())
 
     def Initialize(self):
         """Run once, the first time the user activates this workbench."""
         # Importing Commands has the side effect of calling
         # FreeCADGui.addCommand("Minimal_Hello", ...), which registers the
         # command by name so we can reference it below.
-        from . import Commands  # noqa: F401
+        from . import commands  # noqa: F401
 
         self.appendToolbar("Minimal", ["Minimal_Hello"])
         self.appendMenu("Minimal", ["Minimal_Hello"])

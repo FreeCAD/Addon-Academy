@@ -3,14 +3,14 @@
 
 """FreeCAD startup hook: registers the Transmogrifier workbench and its preferences page."""
 
-import os
+from pathlib import Path
 
 import FreeCADGui
 
 # This file is at <addon-root>/freecad/Transmogrifier/init_gui.py.
-_ADDON_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-_ICONS_DIR  = os.path.join(_ADDON_ROOT, "Resources", "Icons")
-_PREFS_UI   = os.path.join(_ADDON_ROOT, "Resources", "panels", "TransmogrifierPrefs.ui")
+_RESOURCES_ROOT = Path(__file__).parent
+_ICONS_DIR  = _RESOURCES_ROOT / "resources" / "icons"
+_PREFS_UI   = _RESOURCES_ROOT / "resources" / "panels" / "TransmogrifierPrefs.ui"
 
 
 class TransmogrifierWorkbench(FreeCADGui.Workbench):
@@ -18,11 +18,11 @@ class TransmogrifierWorkbench(FreeCADGui.Workbench):
 
     MenuText = "Transmogrifier"
     ToolTip = "Apply transmogrification with configurable parameters."
-    Icon = os.path.join(_ICONS_DIR, "Logo.svg")
+    Icon = str(_ICONS_DIR / "Logo.svg")
 
     def Initialize(self):
         """Run once, the first time the user activates this workbench."""
-        from . import Commands  # noqa: F401
+        from . import commands  # noqa: F401
 
         self.appendToolbar("Transmogrifier", ["Transmogrifier_Engage"])
         self.appendMenu("Transmogrifier",    ["Transmogrifier_Engage"])
@@ -34,8 +34,8 @@ class TransmogrifierWorkbench(FreeCADGui.Workbench):
 
 # Register the icons path so FreeCAD can locate preferences-transmogrifier.svg
 # for the preferences-dialog sidebar.
-FreeCADGui.addIconPath(_ICONS_DIR)
+FreeCADGui.addIconPath(str(_ICONS_DIR))
 
 FreeCADGui.addWorkbench(TransmogrifierWorkbench())
 
-FreeCADGui.addPreferencePage(_PREFS_UI, "Transmogrifier")
+FreeCADGui.addPreferencePage(str(_PREFS_UI), "Transmogrifier")

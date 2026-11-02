@@ -5,7 +5,6 @@
 class Manipulator:
 
     def modifyToolBars ( self ):
-
         return [{
             'toolBar' : 'File' ,
             'append' : 'Example_Command'
