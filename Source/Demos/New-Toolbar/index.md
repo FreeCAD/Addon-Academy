@@ -29,18 +29,18 @@ Switching to the Part workbench shows a three-button Calvinball toolbar. Each bu
 ```
 Calvinball/
 ├─ package.xml
-├─ Resources/
-│  └─ Icons/
-│     ├─ Logo.svg
-│     ├─ Calvinball_Score.svg
-│     ├─ Calvinball_Rule.svg
-│     └─ Calvinball_Mask.svg
 └─ freecad/
    └─ Calvinball/
+      ├─ resources/
+      │  └─ icons/
+      │     ├─ Logo.svg
+      │     ├─ Calvinball_Score.svg
+      │     ├─ Calvinball_Rule.svg
+      │     └─ Calvinball_Mask.svg
       ├─ __init__.py
       ├─ init_gui.py
-      ├─ Manipulator.py
-      └─ Commands.py
+      ├─ manipulator.py
+      └─ commands.py
 ```
 
 The layout is the ordinary Modern namespaced one described in [Structuring][Structuring]. Nothing about a workbench-less addon changes it.
@@ -70,17 +70,17 @@ It registers the icons directory and the manipulator, and that is all.
 
 Source: [`init_gui.py`][Source-gui]
 
-### `freecad/Calvinball/Manipulator.py`
+### `freecad/Calvinball/manipulator.py`
 
 The interesting file. It defines the [workbench manipulator][Manipulators] that builds the toolbar, plus the helper that determines which workbench is being set up.
 
-Source: [`Manipulator.py`][Source-manip]
+Source: [`manipulator.py`][Source-manip]
 
-### `freecad/Calvinball/Commands.py`
+### `freecad/Calvinball/commands.py`
 
 Three ordinary [commands][Commands]. Nothing here is specific to toolbars or to manipulators; these are the same command classes any workbench would use.
 
-Source: [`Commands.py`][Source-cmds]
+Source: [`commands.py`][Source-cmds]
 
 
 ## How the toolbar is built {#how}
@@ -112,7 +112,7 @@ def active_workbench_name():
 
 Returning an empty list from `modifyToolBars()` for every other workbench gives the toolbar the same treatment core toolbars get: hidden, along with its entry in the toolbar visibility menu.
 
-`Manipulator.py` also defers importing `Commands` until the manipulator has decided it is in the right workbench. Since there is no workbench class here, there is no `Initialize()` to defer that import into, and importing at the top of `init_gui.py` would put it on the startup path of every FreeCAD user who installs the addon. See [keeping startup fast][WorkbenchStartup].
+`manipulator.py` also defers importing `commands` until the manipulator has decided it is in the right workbench. Since there is no workbench class here, there is no `Initialize()` to defer that import into, and importing at the top of `init_gui.py` would put it on the startup path of every FreeCAD user who installs the addon. See [keeping startup fast][WorkbenchStartup].
 
 
 ## Trying it out
@@ -122,7 +122,7 @@ Returning an empty list from `modifyToolBars()` for every other workbench gives 
 3.  Click the buttons and watch the Report view.
 4.  Switch to another workbench. The toolbar disappears, and reappears on returning to Part.
 
-To put the toolbar in a different workbench, change `_TARGET_WORKBENCH` at the top of `Manipulator.py` to that workbench's internal name, or set it to `None` to add the toolbar everywhere.
+To put the toolbar in a different workbench, change `_TARGET_WORKBENCH` at the top of `manipulator.py` to that workbench's internal name, or set it to `None` to add the toolbar everywhere.
 
 
 ## Where to go next
@@ -149,6 +149,6 @@ To put the toolbar in a different workbench, change `_TARGET_WORKBENCH` at the t
 [Source-root]: ./Source/
 [Source-pkg]: ./Source/package.xml
 [Source-gui]: ./Source/freecad/Calvinball/init_gui.py
-[Source-manip]: ./Source/freecad/Calvinball/Manipulator.py
-[Source-cmds]: ./Source/freecad/Calvinball/Commands.py
+[Source-manip]: ./Source/freecad/Calvinball/manipulator.py
+[Source-cmds]: ./Source/freecad/Calvinball/commands.py
 [Zip]: ./Calvinball.zip

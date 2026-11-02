@@ -6,7 +6,7 @@
 import FreeCAD
 import FreeCADGui
 
-from .ParametricBox import ParametricBox
+from .parametric_box import ParametricBox
 
 
 class CreateBoxCommand:

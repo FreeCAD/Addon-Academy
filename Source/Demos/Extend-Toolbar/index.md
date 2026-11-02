@@ -21,9 +21,12 @@ toolbar that when activated, will log a debug message.
 
 ```txt
 Source
-└─ Manipulator.py   - Manipulator that modifies an existing toolbar.
-└─ init_gui.py      - Setup code for creating and registering stuff.
-└─ Command.py       - Command that logs a message on activation.
+freecad
+└─ MyAddon
+   ├─ __init__.py      - Module marker.
+   ├─ init_gui.py      - Setup code for creating and registering stuff.
+   ├─ manipulator.py   - Manipulator that modifies an existing toolbar.
+   └─ command.py       - Command that logs a message on activation.
 ```
 
 
@@ -36,3 +39,9 @@ Depending on the toolbar you may have to specify a different names for different
 
 [NewToolbar]: ../New-Toolbar
 [Manipulators]: ../../Guides/Code/Manipulators
+
+[Source-root]: ./Source/
+[Source-pkg]: ./Source/package.xml
+[Source-gui]: ./Source/freecad/MyAddon/init_gui.py
+[Source-manip]: ./Source/freecad/MyAddon/manipulator.py
+[Source-cmds]: ./Source/freecad/MyAddon/command.py

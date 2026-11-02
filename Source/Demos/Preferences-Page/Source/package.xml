@@ -13,7 +13,7 @@
     <maintainer email="no-one@freecad.org">No current maintainer</maintainer>
     <license>CC0-1.0</license>
 
-    <icon>Resources/Icons/Logo.svg</icon>
+    <icon>freecad/Transmogrifier/resources/icons/Logo.svg</icon>
 
     <content>
         <workbench>

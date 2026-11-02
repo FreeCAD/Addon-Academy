@@ -16,15 +16,15 @@ This demo is the runnable companion to the [Custom document objects][DocObjects]
 ```
 ParametricFeature/
 ├─ package.xml
-├─ Resources/
-│  └─ Icons/
-│     └─ Logo.svg
 └─ freecad/
    └─ ParametricFeature/
+      ├─ resources/
+      │  └─ icons/
+      │     └─ Logo.svg
       ├─ __init__.py
       ├─ init_gui.py
-      ├─ Commands.py
-      └─ ParametricBox.py
+      ├─ commands.py
+      └─ parametric_box.py
 ```
 
 The top-level `ParametricFeature/` is the git repository root. See [Structuring][Structuring] for the rationale behind this layout, and the [Minimal Workbench demo][MinimalWB] for a step-by-step description of the `package.xml` and Workbench plumbing.
@@ -53,20 +53,20 @@ Defines `ParametricFeatureWorkbench`. The `Initialize()` method imports the `Com
 Source: [`init_gui.py`][Source-gui]
 
 
-### `freecad/ParametricFeature/Commands.py`
+### `freecad/ParametricFeature/commands.py`
 
 Defines `CreateBoxCommand`. Its `Activated()` method creates a new document object of type `Part::FeaturePython`, attaches a `ParametricBox` proxy instance to it, assigns the default ViewProvider, and recomputes. The work is wrapped in an undo transaction.
 
-Source: [`Commands.py`][Source-cmds]
+Source: [`commands.py`][Source-cmds]
 
 
-### `freecad/ParametricFeature/ParametricBox.py`
+### `freecad/ParametricFeature/parametric_box.py`
 
 The Python proxy class. Its `__init__` adds three `App::PropertyLength` properties; its `execute` builds a `Part.makeBox` shape from the current property values and assigns it to `obj.Shape`.
 
 This class is the one FreeCAD looks up by module and class name when reopening any saved document containing a `ParametricBox` object. Renaming or moving the class will break those files; see the discussion in [Custom document objects][DocObjects] for the implications and mitigations.
 
-Source: [`ParametricBox.py`][Source-box]
+Source: [`parametric_box.py`][Source-box]
 
 
 ## Trying it out
@@ -102,6 +102,6 @@ Source: [`ParametricBox.py`][Source-box]
 [Source-pkg]:  ./Source/package.xml
 [Source-init]: ./Source/freecad/ParametricFeature/__init__.py
 [Source-gui]:  ./Source/freecad/ParametricFeature/init_gui.py
-[Source-cmds]: ./Source/freecad/ParametricFeature/Commands.py
-[Source-box]:  ./Source/freecad/ParametricFeature/ParametricBox.py
+[Source-cmds]: ./Source/freecad/ParametricFeature/commands.py
+[Source-box]:  ./Source/freecad/ParametricFeature/parametric_box.py
 [Zip]:         ./ParametricFeature.zip
