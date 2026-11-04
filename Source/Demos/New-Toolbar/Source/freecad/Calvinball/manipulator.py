@@ -48,7 +48,7 @@ class Manipulator:
         # Registering the commands here rather than in init_gui.py keeps their
         # import off FreeCAD's startup path for users who never visit the
         # target workbench.
-        from . import Commands  # noqa: F401
+        from . import commands  # noqa: F401
 
         # The first dictionary creates the toolbar. Appending to the unnamed
         # root of the toolbar tree adds a new toolbar rather than a new button.

@@ -57,7 +57,7 @@ In your `init_gui.py`, call `Gui.addPreferencePage` with the path to your `.ui` 
 import os
 import FreeCADGui
 FreeCADGui.addPreferencePage(
-    os.path.join(os.path.dirname(__file__), "Resources", "panels", "MyAddonPrefs.ui"),
+    os.path.join(os.path.dirname(__file__), "resources", "panels", "MyAddonPrefs.ui"),
     "MyAddon",
 )
 ```

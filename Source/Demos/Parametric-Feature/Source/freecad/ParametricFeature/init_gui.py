@@ -3,13 +3,12 @@
 
 """FreeCAD startup hook: defines and registers the Parametric Feature workbench."""
 
-import os
+from pathlib import Path
 
 import FreeCADGui
 
 # This file is at <addon-root>/freecad/ParametricFeature/init_gui.py.
-_ADDON_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-_ICON = os.path.join(_ADDON_ROOT, "Resources", "Icons", "Logo.svg")
+_ICON = Path(__file__).parent / "resources" / "icons" / "Logo.svg"
 
 
 class ParametricFeatureWorkbench(FreeCADGui.Workbench):
@@ -17,13 +16,13 @@ class ParametricFeatureWorkbench(FreeCADGui.Workbench):
 
     MenuText = "Parametric Feature"
     ToolTip = "Demonstrates the FeaturePython pattern with a parametric box."
-    Icon = _ICON
+    Icon = str(_ICON)
 
     def Initialize(self):
         """Run once, the first time the user activates this workbench."""
         # Importing Commands has the side effect of registering the command
         # via FreeCADGui.addCommand, so it is available by name below.
-        from . import Commands  # noqa: F401
+        from . import commands  # noqa: F401
 
         self.appendToolbar("Parametric Feature", ["ParametricFeature_CreateBox"])
         self.appendMenu("Parametric Feature",    ["ParametricFeature_CreateBox"])

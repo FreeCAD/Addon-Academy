@@ -4,7 +4,7 @@ layout : Default
 
 # Structuring
 
-There are two common ways to lay out a FreeCAD addon: a **Modern**, namespaced structure used by the current addon templates, and a **Legacy** structure that keeps Python files at the top level with `Init.py` and `InitGui.py`. 
+There are two common ways to lay out a FreeCAD addon: a **Modern**, namespaced structure used by the current addon templates, and a **Legacy** structure that keeps Python files at the top level with `Init.py` and `InitGui.py`.
 
 New addons should use the Modern layout -- this is what the [Addon-Template] produces if it is use to create the addon from scratch (the recommended workflow). It places the addon's code in its own namespace rather than in FreeCAD's global namespace, and it opens up the possibility of using standard Python packaging tools (such as `pip` and `uv`) for installing the addon and managing its development dependencies.
 
@@ -34,12 +34,15 @@ MyAddon/
 ├─ freecad/
 │  └─ MyAddon/
 │     ├─ __init__.py
-│     └─ init_gui.py
+│     ├─ init_gui.py
+│     ├─ commands.py
+│     └─ resources/
+│        ├─ icons/
+│        │  └─ Logo.svg
+│        ├─ media/
+│        ├─ data/
+│        └─ translations/
 ├─ Documentation/
-├─ Resources/
-│  ├─ Icons/
-│  │  └─ Logo.svg
-│  └─ Media/
 ├─ LICENSE-Code
 ├─ LICENSE-Assets
 ├─ README.md
@@ -63,7 +66,7 @@ Additional Python modules for the addon's tools and commands also live inside `f
 
 ## Legacy
 
-The legacy layout predates the namespaced packaging and is still supported for legacy addons. New Addons should use the Modern layout to ensure their commands do not pollute the global namespace. 
+The legacy layout predates the namespaced packaging and is still supported for legacy addons. New Addons should use the Modern layout to ensure their commands do not pollute the global namespace.
 
 From the wiki's [Workbench creation][Workbench-Creation] page:
 

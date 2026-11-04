@@ -16,20 +16,20 @@ This demo is the runnable companion to the [Preferences pages][Preferences] guid
 ```
 Transmogrifier/
 ├─ package.xml
-├─ Resources/
-│  ├─ Icons/
-│  │  ├─ Logo.svg
-│  │  └─ preferences-transmogrifier.svg
-│  └─ panels/
-│     └─ TransmogrifierPrefs.ui
 └─ freecad/
    └─ Transmogrifier/
+      ├─ resources/
+      │  ├─ icons/
+      │  │  ├─ Logo.svg
+      │  │  └─ preferences-transmogrifier.svg
+      │  └─ panels/
+      │     └─ TransmogrifierPrefs.ui
       ├─ __init__.py
       ├─ init_gui.py
-      └─ Commands.py
+      └─ commands.py
 ```
 
-The `.ui` file lives outside the namespace package so its path is straightforward to compute from `__file__`: three directories up to the addon root, then into `Resources/panels/`.
+The `.ui` file lives in submodule `resources/panels/`.
 
 
 ## The files
@@ -41,7 +41,7 @@ The [Addon Manifest][Manifest] declares the workbench. The preferences page is n
 Source: [`package.xml`][Source-pkg]
 
 
-### `Resources/panels/TransmogrifierPrefs.ui`
+### `resources/panels/TransmogrifierPrefs.ui`
 
 The Qt Designer form. The file is hand-written XML for this demo, but in production you would create it visually in Qt Designer (with FreeCAD's plugin loaded) and have it generate the same XML.
 
@@ -61,11 +61,11 @@ Defines `TransmogrifierWorkbench`. After defining the class, the file:
 Source: [`init_gui.py`][Source-gui]
 
 
-### `freecad/Transmogrifier/Commands.py`
+### `freecad/Transmogrifier/commands.py`
 
 Defines `EngageCommand`. Its `Activated()` method reads each preference from `FreeCAD.ParamGet("User parameter:BaseApp/Preferences/Mod/Transmogrifier")` and reports the configured operation in the Report view and a `QMessageBox`.
 
-Source: [`Commands.py`][Source-cmds]
+Source: [`commands.py`][Source-cmds]
 
 
 ### `freecad/Transmogrifier/__init__.py`
@@ -102,8 +102,8 @@ Source: [`__init__.py`][Source-init]
 
 [Source-root]:  ./Source/
 [Source-pkg]:   ./Source/package.xml
-[Source-ui]:    ./Source/Resources/panels/TransmogrifierPrefs.ui
+[Source-ui]:    ./Source/freecad/Transmogrifier/resources/panels/TransmogrifierPrefs.ui
 [Source-init]:  ./Source/freecad/Transmogrifier/__init__.py
 [Source-gui]:   ./Source/freecad/Transmogrifier/init_gui.py
-[Source-cmds]:  ./Source/freecad/Transmogrifier/Commands.py
+[Source-cmds]:  ./Source/freecad/Transmogrifier/commands.py
 [Zip]:          ./Transmogrifier.zip
